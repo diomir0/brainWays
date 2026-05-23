@@ -1,7 +1,4 @@
-import { useState, useRef } from "react";
-
-// ─── CATEGORIES & MODALITIES ──────────────────────────────────────────────────
-const CATEGORIES = [
+export const CATEGORIES = [
   {
     id: "sensory",
     label: "Sensory",
@@ -30,10 +27,9 @@ const CATEGORIES = [
   },
 ];
 
-const ALL_MODALITIES = CATEGORIES.flatMap((c) => c.modalities);
+export const ALL_MODALITIES = CATEGORIES.flatMap((c) => c.modalities);
 
-// ─── PATHWAY DATA ─────────────────────────────────────────────────────────────
-const PATHWAYS = {
+export const PATHWAYS = {
   visual: {
     title: "Visual pathway",
     subtitle: "Retina → LGN → V1 → Association cortex",
@@ -74,9 +70,9 @@ const PATHWAYS = {
       },
       {
         id: "sc",
-        x: 490,
+        x: 480,
         y: 256,
-        w: 150,
+        w: 170,
         label: "Superior colliculus",
         sub: "Retinotectal",
         color: "#888",
@@ -85,9 +81,9 @@ const PATHWAYS = {
       },
       {
         id: "v1",
-        x: 230,
+        x: 220,
         y: 364,
-        w: 200,
+        w: 220,
         label: "V1 — Primary visual cortex",
         sub: "Striate cortex",
         color: "#7C6FCD",
@@ -221,9 +217,9 @@ const PATHWAYS = {
       },
       {
         id: "mgb",
-        x: 320,
+        x: 310,
         y: 460,
-        w: 200,
+        w: 220,
         label: "MGB (medial geniculate body)",
         sub: "Auditory thalamus",
         color: "#3A9E82",
@@ -232,9 +228,9 @@ const PATHWAYS = {
       },
       {
         id: "a1",
-        x: 320,
+        x: 310,
         y: 556,
-        w: 200,
+        w: 220,
         label: "A1 — Primary auditory cortex",
         sub: "Tonotopic, bilateral",
         color: "#3A9E82",
@@ -243,9 +239,9 @@ const PATHWAYS = {
       },
       {
         id: "belt",
-        x: 150,
+        x: 140,
         y: 652,
-        w: 180,
+        w: 200,
         label: "Auditory belt / parabelt",
         sub: "Pitch, timbre, rhythm",
         color: "#3A9E82",
@@ -308,9 +304,9 @@ const PATHWAYS = {
       },
       {
         id: "dcml",
-        x: 150,
+        x: 120,
         y: 256,
-        w: 190,
+        w: 230,
         label: "Dorsal column / med. lemniscus",
         sub: "Touch, proprioception",
         color: "#C4714A",
@@ -352,9 +348,9 @@ const PATHWAYS = {
       },
       {
         id: "s2",
-        x: 150,
+        x: 140,
         y: 556,
-        w: 200,
+        w: 220,
         label: "S2 — Secondary somatosensory",
         sub: "Bilateral, haptic",
         color: "#C4714A",
@@ -561,9 +557,9 @@ const PATHWAYS = {
       },
       {
         id: "vor",
-        x: 540,
+        x: 520,
         y: 364,
-        w: 110,
+        w: 140,
         label: "VOR / oculomotor",
         sub: "Gaze stabilization",
         color: "#888",
@@ -583,9 +579,9 @@ const PATHWAYS = {
       },
       {
         id: "pivc",
-        x: 230,
+        x: 215,
         y: 460,
-        w: 210,
+        w: 230,
         label: "PIVC — parieto-insular cortex",
         sub: "Primary vestibular cortex",
         color: "#B8963A",
@@ -594,9 +590,9 @@ const PATHWAYS = {
       },
       {
         id: "ppc",
-        x: 470,
+        x: 460,
         y: 460,
-        w: 180,
+        w: 200,
         label: "Posterior parietal cortex",
         sub: "VIP, MSTd — heading",
         color: "#5A8FC4",
@@ -703,9 +699,9 @@ const PATHWAYS = {
       },
       {
         id: "mn",
-        x: 320,
+        x: 310,
         y: 652,
-        w: 200,
+        w: 220,
         label: "Spinal motor neurons (α/γ)",
         sub: "Lower motor neurons",
         color: "#5A8FC4",
@@ -814,9 +810,9 @@ const PATHWAYS = {
       },
       {
         id: "parietal",
-        x: 140,
+        x: 130,
         y: 556,
-        w: 190,
+        w: 210,
         label: "Posterior parietal cortex",
         sub: "Attentional selection",
         color: "#5A8FC4",
@@ -825,9 +821,9 @@ const PATHWAYS = {
       },
       {
         id: "fef",
-        x: 460,
+        x: 450,
         y: 556,
-        w: 180,
+        w: 200,
         label: "Frontal eye fields (FEF)",
         sub: "Voluntary gaze control",
         color: "#4EAED0",
@@ -875,9 +871,9 @@ const PATHWAYS = {
       },
       {
         id: "snc",
-        x: 460,
+        x: 430,
         y: 40,
-        w: 200,
+        w: 270,
         label: "SNc — Substantia nigra pars compacta",
         sub: "Nigrostriatal DA",
         color: "#D4A843",
@@ -1011,9 +1007,9 @@ const PATHWAYS = {
       },
       {
         id: "phc",
-        x: 400,
+        x: 390,
         y: 148,
-        w: 200,
+        w: 220,
         label: "Parahippocampal cortex (PHc)",
         sub: "Scenes, spatial context",
         color: "#7EC47E",
@@ -1257,464 +1253,3 @@ const PATHWAYS = {
     ],
   },
 };
-
-// ─── GEOMETRY ────────────────────────────────────────────────────────────────
-const NODE_H = 56;
-
-function getCenter(node) {
-  return { x: node.x + node.w / 2, y: node.y + NODE_H / 2 };
-}
-
-// ─── EDGE ────────────────────────────────────────────────────────────────────
-function PathEdge({ edge, nodes, activeNode }) {
-  const from = nodes.find((n) => n.id === edge.from);
-  const to = nodes.find((n) => n.id === edge.to);
-  if (!from || !to || from === to) return null;
-
-  const fc = getCenter(from);
-  const tc = getCenter(to);
-  const dx = tc.x - fc.x;
-  const dy = tc.y - fc.y;
-  const len = Math.sqrt(dx * dx + dy * dy) || 1;
-  const ux = dx / len;
-  const uy = dy / len;
-  const shift = edge.type === "fb" ? 14 : -9;
-  const nx = -uy * shift;
-  const ny = ux * shift;
-
-  const x1 = fc.x + nx + ux * (NODE_H / 2 + 4);
-  const y1 = fc.y + ny + uy * (NODE_H / 2 + 4);
-  const x2 = tc.x + nx - ux * (NODE_H / 2 + 4);
-  const y2 = tc.y + ny - uy * (NODE_H / 2 + 4);
-
-  const color = edge.type === "ff" ? "#6e8ecc" : edge.type === "fb" ? "#c47a5a" : "#777";
-  const dash = edge.type === "fb" ? "6 4" : edge.type === "bypass" ? "4 4" : "none";
-  const dimmed = activeNode && edge.from !== activeNode && edge.to !== activeNode;
-
-  return (
-    <line
-      x1={x1}
-      y1={y1}
-      x2={x2}
-      y2={y2}
-      stroke={color}
-      strokeWidth={1.4}
-      strokeDasharray={dash}
-      markerEnd="url(#arr)"
-      opacity={dimmed ? 0.1 : 0.8}
-      style={{ transition: "opacity 0.2s" }}
-    />
-  );
-}
-
-// ─── NODE ────────────────────────────────────────────────────────────────────
-function PathNode({ node, active, onSelect }) {
-  const isActive = active === node.id;
-  const col = node.color || "#888";
-  return (
-    <g style={{ cursor: "pointer" }} onClick={() => onSelect(isActive ? null : node.id)}>
-      <rect
-        x={node.x}
-        y={node.y}
-        width={node.w}
-        height={NODE_H}
-        rx={7}
-        fill={col}
-        fillOpacity={isActive ? 0.2 : 0.08}
-        stroke={col}
-        strokeOpacity={isActive ? 1 : 0.38}
-        strokeWidth={isActive ? 1.5 : 0.7}
-        style={{ transition: "all 0.15s" }}
-      />
-      <text
-        x={node.x + node.w / 2}
-        y={node.y + 20}
-        textAnchor="middle"
-        dominantBaseline="central"
-        fill={col}
-        fontSize={11.5}
-        fontWeight={600}
-        fontFamily="'DM Mono', monospace"
-      >
-        {node.label}
-      </text>
-      <text
-        x={node.x + node.w / 2}
-        y={node.y + 39}
-        textAnchor="middle"
-        dominantBaseline="central"
-        fill={col}
-        fontSize={9.5}
-        fontWeight={400}
-        opacity={0.6}
-        fontFamily="'DM Mono', monospace"
-      >
-        {node.sub}
-      </text>
-    </g>
-  );
-}
-
-// ─── DIAGRAM ────────────────────────────────────────────────────────────────
-function PathwayDiagram({ pathway, activeNode, onSelectNode }) {
-  const { nodes, edges } = pathway;
-  const maxY = Math.max(...nodes.map((n) => n.y)) + NODE_H + 40;
-  const maxX = Math.max(...nodes.map((n) => n.x + n.w)) + 40;
-  const vbW = Math.max(maxX, 680);
-
-  return (
-    <svg width="100%" viewBox={`0 0 ${vbW} ${maxY}`} style={{ overflow: "visible" }}>
-      <defs>
-        <marker
-          id="arr"
-          viewBox="0 0 10 10"
-          refX="8"
-          refY="5"
-          markerWidth="6"
-          markerHeight="6"
-          orient="auto-start-reverse"
-        >
-          <path
-            d="M2 1L8 5L2 9"
-            fill="none"
-            stroke="context-stroke"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </marker>
-      </defs>
-      {edges.map((e, i) => (
-        <PathEdge key={i} edge={e} nodes={nodes} activeNode={activeNode} />
-      ))}
-      {nodes.map((n) => (
-        <PathNode key={n.id} node={n} active={activeNode} onSelect={onSelectNode} />
-      ))}
-    </svg>
-  );
-}
-
-// ─── DETAIL PANEL ────────────────────────────────────────────────────────────
-function DetailPanel({ node, onClose }) {
-  const col = node.color || "#888";
-  return (
-    <div
-      style={{
-        background: "rgba(10,10,14,0.97)",
-        borderTop: `1px solid ${col}44`,
-        padding: "16px 18px 18px",
-        backdropFilter: "blur(12px)",
-        animation: "slideUp 0.18s ease",
-        flexShrink: 0,
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          marginBottom: 8,
-        }}
-      >
-        <div>
-          <div
-            style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: 12.5,
-              fontWeight: 600,
-              color: col,
-              marginBottom: 2,
-            }}
-          >
-            {node.label}
-          </div>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#555" }}>
-            {node.sub}
-          </div>
-        </div>
-        <button
-          onClick={onClose}
-          style={{
-            background: "none",
-            border: "none",
-            color: "#555",
-            fontSize: 18,
-            cursor: "pointer",
-            padding: "0 0 0 12px",
-            lineHeight: 1,
-          }}
-        >
-          ×
-        </button>
-      </div>
-      <p
-        style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: 12.5,
-          color: "#bbb",
-          lineHeight: 1.7,
-          margin: 0,
-        }}
-      >
-        {node.detail}
-      </p>
-    </div>
-  );
-}
-
-// ─── LEGEND ─────────────────────────────────────────────────────────────────
-function Legend() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        gap: 16,
-        alignItems: "center",
-        padding: "5px 0 3px",
-        flexWrap: "wrap",
-      }}
-    >
-      {[
-        { color: "#6e8ecc", dash: false, label: "Feedforward" },
-        { color: "#c47a5a", dash: true, label: "Feedback" },
-        { color: "#777", dash: true, label: "Bypass / reflex" },
-      ].map((l) => (
-        <div key={l.label} style={{ display: "flex", alignItems: "center", gap: 5 }}>
-          <svg width={30} height={10}>
-            <defs>
-              <marker
-                id={`leg-${l.label}`}
-                viewBox="0 0 10 10"
-                refX="8"
-                refY="5"
-                markerWidth="5"
-                markerHeight="5"
-                orient="auto-start-reverse"
-              >
-                <path d="M2 1L8 5L2 9" fill="none" stroke={l.color} strokeWidth="1.5" />
-              </marker>
-            </defs>
-            <line
-              x1={2}
-              y1={5}
-              x2={26}
-              y2={5}
-              stroke={l.color}
-              strokeWidth={1.4}
-              strokeDasharray={l.dash ? "5 3" : "none"}
-              markerEnd={`url(#leg-${l.label})`}
-            />
-          </svg>
-          <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 9.5, color: "#666" }}>
-            {l.label}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// ─── MAIN APP ────────────────────────────────────────────────────────────────
-export default function BrainPathways() {
-  const [modality, setModality] = useState("visual");
-  const [activeNode, setActiveNode] = useState(null);
-  const [openCat, setOpenCat] = useState(null);
-  const scrollRef = useRef(null);
-
-  const pathway = PATHWAYS[modality];
-  const activeNodeData = pathway.nodes.find((n) => n.id === activeNode);
-  const activeMod = ALL_MODALITIES.find((m) => m.id === modality);
-
-  const handleSelect = (id) => {
-    setModality(id);
-    setActiveNode(null);
-    setOpenCat(null);
-    if (scrollRef.current) scrollRef.current.scrollTop = 0;
-  };
-
-  return (
-    <div
-      style={{
-        fontFamily: "'DM Sans', sans-serif",
-        background: "#09090d",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        color: "#eee",
-      }}
-    >
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
-        @keyframes slideUp { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
-        * { box-sizing: border-box; }
-        ::-webkit-scrollbar { width: 3px; height: 3px; }
-        ::-webkit-scrollbar-thumb { background: #2a2a35; border-radius: 2px; }
-        .cat-btn { border: none; cursor: pointer; transition: all 0.15s; }
-        .cat-btn:hover { opacity: 0.8; }
-        .mod-pill { border: none; cursor: pointer; transition: all 0.15s; text-align: left; }
-        .mod-pill:hover { opacity: 0.85; }
-      `}</style>
-
-      {/* Header */}
-      <div style={{ padding: "14px 18px 10px", borderBottom: "1px solid #181820", flexShrink: 0 }}>
-        <div
-          style={{
-            fontFamily: "'DM Mono', monospace",
-            fontSize: 10,
-            color: "#3a3a4a",
-            letterSpacing: "0.14em",
-            marginBottom: 4,
-          }}
-        >
-          NEURAL PATHWAYS EXPLORER
-        </div>
-        <div
-          style={{
-            fontSize: 16,
-            fontWeight: 500,
-            color: activeMod?.color || "#fff",
-            fontFamily: "'DM Mono', monospace",
-            transition: "color 0.2s",
-          }}
-        >
-          {pathway.title}
-        </div>
-        <div
-          style={{
-            fontSize: 10.5,
-            color: "#3a3a4a",
-            fontFamily: "'DM Mono', monospace",
-            marginTop: 2,
-          }}
-        >
-          {pathway.subtitle}
-        </div>
-      </div>
-
-      {/* Category + modality nav */}
-      <div style={{ borderBottom: "1px solid #181820", flexShrink: 0, padding: "8px 14px 0" }}>
-        <div
-          style={{ display: "flex", gap: 6, overflowX: "auto", paddingBottom: 8, flexWrap: "wrap" }}
-        >
-          {CATEGORIES.map((cat) => {
-            const isOpen = openCat === cat.id;
-            const hasActive = cat.modalities.some((m) => m.id === modality);
-            return (
-              <div key={cat.id} style={{ position: "relative" }}>
-                <button
-                  className="cat-btn"
-                  onClick={() => setOpenCat(isOpen ? null : cat.id)}
-                  style={{
-                    padding: "4px 11px",
-                    borderRadius: 6,
-                    border: `1px solid ${hasActive ? activeMod.color + "88" : "#242430"}`,
-                    background: hasActive
-                      ? activeMod.color + "14"
-                      : isOpen
-                        ? "#1c1c28"
-                        : "transparent",
-                    color: hasActive ? activeMod.color : isOpen ? "#bbb" : "#555",
-                    fontFamily: "'DM Mono', monospace",
-                    fontSize: 10.5,
-                    fontWeight: hasActive ? 600 : 400,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {cat.label}{" "}
-                  <span style={{ opacity: 0.5, fontSize: 9 }}>{isOpen ? "▲" : "▼"}</span>
-                </button>
-
-                {isOpen && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "calc(100% + 4px)",
-                      left: 0,
-                      background: "#111118",
-                      border: "1px solid #222230",
-                      borderRadius: 8,
-                      padding: "6px",
-                      zIndex: 20,
-                      minWidth: 170,
-                      boxShadow: "0 8px 24px rgba(0,0,0,0.6)",
-                      animation: "fadeIn 0.12s ease",
-                    }}
-                  >
-                    {cat.modalities.map((m) => {
-                      const isAct = modality === m.id;
-                      return (
-                        <button
-                          key={m.id}
-                          className="mod-pill"
-                          onClick={() => handleSelect(m.id)}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 8,
-                            width: "100%",
-                            padding: "6px 10px",
-                            borderRadius: 5,
-                            background: isAct ? m.color + "20" : "transparent",
-                            border: `1px solid ${isAct ? m.color + "66" : "transparent"}`,
-                            color: isAct ? m.color : "#888",
-                            fontFamily: "'DM Mono', monospace",
-                            fontSize: 11,
-                            fontWeight: isAct ? 600 : 400,
-                          }}
-                        >
-                          <span style={{ fontSize: 13 }}>{m.icon}</span>
-                          {m.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Legend */}
-      <div style={{ padding: "2px 18px 0", borderBottom: "1px solid #111116", flexShrink: 0 }}>
-        <Legend />
-      </div>
-
-      {/* Diagram */}
-      <div
-        ref={scrollRef}
-        style={{
-          flex: 1,
-          overflowY: "auto",
-          overflowX: "auto",
-          padding: "14px 10px 10px",
-          minHeight: 0,
-        }}
-        onClick={() => {
-          if (openCat) setOpenCat(null);
-        }}
-      >
-        <div key={modality} style={{ animation: "fadeIn 0.22s ease", minWidth: 340 }}>
-          <PathwayDiagram pathway={pathway} activeNode={activeNode} onSelectNode={setActiveNode} />
-        </div>
-        {!activeNode && (
-          <div
-            style={{
-              textAlign: "center",
-              fontFamily: "'DM Mono', monospace",
-              fontSize: 9.5,
-              color: "#222230",
-              marginTop: 6,
-            }}
-          >
-            tap any node for details
-          </div>
-        )}
-      </div>
-
-      {/* Detail panel */}
-      {activeNodeData && <DetailPanel node={activeNodeData} onClose={() => setActiveNode(null)} />}
-    </div>
-  );
-}

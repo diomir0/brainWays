@@ -1,18 +1,55 @@
-# React + Vite
+# BrainWays — Neural Pathways Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive visualization of neural pathways in the human brain. Explore sensory, motor, and cognitive circuits through clickable node-and-edge diagrams with detailed anatomical and functional descriptions.
 
-Currently, two official plugins are available:
+## Pathways included
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Category | Pathways |
+|----------|----------|
+| Sensory | Visual, Auditory, Somatosensory, Olfactory, Vestibular |
+| Motor | Motor |
+| Higher-order | Executive, Reward, Memory, Emotion |
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Interactive SVG diagrams with selectable nodes
+- Feedforward, feedback, and bypass/rec reflex edge types
+- Detailed descriptions of each brain region
+- Dark theme UI
 
-Note: This will impact Vite dev & build performances.
+## Getting started
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Build
+
+```bash
+npm run build
+```
+
+## Project structure
+
+```
+src/
+  data/pathways.js       — Pathway node/edge data and category definitions
+  utils/geometry.js      — Geometry helpers for diagram layout
+  utils/validateData.js  — Runtime validation of pathway data integrity
+  components/
+    BrainPathways.jsx    — Main application component
+    PathwayDiagram.jsx   — SVG diagram container
+    PathEdge.jsx         — Edge renderer
+    PathNode.jsx         — Node renderer
+    DetailPanel.jsx      — Node detail panel
+    Legend.jsx           — Edge type legend
+  brainWays.css          — Global styles, animations, fonts
+  main.jsx               — Entry point
+```
+
+## Tech stack
+
+- React 19 + Vite 8
+- React Compiler (via Babel plugin)
+- ESLint

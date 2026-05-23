@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import BrainPathways from "./brainWays.jsx";
+import "./brainWays.css";
+import BrainPathways from "./components/BrainPathways.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
