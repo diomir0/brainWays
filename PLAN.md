@@ -120,12 +120,13 @@ src/core/
 - [x] Flashcards / spaced-repetition decks
 - [x] Search & explore UX
 
-### Phase 6 — Hardening (partial)
+### Phase 6 — Hardening
 - [x] PWA manifest + service worker (offline model/Draco cache)
-- [ ] Native PNG app icons (192/512)
-- [ ] Accessibility & low-end-phone perf pass
+- [x] Native PNG app icons (192/512)
+- [x] Accessibility & low-end-phone perf pass
 - [x] Content schema validation (`check:data`)
-- [ ] Unit tests (SRS, migration)
+- [x] Unit tests (SRS, migration)
+- [x] Android build via Capacitor (`capacitor.config.ts`, `android/` platform, APK steps documented)
 - [ ] User testing
 
 ---
@@ -157,6 +158,11 @@ src/core/
 - [x] Explore structure toggles moved to a left-side vertical panel
 - [x] Home/start view faces the anterior (front) of the brain
 - [x] Clinical case-vignette question type (vignette + MC, cited explanation)
+- [x] Renamed project/app to BrainWays (internal IndexedDB name kept for data
+      compatibility)
+- [x] Capacitor configured for Android; `android/` platform generated; APK steps
+      documented in README
+- [x] Unit tests: SM-2 SRS + IndexedDB kv store (Vitest, 11 tests)
 
 ## Recent fixes (round 2 feedback)
 
