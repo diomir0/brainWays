@@ -7,4 +7,3 @@ scripts/_mesh_names.json
 scripts/_bp_*.js
 .vscode/*
 !.vscode/extensions.json
-android
