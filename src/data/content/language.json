@@ -1,0 +1,174 @@
+{
+  "systemId": "language",
+  "overview": "Language is strongly left-lateralized in most individuals and organized around a perisylvian network. Broca's area (posterior inferior frontal gyrus) supports speech production and syntactic processing; Wernicke's area (posterior superior temporal gyrus) supports auditory comprehension; and the arcuate fasciculus links the two, mediating repetition. Contemporary dual-stream models (Hickok & Poeppel) divide this network into a dorsal 'how' route (articulatory/phonological mapping) and a ventral 'what' route (sound-to-meaning mapping).",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 55" },
+    { "source": "Purves et al., Principles of Cognitive Neuroscience, 2nd ed. (2013), Ch. 12" },
+    { "source": "Hickok & Poeppel (2007)" },
+    { "source": "Geschwind (1970)" }
+  ],
+  "structures": [
+    {
+      "structureId": "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+      "function": [
+        "Pars triangularis (Brodmann area 45), part of Broca's area; involved in semantic retrieval and syntactic processing.",
+        "Contributes to speech planning together with the adjacent pars opercularis (BA 44)."
+      ],
+      "connectivity": {
+        "afferent": ["Superior temporal gyrus (via arcuate fasciculus)", "Prefrontal cortex"],
+        "efferent": ["Premotor/motor cortex for articulation"]
+      },
+      "clinical": [
+        { "condition": "Broca's (non-fluent) aphasia", "note": "Lesions of the inferior frontal gyrus cause effortful, telegraphic speech with relatively preserved comprehension." }
+      ],
+      "methods": ["fMRI language localizers", "Lesion-symptom mapping"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 55" },
+        { "source": "Broca (1861)" }
+      ]
+    },
+    {
+      "structureId": "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+      "function": [
+        "Pars opercularis (Brodmann area 44), the posterior portion of Broca's area; central to phonological encoding and articulatory planning.",
+        "A key node of the dorsal language stream."
+      ],
+      "connectivity": {
+        "afferent": ["Superior temporal gyrus"],
+        "efferent": ["Primary motor cortex (face/larynx area)"]
+      },
+      "clinical": [
+        { "condition": "Apraxia of speech", "note": "Left inferior frontal damage can impair motor speech planning distinct from aphasia." }
+      ],
+      "methods": ["fMRI", "Direct cortical stimulation"],
+      "citations": [{ "source": "Hickok & Poeppel (2007)" }]
+    },
+    {
+      "structureId": "cortex.superior-temporal-gyrus-lateral-part.left",
+      "function": [
+        "Posterior superior temporal gyrus is the core of Wernicke's area, essential for phonological processing and auditory comprehension.",
+        "Contains the planum temporale, a site of leftward asymmetry implicated in language lateralization."
+      ],
+      "connectivity": {
+        "afferent": ["Primary auditory cortex (Heschl's gyrus)"],
+        "efferent": ["Broca's area via arcuate fasciculus", "Angular gyrus"]
+      },
+      "clinical": [
+        { "condition": "Wernicke's (fluent) aphasia", "note": "Fluent but paraphasic, often incomprehensible speech with severe comprehension deficit." }
+      ],
+      "methods": ["fMRI", "Structural asymmetry (planum temporale)"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 55" },
+        { "source": "Wernicke (1874)" }
+      ]
+    },
+    {
+      "structureId": "tracts.arcuate-fasciculus.left",
+      "function": [
+        "White-matter tract connecting posterior temporal (Wernicke) to inferior frontal (Broca) cortex.",
+        "Mediates repetition and phonological working memory (the 'dorsal route')."
+      ],
+      "connectivity": {
+        "afferent": ["Superior temporal gyrus"],
+        "efferent": ["Inferior frontal gyrus"]
+      },
+      "clinical": [
+        { "condition": "Conduction aphasia", "note": "Disproportionate impairment of repetition with relatively fluent speech and preserved comprehension." }
+      ],
+      "methods": ["Diffusion tractography", "Intraoperative subcortical stimulation"],
+      "citations": [
+        { "source": "Geschwind (1970)" },
+        { "source": "Hickok & Poeppel (2007)" }
+      ]
+    },
+    {
+      "structureId": "cortex.angular-gyrus.left",
+      "function": [
+        "Inferior parietal cortex integrating visual, auditory, and somatosensory information for reading and semantic access.",
+        "Central to written-word processing (visual word form → meaning)."
+      ],
+      "connectivity": {
+        "afferent": ["Wernicke's area", "Occipitotemporal (visual word form) cortex"],
+        "efferent": ["Wernicke's area"]
+      },
+      "clinical": [
+        { "condition": "Gerstmann syndrome / alexia", "note": "Left angular-gyrus lesions produce agraphia, acalculia, finger agnosia, left-right confusion, and can cause alexia with agraphia." }
+      ],
+      "methods": ["fMRI reading tasks", "Lesion studies"],
+      "citations": [{ "source": "Dejerine (1892)" }]
+    },
+    {
+      "structureId": "cortex.supramarginal-gyrus.left",
+      "function": [
+        "Part of the inferior parietal lobule supporting phonological storage in the verbal working-memory loop.",
+        "Contributes to phonological retrieval during naming."
+      ],
+      "connectivity": {
+        "afferent": ["Superior temporal gyrus", "Angular gyrus"],
+        "efferent": ["Inferior frontal gyrus (Broca)"]
+      },
+      "clinical": [
+        { "condition": "Phonological paraphasia", "note": "Left supramarginal damage is associated with phonological errors in speech output." }
+      ],
+      "methods": ["fMRI verbal working memory", "Lesion-symptom mapping"],
+      "citations": [{ "source": "Hickok & Poeppel (2007)" }]
+    }
+  ],
+  "questions": [
+    {
+      "id": "language.mc.1",
+      "kind": "mc",
+      "systemId": "language",
+      "stem": "A patient speaks fluently but with frequent paraphasias and markedly impaired comprehension. Where is the most likely lesion?",
+      "options": ["Posterior inferior frontal gyrus (Broca)", "Posterior superior temporal gyrus (Wernicke)", "Arcuate fasciculus", "Primary motor cortex"],
+      "answerIndex": 1,
+      "explanation": "Fluent, paraphasic speech with poor comprehension is Wernicke's (sensory) aphasia, classically from posterior superior temporal gyrus damage.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 55" }],
+      "structureIds": ["cortex.superior-temporal-gyrus-lateral-part.left"]
+    },
+    {
+      "id": "language.mc.2",
+      "kind": "mc",
+      "systemId": "language",
+      "stem": "Selective, disproportionate impairment of repetition with preserved comprehension and fluency is termed:",
+      "options": ["Global aphasia", "Conduction aphasia", "Transcortical motor aphasia", "Anomic aphasia"],
+      "answerIndex": 1,
+      "explanation": "Conduction aphasia reflects disruption of the arcuate fasciculus connecting Wernicke's and Broca's areas, sparing comprehension and fluency while breaking repetition.",
+      "citations": [{ "source": "Geschwind (1970)" }],
+      "structureIds": ["tracts.arcuate-fasciculus.left"]
+    },
+    {
+      "id": "language.mc.3",
+      "kind": "mc",
+      "systemId": "language",
+      "stem": "In Hickok & Poeppel's dual-stream model, the dorsal stream primarily supports what function?",
+      "options": ["Sound-to-meaning mapping", "Sensory-motor (articulatory) mapping", "Pitch discrimination", "Face recognition"],
+      "answerIndex": 1,
+      "explanation": "The dorsal stream maps auditory speech signals onto articulatory/motor representations (the 'how'), while the ventral stream maps sound to meaning (the 'what').",
+      "citations": [{ "source": "Hickok & Poeppel (2007)" }],
+      "structureIds": ["cortex.opercular-part-of-inferior-frontal-gyrus.left"]
+    },
+    {
+      "id": "language.find.1",
+      "kind": "find",
+      "systemId": "language",
+      "stem": "Find the frontal area whose lesion causes non-fluent (Broca's) aphasia.",
+      "candidateIds": ["cortex.triangular-part-of-inferior-frontal-gyrus.left", "cortex.superior-temporal-gyrus-lateral-part.left", "cortex.angular-gyrus.left", "cortex.postcentral-gyrus.left"],
+      "answerId": "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+      "explanation": "Broca's area lies in the posterior inferior frontal gyrus (pars triangularis and opercularis); its damage produces non-fluent aphasia.",
+      "citations": [{ "source": "Broca (1861)" }],
+      "structureIds": ["cortex.triangular-part-of-inferior-frontal-gyrus.left"]
+    },
+    {
+      "id": "language.find.2",
+      "kind": "find",
+      "systemId": "language",
+      "stem": "Find the white-matter tract whose disconnection impairs repetition (conduction aphasia).",
+      "candidateIds": ["tracts.arcuate-fasciculus.left", "tracts.uncinate-fasciculus.left", "tracts.corticospinal-tract.left", "tracts.optic-radiation.left"],
+      "answerId": "tracts.arcuate-fasciculus.left",
+      "explanation": "The arcuate fasciculus links Wernicke's and Broca's areas; its interruption produces conduction aphasia with impaired repetition.",
+      "citations": [{ "source": "Geschwind (1970)" }],
+      "structureIds": ["tracts.arcuate-fasciculus.left"]
+    }
+  ]
+}

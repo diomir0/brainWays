@@ -1,0 +1,917 @@
+{
+  "schemaVersion": 1,
+  "license": "CC BY-SA 4.0",
+  "source": "Brain Project systems & lessons (CC BY-SA 4.0)",
+  "landmarks": {
+    "prefrontal": {
+      "label": "Prefrontal cortex",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right"
+      ]
+    },
+    "mpfc": {
+      "label": "Medial prefrontal cortex",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right"
+      ]
+    },
+    "broca": {
+      "label": "Broca's area",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.right"
+      ]
+    },
+    "premotor": {
+      "label": "Premotor cortex / SMA",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.precentral-sulcus-superior-part.left",
+        "cortex.precentral-sulcus-superior-part.right",
+        "cortex.precentral-sulcus-inferior-part.left",
+        "cortex.precentral-sulcus-inferior-part.right"
+      ]
+    },
+    "m1": {
+      "label": "Primary motor cortex (M1)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.precentral-gyrus.left",
+        "cortex.precentral-gyrus.right"
+      ]
+    },
+    "s1": {
+      "label": "Primary somatosensory (S1)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.postcentral-gyrus.left",
+        "cortex.postcentral-gyrus.right"
+      ]
+    },
+    "parietal": {
+      "label": "Posterior parietal cortex",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.intraparietal-sulcus.left",
+        "cortex.intraparietal-sulcus.right"
+      ]
+    },
+    "wernicke": {
+      "label": "Wernicke's area",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.temporal-plane.left",
+        "cortex.temporal-plane.right"
+      ]
+    },
+    "a1": {
+      "label": "Primary auditory (Heschl)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.transverse-temporal-gyri.left",
+        "cortex.transverse-temporal-gyri.right"
+      ]
+    },
+    "mt_dorsal": {
+      "label": "Dorsal stream (MT / parietal)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.lateral-occipital-gyrus-middle-occipital-gyrus.left",
+        "cortex.lateral-occipital-gyrus-middle-occipital-gyrus.right"
+      ]
+    },
+    "v1": {
+      "label": "Primary visual cortex (V1)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.calcarine-sulcus.left",
+        "cortex.calcarine-sulcus.right",
+        "cortex.occipital-pole.left",
+        "cortex.occipital-pole.right"
+      ]
+    },
+    "cuneus": {
+      "label": "Dorsal extrastriate (cuneus)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.cuneus.left",
+        "cortex.cuneus.right"
+      ]
+    },
+    "visual_assoc": {
+      "label": "Ventral stream (V2-V4 / fusiform)",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.lingual-gyrus.left",
+        "cortex.lingual-gyrus.right",
+        "cortex.lateral-occipitotemporal-gyrus.left",
+        "cortex.lateral-occipitotemporal-gyrus.right"
+      ]
+    },
+    "temporal": {
+      "label": "Inferior temporal cortex",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.inferior-temporal-gyrus.left",
+        "cortex.inferior-temporal-gyrus.right"
+      ]
+    },
+    "cingulate": {
+      "label": "Cingulate gyrus",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right"
+      ]
+    },
+    "hippocampus": {
+      "label": "Hippocampus",
+      "category": "cortex",
+      "structureIds": [
+        "cortex.hippocampus.right",
+        "cortex.hippocampus.left"
+      ]
+    },
+    "arcuate": {
+      "label": "Arcuate fasciculus",
+      "category": "tracts",
+      "structureIds": [
+        "tracts.arcuate-fasciculus.left",
+        "tracts.arcuate-fasciculus.right"
+      ]
+    },
+    "fornix": {
+      "label": "Fornix",
+      "category": "white_matter",
+      "structureIds": [
+        "white-matter.fornix.right",
+        "white-matter.fornix.left"
+      ]
+    },
+    "cst": {
+      "label": "Corticospinal tract",
+      "category": "tracts",
+      "structureIds": [
+        "tracts.corticospinal-tract.left",
+        "tracts.corticospinal-tract.right"
+      ]
+    },
+    "drtt": {
+      "label": "Dentatorubrothalamic tract",
+      "category": "tracts",
+      "structureIds": [
+        "tracts.dentatorubrothalamic-tract.left",
+        "tracts.dentatorubrothalamic-tract.right"
+      ]
+    },
+    "striatum": {
+      "label": "Striatum (caudate + putamen)",
+      "category": "deep_grey",
+      "structureIds": [
+        "deep-grey.caudate-nucleus.right",
+        "deep-grey.caudate-nucleus.left",
+        "deep-grey.putamen.right",
+        "deep-grey.putamen.left"
+      ]
+    },
+    "gp": {
+      "label": "Globus pallidus",
+      "category": "deep_grey",
+      "structureIds": [
+        "deep-grey.globus-pallidus-external.left",
+        "deep-grey.globus-pallidus-external.right",
+        "deep-grey.globus-pallidus-internal.left",
+        "deep-grey.globus-pallidus-internal.right"
+      ]
+    },
+    "accumbens": {
+      "label": "Nucleus accumbens",
+      "category": "deep_grey",
+      "structureIds": [
+        "deep-grey.nucleus-accumbens.left",
+        "deep-grey.nucleus-accumbens.right"
+      ]
+    },
+    "amygdala": {
+      "label": "Amygdala",
+      "category": "deep_grey",
+      "structureIds": [
+        "deep-grey.lateral-nucleus.left",
+        "deep-grey.lateral-nucleus.right",
+        "deep-grey.basolateral-complex.left",
+        "deep-grey.basolateral-complex.right",
+        "deep-grey.central-nucleus.left",
+        "deep-grey.central-nucleus.right",
+        "deep-grey.corticomedial-group.left",
+        "deep-grey.corticomedial-group.right"
+      ]
+    },
+    "thalamus": {
+      "label": "Thalamus",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.ventral-lateroventral-nucleus.left",
+        "diencephalon.ventral-lateroventral-nucleus.right",
+        "diencephalon.ventral-laterodorsal-nucleus.left",
+        "diencephalon.ventral-laterodorsal-nucleus.right",
+        "diencephalon.ventral-anterior-nucleus.left",
+        "diencephalon.ventral-anterior-nucleus.right",
+        "diencephalon.mediodorsal-nucleus.left",
+        "diencephalon.mediodorsal-nucleus.right",
+        "diencephalon.pulvinar.left",
+        "diencephalon.pulvinar.right",
+        "diencephalon.anterior-nuclei-of-thalamus.left",
+        "diencephalon.anterior-nuclei-of-thalamus.right"
+      ]
+    },
+    "thal_va": {
+      "label": "Thalamus (VA / VL nuclei)",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.ventral-anterior-nucleus.left",
+        "diencephalon.ventral-anterior-nucleus.right",
+        "diencephalon.ventral-lateroventral-nucleus.left",
+        "diencephalon.ventral-lateroventral-nucleus.right",
+        "diencephalon.ventral-laterodorsal-nucleus.left",
+        "diencephalon.ventral-laterodorsal-nucleus.right"
+      ]
+    },
+    "thal_ant": {
+      "label": "Anterior thalamic nucleus",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.anterior-nuclei-of-thalamus.left",
+        "diencephalon.anterior-nuclei-of-thalamus.right"
+      ]
+    },
+    "lgn": {
+      "label": "Lateral geniculate (LGN)",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.lateral-geniculate-body.right",
+        "diencephalon.lateral-geniculate-body.left"
+      ]
+    },
+    "mgn": {
+      "label": "Medial geniculate (MGN)",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.medial-geniculate-body.right",
+        "diencephalon.medial-geniculate-body.left"
+      ]
+    },
+    "mammillary": {
+      "label": "Mammillary body",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.mamillary-body.left",
+        "diencephalon.mamillary-body.right"
+      ]
+    },
+    "optic_chiasm": {
+      "label": "Optic chiasm",
+      "category": "diencephalon",
+      "structureIds": [
+        "diencephalon.optic-chiasm.right",
+        "diencephalon.optic-chiasm.left"
+      ]
+    },
+    "stn": {
+      "label": "Subthalamic nucleus",
+      "category": "deep_grey",
+      "structureIds": [
+        "deep-grey.subthalamic-nucleus.left",
+        "deep-grey.subthalamic-nucleus.right"
+      ]
+    },
+    "midbrain": {
+      "label": "Midbrain",
+      "category": "brainstem",
+      "structureIds": [
+        "brainstem.midbrain.right",
+        "brainstem.midbrain.left"
+      ]
+    },
+    "snc": {
+      "label": "Substantia nigra (SNc)",
+      "category": "deep_grey",
+      "structureIds": [
+        "deep-grey.substantia-nigra.left",
+        "deep-grey.substantia-nigra.right"
+      ]
+    },
+    "vta": {
+      "label": "Ventral tegmental area (at substantia nigra)",
+      "category": "brainstem",
+      "structureIds": [
+        "deep-grey.substantia-nigra.left",
+        "deep-grey.substantia-nigra.right"
+      ]
+    },
+    "pons": {
+      "label": "Pons",
+      "category": "brainstem",
+      "structureIds": [
+        "brainstem.pons.right",
+        "brainstem.pons.left"
+      ]
+    },
+    "cochlear": {
+      "label": "Cochlear / vestibular nuclei",
+      "category": "brainstem",
+      "structureIds": [
+        "brainstem.vestibular-nuclei.left",
+        "brainstem.vestibular-nuclei.right"
+      ]
+    },
+    "medulla": {
+      "label": "Medulla (pyramids)",
+      "category": "brainstem",
+      "structureIds": [
+        "brainstem.medulla-oblongata.left",
+        "brainstem.pyramid-of-medulla-oblongata.left",
+        "brainstem.pyramid-of-medulla-oblongata.right"
+      ]
+    },
+    "decussation": {
+      "label": "Pyramidal decussation",
+      "category": "brainstem",
+      "structureIds": [
+        "brainstem.pyramid-of-medulla-oblongata.left",
+        "brainstem.pyramid-of-medulla-oblongata.right"
+      ]
+    },
+    "cerebellum": {
+      "label": "Cerebellum",
+      "category": "cerebellum",
+      "structureIds": [
+        "cerebellum.culmen.median",
+        "cerebellum.declive.median",
+        "cerebellum.central-lobule.median",
+        "cerebellum.tuber-of-vermis.median",
+        "cerebellum.anterior-quadrangular-lobule.left",
+        "cerebellum.anterior-quadrangular-lobule.right"
+      ]
+    },
+    "vent_lateral": {
+      "label": "Lateral ventricle",
+      "category": "ventricles",
+      "structureIds": [
+        "ventricles.lateral-ventricle.right",
+        "ventricles.lateral-ventricle.left"
+      ]
+    },
+    "choroid": {
+      "label": "Choroid plexus",
+      "category": "ventricles",
+      "structureIds": [
+        "ventricles.choroid-plexus.right",
+        "ventricles.choroid-plexus.left"
+      ]
+    },
+    "vent_third": {
+      "label": "Third ventricle",
+      "category": "ventricles",
+      "structureIds": [
+        "ventricles.third-ventricle.median"
+      ]
+    },
+    "vent_fourth": {
+      "label": "Fourth ventricle",
+      "category": "ventricles",
+      "structureIds": [
+        "ventricles.fourth-ventricle.median"
+      ]
+    },
+    "sss": {
+      "label": "Superior sagittal sinus",
+      "category": "veins_sinuses",
+      "structureIds": [
+        "veins-sinuses.superior-sagittal-sinus.median"
+      ]
+    },
+    "retina": {
+      "label": "Optic nerve (eye)",
+      "category": "cranial_nerves",
+      "structureIds": [
+        "cranial-nerves.optic-nerve-ii.left",
+        "cranial-nerves.optic-nerve-ii.right"
+      ]
+    },
+    "spinal": {
+      "label": "Spinal cord",
+      "category": "white_matter",
+      "structureIds": []
+    },
+    "muscle": {
+      "label": "Skeletal muscle",
+      "category": "cranial_nerves",
+      "structureIds": []
+    }
+  },
+  "systems": [
+    {
+      "id": "motor",
+      "name": "Motor system",
+      "category": "cortex",
+      "summary": "How a movement is planned, gated, refined and sent to muscle.",
+      "flagship": true,
+      "stages": [
+        {
+          "title": "Forming the intention",
+          "body": "Voluntary movement begins before any muscle twitches. The prefrontal cortex decides to act; the premotor cortex and supplementary motor area (SMA) assemble the spatial plan and the sequence - which muscles, in what order, with what timing.",
+          "structureIds": [
+            "cortex.superior-frontal-gyrus.left",
+            "cortex.superior-frontal-gyrus.right",
+            "cortex.middle-frontal-gyrus.left",
+            "cortex.middle-frontal-gyrus.right",
+            "cortex.precentral-sulcus-superior-part.left",
+            "cortex.precentral-sulcus-superior-part.right",
+            "cortex.precentral-sulcus-inferior-part.left",
+            "cortex.precentral-sulcus-inferior-part.right"
+          ]
+        },
+        {
+          "title": "The command - primary motor cortex",
+          "body": "The plan converges on the precentral gyrus (M1). Its giant Betz cells are arranged as the motor homunculus, a distorted body map where the hand and face claim huge territory. M1 is the origin of the corticospinal tract.",
+          "structureIds": [
+            "cortex.precentral-sulcus-superior-part.left",
+            "cortex.precentral-sulcus-superior-part.right",
+            "cortex.precentral-sulcus-inferior-part.left",
+            "cortex.precentral-sulcus-inferior-part.right",
+            "cortex.precentral-gyrus.left",
+            "cortex.precentral-gyrus.right"
+          ]
+        },
+        {
+          "title": "The basal ganglia loop - go / no-go",
+          "body": "Before the command leaves, a cortico-striato-pallido-thalamic loop scales it. The direct pathway ('go') releases movement; the indirect pathway ('no-go') suppresses unwanted movement. Dopamine from the substantia nigra biases the loop toward action - its loss is the lesion of Parkinson's disease.",
+          "structureIds": [
+            "cortex.precentral-gyrus.left",
+            "cortex.precentral-gyrus.right",
+            "deep-grey.caudate-nucleus.right",
+            "deep-grey.caudate-nucleus.left",
+            "deep-grey.putamen.right",
+            "deep-grey.putamen.left",
+            "deep-grey.globus-pallidus-external.left",
+            "deep-grey.globus-pallidus-external.right",
+            "deep-grey.globus-pallidus-internal.left",
+            "deep-grey.globus-pallidus-internal.right",
+            "deep-grey.substantia-nigra.left",
+            "deep-grey.substantia-nigra.right",
+            "diencephalon.ventral-anterior-nucleus.left",
+            "diencephalon.ventral-anterior-nucleus.right",
+            "diencephalon.ventral-lateroventral-nucleus.left",
+            "diencephalon.ventral-lateroventral-nucleus.right",
+            "diencephalon.ventral-laterodorsal-nucleus.left",
+            "diencephalon.ventral-laterodorsal-nucleus.right"
+          ]
+        },
+        {
+          "title": "Fine-tuning - the cerebellar loop",
+          "body": "In parallel, a copy of the command reaches the cerebellum via the pons. The cerebellum compares intended against actual movement and sends correction back through the thalamus, smoothing timing and coordination. Damage causes ataxia, not paralysis.",
+          "structureIds": [
+            "cortex.precentral-gyrus.left",
+            "cortex.precentral-gyrus.right",
+            "brainstem.pons.right",
+            "brainstem.pons.left",
+            "cerebellum.culmen.median",
+            "cerebellum.declive.median",
+            "cerebellum.central-lobule.median",
+            "cerebellum.tuber-of-vermis.median",
+            "cerebellum.anterior-quadrangular-lobule.left",
+            "cerebellum.anterior-quadrangular-lobule.right",
+            "diencephalon.ventral-anterior-nucleus.left",
+            "diencephalon.ventral-anterior-nucleus.right",
+            "diencephalon.ventral-lateroventral-nucleus.left",
+            "diencephalon.ventral-lateroventral-nucleus.right",
+            "diencephalon.ventral-laterodorsal-nucleus.left",
+            "diencephalon.ventral-laterodorsal-nucleus.right"
+          ]
+        },
+        {
+          "title": "The descending highway",
+          "body": "The refined command travels down the corticospinal tract, through the internal capsule, the midbrain, and the pyramids of the medulla. This is the great motor expressway from cortex to cord.",
+          "structureIds": [
+            "cortex.precentral-gyrus.left",
+            "cortex.precentral-gyrus.right",
+            "tracts.corticospinal-tract.left",
+            "tracts.corticospinal-tract.right",
+            "brainstem.midbrain.right",
+            "brainstem.midbrain.left",
+            "brainstem.pons.right",
+            "brainstem.pons.left",
+            "brainstem.medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.right"
+          ]
+        },
+        {
+          "title": "Crossing over & the final common path",
+          "body": "At the pyramidal decussation in the lower medulla, about 85% of fibres cross, which is why the left brain moves the right body. They synapse on lower motor neurons in the spinal cord: the 'final common pathway' to muscle.",
+          "structureIds": [
+            "brainstem.medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.right",
+            "brainstem.pyramid-of-medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.right"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visual",
+      "name": "Visual processing",
+      "category": "cortex",
+      "summary": "Retina to LGN to V1, then the dorsal \"where\" and ventral \"what\" streams.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "Eye to thalamus",
+          "body": "Signals leave the retina along the optic nerve, partially cross at the optic chiasm, and relay in the lateral geniculate nucleus (LGN) of the thalamus.",
+          "structureIds": [
+            "cranial-nerves.optic-nerve-ii.left",
+            "cranial-nerves.optic-nerve-ii.right",
+            "diencephalon.optic-chiasm.right",
+            "diencephalon.optic-chiasm.left",
+            "diencephalon.lateral-geniculate-body.right",
+            "diencephalon.lateral-geniculate-body.left"
+          ]
+        },
+        {
+          "title": "Primary visual cortex (V1)",
+          "body": "The LGN projects to V1, the first cortical visual area: the striate cortex lining the calcarine sulcus, with its central-vision representation at the occipital pole. Here orientation, edges and contrast are first extracted before anything splits into streams.",
+          "structureIds": [
+            "diencephalon.lateral-geniculate-body.right",
+            "diencephalon.lateral-geniculate-body.left",
+            "cortex.calcarine-sulcus.left",
+            "cortex.calcarine-sulcus.right",
+            "cortex.occipital-pole.left",
+            "cortex.occipital-pole.right"
+          ]
+        },
+        {
+          "title": "The dorsal \"where\" stream",
+          "body": "From V1 the dorsal stream passes through dorsal extrastriate cortex (the cuneus) to area MT and the parietal cortex, coding motion, location and visually-guided action.",
+          "structureIds": [
+            "cortex.calcarine-sulcus.left",
+            "cortex.calcarine-sulcus.right",
+            "cortex.occipital-pole.left",
+            "cortex.occipital-pole.right",
+            "cortex.cuneus.left",
+            "cortex.cuneus.right",
+            "cortex.lateral-occipital-gyrus-middle-occipital-gyrus.left",
+            "cortex.lateral-occipital-gyrus-middle-occipital-gyrus.right",
+            "cortex.superior-parietal-lobule.left",
+            "cortex.superior-parietal-lobule.right",
+            "cortex.intraparietal-sulcus.left",
+            "cortex.intraparietal-sulcus.right"
+          ]
+        },
+        {
+          "title": "The ventral \"what\" stream",
+          "body": "The ventral stream runs to inferior temporal cortex, coding form, colour and object/face identity.",
+          "structureIds": [
+            "cortex.calcarine-sulcus.left",
+            "cortex.calcarine-sulcus.right",
+            "cortex.occipital-pole.left",
+            "cortex.occipital-pole.right",
+            "cortex.lingual-gyrus.left",
+            "cortex.lingual-gyrus.right",
+            "cortex.lateral-occipitotemporal-gyrus.left",
+            "cortex.lateral-occipitotemporal-gyrus.right",
+            "cortex.inferior-temporal-gyrus.left",
+            "cortex.inferior-temporal-gyrus.right"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auditory",
+      "name": "Auditory pathway",
+      "category": "cortex",
+      "summary": "Cochlea to brainstem nuclei to MGN to primary auditory cortex.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "Into the brainstem",
+          "body": "Auditory nerve fibres synapse in the cochlear nuclei of the brainstem, the first central relay.",
+          "structureIds": [
+            "brainstem.vestibular-nuclei.left",
+            "brainstem.vestibular-nuclei.right",
+            "brainstem.pons.right",
+            "brainstem.pons.left"
+          ]
+        },
+        {
+          "title": "Thalamic relay",
+          "body": "The pathway ascends to the medial geniculate nucleus (MGN) of the thalamus.",
+          "structureIds": [
+            "brainstem.vestibular-nuclei.left",
+            "brainstem.vestibular-nuclei.right",
+            "diencephalon.medial-geniculate-body.right",
+            "diencephalon.medial-geniculate-body.left"
+          ]
+        },
+        {
+          "title": "Auditory cortex",
+          "body": "The MGN projects to Heschl's gyrus (A1) in the superior temporal lobe, tonotopically mapped by frequency.",
+          "structureIds": [
+            "diencephalon.medial-geniculate-body.right",
+            "diencephalon.medial-geniculate-body.left",
+            "cortex.transverse-temporal-gyri.left",
+            "cortex.transverse-temporal-gyri.right"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "somatosensory",
+      "name": "Somatosensory pathway",
+      "category": "cortex",
+      "summary": "Body to spinal cord to medulla to thalamus to primary somatosensory cortex.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "Ascending the cord",
+          "body": "Touch and proprioception ascend the dorsal columns of the spinal cord to the medulla.",
+          "structureIds": [
+            "brainstem.medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.right"
+          ]
+        },
+        {
+          "title": "Thalamic relay",
+          "body": "After crossing, fibres relay in the thalamus (VPL/VPM nuclei).",
+          "structureIds": [
+            "brainstem.medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.left",
+            "brainstem.pyramid-of-medulla-oblongata.right",
+            "diencephalon.ventral-lateroventral-nucleus.left",
+            "diencephalon.ventral-lateroventral-nucleus.right",
+            "diencephalon.ventral-laterodorsal-nucleus.left",
+            "diencephalon.ventral-laterodorsal-nucleus.right",
+            "diencephalon.ventral-anterior-nucleus.left",
+            "diencephalon.ventral-anterior-nucleus.right",
+            "diencephalon.mediodorsal-nucleus.left",
+            "diencephalon.mediodorsal-nucleus.right",
+            "diencephalon.pulvinar.left",
+            "diencephalon.pulvinar.right",
+            "diencephalon.anterior-nuclei-of-thalamus.left",
+            "diencephalon.anterior-nuclei-of-thalamus.right"
+          ]
+        },
+        {
+          "title": "Somatosensory cortex",
+          "body": "The thalamus projects to S1 in the postcentral gyrus, the sensory homunculus.",
+          "structureIds": [
+            "diencephalon.ventral-lateroventral-nucleus.left",
+            "diencephalon.ventral-lateroventral-nucleus.right",
+            "diencephalon.ventral-laterodorsal-nucleus.left",
+            "diencephalon.ventral-laterodorsal-nucleus.right",
+            "diencephalon.ventral-anterior-nucleus.left",
+            "diencephalon.ventral-anterior-nucleus.right",
+            "diencephalon.mediodorsal-nucleus.left",
+            "diencephalon.mediodorsal-nucleus.right",
+            "diencephalon.pulvinar.left",
+            "diencephalon.pulvinar.right",
+            "diencephalon.anterior-nuclei-of-thalamus.left",
+            "diencephalon.anterior-nuclei-of-thalamus.right",
+            "cortex.postcentral-gyrus.left",
+            "cortex.postcentral-gyrus.right",
+            "cortex.superior-parietal-lobule.left",
+            "cortex.superior-parietal-lobule.right",
+            "cortex.intraparietal-sulcus.left",
+            "cortex.intraparietal-sulcus.right"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "name": "Language network",
+      "category": "cortex",
+      "summary": "Wernicke comprehends, the arcuate fasciculus links, Broca produces.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "Comprehension",
+          "body": "Heard speech is decoded for meaning in Wernicke's area (posterior superior temporal lobe).",
+          "structureIds": [
+            "cortex.transverse-temporal-gyri.left",
+            "cortex.transverse-temporal-gyri.right",
+            "cortex.temporal-plane.left",
+            "cortex.temporal-plane.right"
+          ]
+        },
+        {
+          "title": "The connecting tract",
+          "body": "The arcuate fasciculus carries the message forward; its lesion produces conduction aphasia.",
+          "structureIds": [
+            "cortex.temporal-plane.left",
+            "cortex.temporal-plane.right",
+            "tracts.arcuate-fasciculus.left",
+            "tracts.arcuate-fasciculus.right",
+            "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+            "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+            "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+            "cortex.triangular-part-of-inferior-frontal-gyrus.right"
+          ]
+        },
+        {
+          "title": "Production",
+          "body": "Broca's area plans articulation and drives the motor cortex to speak.",
+          "structureIds": [
+            "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+            "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+            "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+            "cortex.triangular-part-of-inferior-frontal-gyrus.right",
+            "cortex.precentral-gyrus.left",
+            "cortex.precentral-gyrus.right"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limbic",
+      "name": "Limbic / memory",
+      "category": "deep_grey",
+      "summary": "The Papez circuit of emotion & memory, plus the amygdala.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "Encoding: the hippocampal output",
+          "body": "New declarative memories form in the hippocampus. Its output leaves along the fornix, arching forward to the mammillary bodies of the hypothalamus.",
+          "structureIds": [
+            "cortex.hippocampus.right",
+            "cortex.hippocampus.left",
+            "white-matter.fornix.right",
+            "white-matter.fornix.left",
+            "diencephalon.mamillary-body.left",
+            "diencephalon.mamillary-body.right"
+          ]
+        },
+        {
+          "title": "Closing the Papez loop",
+          "body": "From the mammillary bodies the signal runs to the anterior thalamic nucleus, on to the cingulate gyrus, and back to the hippocampus, the loop Papez proposed binds emotion to memory.",
+          "structureIds": [
+            "diencephalon.mamillary-body.left",
+            "diencephalon.mamillary-body.right",
+            "diencephalon.anterior-nuclei-of-thalamus.left",
+            "diencephalon.anterior-nuclei-of-thalamus.right",
+            "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+            "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+            "cortex.hippocampus.right",
+            "cortex.hippocampus.left"
+          ]
+        },
+        {
+          "title": "The amygdala's emotional tag",
+          "body": "In parallel, the amygdala tags experiences with emotional salience, especially fear, and modulates how strongly the hippocampus stores them.",
+          "structureIds": [
+            "deep-grey.lateral-nucleus.left",
+            "deep-grey.lateral-nucleus.right",
+            "deep-grey.basolateral-complex.left",
+            "deep-grey.basolateral-complex.right",
+            "deep-grey.central-nucleus.left",
+            "deep-grey.central-nucleus.right",
+            "deep-grey.corticomedial-group.left",
+            "deep-grey.corticomedial-group.right",
+            "cortex.hippocampus.right",
+            "cortex.hippocampus.left"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reward",
+      "name": "Reward / dopamine",
+      "category": "deep_grey",
+      "summary": "The dopamine system: where dopamine is made, and the mesolimbic & mesocortical pathways.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "The source: midbrain dopamine",
+          "body": "Reward signalling starts with dopamine neurons of the ventral tegmental area (VTA). The VTA sits in the midbrain immediately medial to the substantia nigra, so closely that this atlas shows them at the same location, but the VTA is the reward source, the substantia nigra the motor one.",
+          "structureIds": [
+            "deep-grey.substantia-nigra.left",
+            "deep-grey.substantia-nigra.right"
+          ]
+        },
+        {
+          "title": "The mesolimbic pathway",
+          "body": "VTA neurons project to the nucleus accumbens (ventral striatum) and nearby limbic targets such as the amygdala, signalling reward, motivation and \"wanting\". This is the limbic, not cortical, arm, so it bypasses the cingulate.",
+          "structureIds": [
+            "deep-grey.substantia-nigra.left",
+            "deep-grey.substantia-nigra.right",
+            "deep-grey.nucleus-accumbens.left",
+            "deep-grey.nucleus-accumbens.right",
+            "deep-grey.lateral-nucleus.left",
+            "deep-grey.lateral-nucleus.right",
+            "deep-grey.basolateral-complex.left",
+            "deep-grey.basolateral-complex.right",
+            "deep-grey.central-nucleus.left",
+            "deep-grey.central-nucleus.right",
+            "deep-grey.corticomedial-group.left",
+            "deep-grey.corticomedial-group.right"
+          ]
+        },
+        {
+          "title": "The mesocortical pathway",
+          "body": "A separate VTA projection reaches the prefrontal cortex and the anterior cingulate gyrus, shaping motivation, decision-making and drive. The cingulate is a target of this cortical arm.",
+          "structureIds": [
+            "deep-grey.substantia-nigra.left",
+            "deep-grey.substantia-nigra.right",
+            "cortex.straight-gyrus-gyrus-rectus.left",
+            "cortex.straight-gyrus-gyrus-rectus.right",
+            "cortex.superior-frontal-gyrus.left",
+            "cortex.superior-frontal-gyrus.right",
+            "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+            "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "csf",
+      "name": "CSF / ventricular flow",
+      "category": "ventricles",
+      "summary": "Where cerebrospinal fluid is made, how it circulates, and where it is reabsorbed.",
+      "flagship": false,
+      "stages": [
+        {
+          "title": "Production",
+          "body": "The choroid plexus inside the lateral ventricles secretes most cerebrospinal fluid (CSF).",
+          "structureIds": [
+            "ventricles.choroid-plexus.right",
+            "ventricles.choroid-plexus.left",
+            "ventricles.lateral-ventricle.right",
+            "ventricles.lateral-ventricle.left"
+          ]
+        },
+        {
+          "title": "Lateral to third ventricle",
+          "body": "CSF flows from each lateral ventricle through the interventricular foramen (of Monro) into the midline third ventricle.",
+          "structureIds": [
+            "ventricles.lateral-ventricle.right",
+            "ventricles.lateral-ventricle.left",
+            "ventricles.third-ventricle.median"
+          ]
+        },
+        {
+          "title": "Third to fourth ventricle",
+          "body": "From the third ventricle CSF passes down the cerebral aqueduct (of Sylvius) into the fourth ventricle, between the brainstem and cerebellum.",
+          "structureIds": [
+            "ventricles.third-ventricle.median",
+            "ventricles.fourth-ventricle.median"
+          ]
+        },
+        {
+          "title": "Out and reabsorbed",
+          "body": "CSF leaves the fourth ventricle into the subarachnoid space to cushion the whole CNS, then is reabsorbed through arachnoid granulations into the superior sagittal sinus and back to the blood.",
+          "structureIds": [
+            "ventricles.fourth-ventricle.median",
+            "veins-sinuses.superior-sagittal-sinus.median"
+          ]
+        }
+      ]
+    }
+  ],
+  "nodeDesc": {
+    "m1": "The precentral gyrus. Its giant Betz cells form the motor homunculus and give rise to the corticospinal tract, the command centre for voluntary movement.",
+    "premotor": "Premotor cortex and the supplementary motor area plan and sequence movement before it is executed by M1.",
+    "s1": "The postcentral gyrus, the primary somatosensory cortex, mapping touch and proprioception as the sensory homunculus.",
+    "prefrontal": "The seat of executive function: planning, working memory, and the decision to act.",
+    "broca": "Inferior frontal gyrus. Plans the motor sequence of speech; damage causes non-fluent (Broca's) aphasia.",
+    "wernicke": "The posterior superior temporal cortex (posterior BA 22), not the whole gyrus. It decodes the meaning of language; damage causes fluent (Wernicke's) aphasia. This atlas localises it to the planum temporale (the temporal plane), the posterior supratemporal language cortex just behind Heschl's gyrus, since the superior temporal gyrus is not subdivided here.",
+    "v1": "The primary visual cortex at the occipital pole, organised retinotopically around the calcarine sulcus.",
+    "a1": "Heschl's gyrus, the primary auditory cortex, tonotopically mapped by sound frequency.",
+    "thalamus": "The brain's great relay station: almost all sensory and motor information synapses here on the way to cortex.",
+    "striatum": "Caudate + putamen, the input stage of the basal ganglia, gating movement via the direct and indirect pathways.",
+    "snc": "Substantia nigra pars compacta. Supplies dopamine to the striatum; its degeneration causes Parkinson's disease.",
+    "vta": "Ventral tegmental area: origin of the mesolimbic and mesocortical dopamine pathways of reward and motivation. It lies in the midbrain just medial to the substantia nigra; this atlas shows the two at the same location.",
+    "hippocampus": "Essential for forming new declarative memories; the hub of the Papez circuit.",
+    "amygdala": "Tags experience with emotional salience, especially fear, and modulates memory.",
+    "cerebellum": "Coordinates timing and smoothness of movement by comparing intended with actual motion. Damage causes ataxia.",
+    "medulla": "The lowest brainstem segment; its pyramids carry the corticospinal tract, most of which crosses here.",
+    "pons": "Relays cortical motor copies to the cerebellum and houses several cranial-nerve nuclei.",
+    "lgn": "Lateral geniculate nucleus, the thalamic relay for vision, between retina and V1.",
+    "mgn": "Medial geniculate nucleus, the thalamic relay for hearing, between brainstem and A1.",
+    "accumbens": "Nucleus accumbens, the ventral striatum, a key node of reward and motivation.",
+    "fornix": "The major output tract of the hippocampus, arching to the mammillary bodies in the Papez circuit."
+  }
+}

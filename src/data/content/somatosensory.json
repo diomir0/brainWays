@@ -1,0 +1,174 @@
+{
+  "systemId": "somatosensory",
+  "overview": "Touch, proprioception, pain, and temperature ascend from the body through the dorsal column–medial lemniscus (fine touch/proprioception) and spinothalamic (pain/temperature) pathways. Fine-touch fibers decussate in the caudal medulla (internal arcuate fibers → medial lemniscus) and synapse in the ventral posterior nucleus of the thalamus before reaching the primary somatosensory cortex (postcentral gyrus, Brodmann areas 3a/3b/1/2), which holds a somatotopic homunculus. Higher-order areas (superior parietal lobule, intraparietal sulcus) integrate touch with vision and motor plans.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 23–25" },
+    { "source": "Purves et al., Neuroscience, 5th ed. (2012), Ch. 9–10" }
+  ],
+  "structures": [
+    {
+      "structureId": "brainstem.medulla-oblongata.left",
+      "function": [
+        "Contains the dorsal column nuclei (gracile and cuneate), where fine-touch and proprioceptive afferents synapse; their axons decussate as internal arcuate fibers to form the contralateral medial lemniscus.",
+        "A key somatotopic relay that maintains a precise body map (leg in gracile, arm in cuneate)."
+      ],
+      "connectivity": {
+        "afferent": ["Dorsal column–medial lemniscus fibers (fasciculus gracilis & cuneatus)"],
+        "efferent": ["Ventral posterolateral (VPL) thalamus via the medial lemniscus"]
+      },
+      "clinical": [
+        { "condition": "Medial medullary syndrome (Dejerine)", "note": "Infarct of the medial medulla causes contralateral loss of fine touch/proprioception (medial lemniscus) plus ipsilateral tongue weakness." }
+      ],
+      "methods": ["Somatotopic single-unit mapping", "Diffusion tractography of the lemniscus"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 23" },
+        { "source": "Mountcastle (1957)" }
+      ]
+    },
+    {
+      "structureId": "brainstem.pyramid-of-medulla-oblongata.left",
+      "function": [
+        "Landmark for the corticospinal tract at the decussation; the somatosensory medial lemniscus runs immediately dorsal to it.",
+        "Serves as a spatial reference for the caudal medulla where fine-touch fibers have already crossed."
+      ],
+      "connectivity": {
+        "afferent": ["Corticospinal tract fibers (motor, landmark)"],
+        "efferent": ["Spinal cord (pyramidal decussation)"]
+      },
+      "clinical": [
+        { "condition": "Lateral medullary syndrome (Wallenberg)", "note": "Spares the pyramid but damages spinothalamic fibers, producing contralateral loss of pain/temperature with ipsilateral ataxia and Horner syndrome." }
+      ],
+      "methods": ["Classic brainstem-section anatomy"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 23" }]
+    },
+    {
+      "structureId": "diencephalon.ventral-lateroventral-nucleus.left",
+      "function": [
+        "Part of the ventral posterior complex (VPL/VPM) of the thalamus — the principal somatosensory relay to cortex.",
+        "Maintains a precise somatotopic map: the body (VPL) and face (VPM) are represented topographically."
+      ],
+      "connectivity": {
+        "afferent": ["Medial lemniscus (body)", "Trigeminothalamic tract (face)"],
+        "efferent": ["Primary somatosensory cortex (areas 3a/3b/1/2)"]
+      },
+      "clinical": [
+        { "condition": "Thalamic pain syndrome (Dejerine–Roussy)", "note": "VPL/VPM damage can produce contralateral sensory loss paradoxically accompanied by severe spontaneous pain." }
+      ],
+      "methods": ["Receptive-field mapping in VPL", "Somatosensory-evoked potentials (SEP)"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 24" },
+        { "source": "Mountcastle & Henneman (1949)" }
+      ]
+    },
+    {
+      "structureId": "cortex.postcentral-gyrus.left",
+      "function": [
+        "Primary somatosensory cortex (S1, Brodmann areas 3a/3b/1/2), organized as a somatotopic homunculus (face lateral, leg medial).",
+        "Area 3b receives cutaneous input, 3a proprioceptive, and 1/2 process texture, size, and form through higher-order feature extraction."
+      ],
+      "connectivity": {
+        "afferent": ["Ventral posterior thalamus (VPL/VPM)"],
+        "efferent": ["Secondary somatosensory cortex (S2)", "Superior parietal lobule", "Primary motor cortex"]
+      },
+      "clinical": [
+        { "condition": "S1 lesion", "note": "Contralateral astereognosis, impaired two-point discrimination, and loss of graphesthesia while crude touch is partly spared." }
+      ],
+      "methods": ["Penfield somatotopic stimulation", "fMRI finger-mapping"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 24" },
+        { "source": "Penfield & Boldrey (1937)" }
+      ]
+    },
+    {
+      "structureId": "cortex.superior-parietal-lobule.left",
+      "function": [
+        "Higher-order somatosensory association cortex (areas 5 and 7); integrates tactile and proprioceptive information with visual and motor signals.",
+        "Contributes to body schema, spatial attention, and the planning of reaching and grasping."
+      ],
+      "connectivity": {
+        "afferent": ["Primary somatosensory cortex (S1)", "Posterior parietal cortex", "Intraparietal sulcus"],
+        "efferent": ["Premotor cortex", "Dorsolateral prefrontal cortex"]
+      },
+      "clinical": [
+        { "condition": "Optic ataxia (Balint syndrome component)", "note": "Parietal damage disrupts visually guided reaching despite intact sensation." },
+        { "condition": "Somatosensory neglect", "note": "Right-parietal lesions can cause contralesional neglect of tactile space." }
+      ],
+      "methods": ["Reaching-and-grasping neurophysiology", "Lesion–behavior mapping"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 25" }]
+    },
+    {
+      "structureId": "cortex.intraparietal-sulcus.left",
+      "function": [
+        "Fronto-parietal node encoding visual-motor transformations for eye and hand movements (lateral and medial intraparietal areas).",
+        "Mediates sensorimotor integration between the dorsal visual stream and frontal motor areas."
+      ],
+      "connectivity": {
+        "afferent": ["Superior parietal lobule", "Dorsal visual stream (MT/MST)"],
+        "efferent": ["Frontal eye fields", "Premotor cortex"]
+      },
+      "clinical": [
+        { "condition": "Constructional apraxia", "note": "Intraparietal involvement impairs the spatial assembly of objects." }
+      ],
+      "methods": ["Delayed saccade single-unit recording (LIP)", "fMRI of mental rotation"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 25" }]
+    }
+  ],
+  "questions": [
+    {
+      "id": "somatosensory.mc.1",
+      "kind": "mc",
+      "systemId": "somatosensory",
+      "stem": "Where do fine-touch and proprioceptive fibers decussate?",
+      "options": ["Spinal cord at entry", "Caudal medulla (internal arcuate fibers)", "Pons", "Midbrain"],
+      "answerIndex": 1,
+      "explanation": "Dorsal column fibers synapse in the gracile/cuneate nuclei; second-order axons decussate in the caudal medulla as internal arcuate fibers to form the contralateral medial lemniscus.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 23" }],
+      "structureIds": ["brainstem.medulla-oblongata.left"]
+    },
+    {
+      "id": "somatosensory.mc.2",
+      "kind": "mc",
+      "systemId": "somatosensory",
+      "stem": "Which thalamic region is the principal somatosensory relay to cortex?",
+      "options": ["Anterior nuclei", "Mediodorsal nucleus", "Ventral posterior complex (VPL/VPM)", "Pulvinar"],
+      "answerIndex": 2,
+      "explanation": "The ventral posterior nucleus relays body (VPL) and face (VPM) somatosensory information to the primary somatosensory cortex.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 24" }],
+      "structureIds": ["diencephalon.ventral-lateroventral-nucleus.left"]
+    },
+    {
+      "id": "somatosensory.mc.3",
+      "kind": "mc",
+      "systemId": "somatosensory",
+      "stem": "Loss of graphesthesia and two-point discrimination with preserved crude touch suggests a lesion of:",
+      "options": ["Dorsal root ganglion", "Primary somatosensory cortex (S1)", "Spinothalamic tract", "Medial lemniscus in the cord"],
+      "answerIndex": 1,
+      "explanation": "S1 lesions produce cortical sensory deficits — astereognosis, impaired two-point discrimination and graphesthesia — while crude (spinothalamic) touch is relatively preserved.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 24" }],
+      "structureIds": ["cortex.postcentral-gyrus.left"]
+    },
+    {
+      "id": "somatosensory.find.1",
+      "kind": "find",
+      "systemId": "somatosensory",
+      "stem": "Find the primary somatosensory cortex, home of the sensory homunculus.",
+      "candidateIds": ["cortex.postcentral-gyrus.left", "cortex.precentral-gyrus.left", "cortex.middle-temporal-gyrus.left", "cortex.superior-frontal-gyrus.left"],
+      "answerId": "cortex.postcentral-gyrus.left",
+      "explanation": "The postcentral gyrus (BA 3a/3b/1/2) is the primary somatosensory cortex, somatotopically organized as the sensory homunculus.",
+      "citations": [{ "source": "Penfield & Boldrey (1937)" }],
+      "structureIds": ["cortex.postcentral-gyrus.left"]
+    },
+    {
+      "id": "somatosensory.case.1",
+      "kind": "case",
+      "systemId": "somatosensory",
+      "vignette": "A 45-year-old woman has a left lateral medullary (Wallenberg) infarct. On examination she has loss of pain and temperature sensation over the right side of her body, but fine touch, vibration, and proprioception are intact on that side.",
+      "stem": "Which pathway is selectively involved?",
+      "options": ["Spinothalamic tract", "Dorsal column–medial lemniscus pathway", "Corticospinal tract", "Spinocerebellar tract"],
+      "answerIndex": 0,
+      "explanation": "Loss of contralateral pain/temperature with preserved fine touch/proprioception indicates spinothalamic damage; the dorsal column–medial lemniscus (which carries fine touch) decussates in the caudal medulla and is spared in a lateral medullary lesion.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 23" }],
+      "structureIds": ["brainstem.medulla-oblongata.left"]
+    }
+  ]
+}

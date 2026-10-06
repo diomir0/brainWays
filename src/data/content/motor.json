@@ -1,0 +1,181 @@
+{
+  "systemId": "motor",
+  "overview": "Voluntary movement emerges from parallel cortico-basal-ganglia-thalamo-cortical loops and a cerebellar feedforward loop. The primary motor cortex (M1, Brodmann area 4) issues the corticospinal and corticobulbar tracts; the basal ganglia gate and select actions through direct (facilitatory) and indirect (inhibitory) pathways, while the cerebellum supplies an internal forward model that corrects ongoing movement in near real time.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 38–43" },
+    { "source": "Purves et al., Neuroscience, 5th ed. (2012), Ch. 16–19" }
+  ],
+  "structures": [
+    {
+      "structureId": "cortex.precentral-gyrus.left",
+      "function": [
+        "Primary motor cortex (Brodmann area 4); its layer-V giant Betz cells give rise to the corticospinal tract.",
+        "Organized somatotopically as a motor homunculus; focal electrical stimulation elicits discrete contralateral movements."
+      ],
+      "connectivity": {
+        "afferent": ["Premotor cortex & SMA", "Primary somatosensory cortex (S1)", "VA/VL thalamus", "Cerebellum via VL"],
+        "efferent": ["Corticospinal tract", "Corticobulbar tract", "Corticostriatal projections to putamen"]
+      },
+      "clinical": [
+        { "condition": "Upper motor neuron lesion", "note": "Contralateral weakness, spasticity, hyperreflexia, and a Babinski sign." }
+      ],
+      "methods": ["Electrical stimulation mapping (Penfield)", "fMRI motor-task activations"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 38" },
+        { "source": "Penfield & Rasmussen (1950)" }
+      ]
+    },
+    {
+      "structureId": "deep-grey.substantia-nigra.left",
+      "function": [
+        "Pars compacta (SNc) dopaminergic neurons project to the striatum (nigrostriatal pathway); pars reticulata (SNr) is a major GABAergic basal-ganglia output.",
+        "Dopamine bidirectionally modulates the direct (D1) and indirect (D2) pathways."
+      ],
+      "connectivity": {
+        "afferent": ["Striatum (striatonigral)", "Subthalamic nucleus"],
+        "efferent": ["Striatum (dopamine)", "Thalamus & superior colliculus (SNr)"]
+      },
+      "clinical": [
+        { "condition": "Parkinson's disease", "note": "SNc dopamine-cell loss produces the triad of bradykinesia, rigidity, and resting tremor." }
+      ],
+      "methods": ["Post-mortem catecholamine assay", "Dopamine-transporter (DAT) PET imaging"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 42" },
+        { "source": "Hornykiewicz (1966)" }
+      ]
+    },
+    {
+      "structureId": "deep-grey.subthalamic-nucleus.left",
+      "function": [
+        "Excitatory (glutamatergic) nucleus contributing to the hyperdirect and indirect pathways, driving basal-ganglia output.",
+        "The principal deep-brain-stimulation target in Parkinson's disease."
+      ],
+      "connectivity": {
+        "afferent": ["Cortex (hyperdirect pathway)", "Globus pallidus external"],
+        "efferent": ["Globus pallidus internal / SNr"]
+      },
+      "clinical": [
+        { "condition": "Parkinson's disease & dystonia", "note": "High-frequency STN-DBS alleviates motor signs; lesions can produce contralateral hemiballismus." }
+      ],
+      "methods": ["Deep-brain stimulation", "Intraoperative microelectrode recording"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }]
+    },
+    {
+      "structureId": "deep-grey.putamen.left",
+      "function": [
+        "Input nucleus of the basal ganglia (striatum); receives dense corticostriatal input and dopaminergic modulation.",
+        "Encodes action selection, habit formation, and the learning of motor sequences."
+      ],
+      "connectivity": {
+        "afferent": ["Corticostriatal projections (all of cortex)", "Substantia nigra pars compacta"],
+        "efferent": ["Globus pallidus internal/external (direct & indirect pathways)"]
+      },
+      "clinical": [
+        { "condition": "Huntington's disease", "note": "Early degeneration of striatal medium spiny neurons → chorea and executive decline." }
+      ],
+      "methods": ["Corticostriatal tractography (DTI)", "fMRI of procedural learning"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }]
+    },
+    {
+      "structureId": "deep-grey.globus-pallidus-internal.left",
+      "function": [
+        "The basal ganglia's main inhibitory (GABAergic) output to the thalamus.",
+        "Tonic GPi activity suppresses the thalamus; phasic pauses disinhibit selected motor programs."
+      ],
+      "connectivity": {
+        "afferent": ["Striatum (direct pathway)", "Subthalamic nucleus (indirect/hyperdirect)"],
+        "efferent": ["VA/VL thalamus", "Brainstem (pedunculopontine nucleus)"]
+      },
+      "clinical": [
+        { "condition": "Parkinson's disease & dystonia", "note": "A key deep-brain-stimulation target; pallidotomy historically relieved dyskinesias." }
+      ],
+      "methods": ["Deep-brain stimulation", "Single-unit electrophysiology"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }]
+    },
+    {
+      "structureId": "diencephalon.ventral-anterior-nucleus.left",
+      "function": [
+        "Motor thalamus (VA/VL): relays basal-ganglia (VA) and cerebellar (VL) output back to motor and premotor cortex.",
+        "Closes the cortico-basal-ganglia-thalamo-cortical and cerebro-cerebellar loops."
+      ],
+      "connectivity": {
+        "afferent": ["Globus pallidus internal / SNr (VA)", "Deep cerebellar nuclei via superior cerebellar peduncle (VL)"],
+        "efferent": ["Primary motor & premotor cortex"]
+      },
+      "clinical": [
+        { "condition": "Tremor", "note": "Thalamic (Vim) stimulation is an alternative tremor treatment." }
+      ],
+      "methods": ["Thalamic DBS (Vim)", "Tract-tracing studies"],
+      "citations": [{ "source": "Kandel 6th ed., Ch. 39" }]
+    }
+  ],
+  "questions": [
+    {
+      "id": "motor.mc.1",
+      "kind": "mc",
+      "systemId": "motor",
+      "stem": "Which structure's giant Betz cells give rise to the corticospinal tract?",
+      "options": ["Premotor cortex", "Primary motor cortex (M1)", "Cerebellar Purkinje layer", "Ventral anterior thalamus"],
+      "answerIndex": 1,
+      "explanation": "Betz cells are the large pyramidal neurons of layer V in the primary motor cortex (precentral gyrus, BA 4); their axons form the bulk of the corticospinal (pyramidal) tract.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 38" }],
+      "structureIds": ["cortex.precentral-gyrus.left"]
+    },
+    {
+      "id": "motor.mc.2",
+      "kind": "mc",
+      "systemId": "motor",
+      "stem": "Degeneration of which neuron population underlies the motor signs of Parkinson's disease?",
+      "options": ["Subthalamic nucleus glutamatergic neurons", "Substantia nigra pars compacta dopaminergic neurons", "Globus pallidus GABAergic neurons", "Striatal medium spiny neurons"],
+      "answerIndex": 1,
+      "explanation": "Loss of SNc dopamine neurons depletes striatal dopamine, shifting the balance toward the indirect pathway and producing bradykinesia, rigidity, and tremor.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }, { "source": "Hornykiewicz (1966)" }],
+      "structureIds": ["deep-grey.substantia-nigra.left"]
+    },
+    {
+      "id": "motor.mc.3",
+      "kind": "mc",
+      "systemId": "motor",
+      "stem": "Which basal-ganglia pathway is net inhibitory to movement and becomes hyperactive in Parkinson's disease?",
+      "options": ["Direct pathway", "Indirect pathway", "Cerebellar loop", "Corticobulbar tract"],
+      "answerIndex": 1,
+      "explanation": "The indirect pathway (striatum → GPe → STN → GPi) increases GPi inhibition of the thalamus and suppresses movement; dopamine loss disinhibits this pathway.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }],
+      "structureIds": ["deep-grey.globus-pallidus-external.left"]
+    },
+    {
+      "id": "motor.find.1",
+      "kind": "find",
+      "systemId": "motor",
+      "stem": "Find the structure whose dopaminergic neurons degenerate in Parkinson's disease.",
+      "candidateIds": ["deep-grey.substantia-nigra.left", "deep-grey.caudate-nucleus.left", "deep-grey.putamen.left", "deep-grey.globus-pallidus-internal.left"],
+      "answerId": "deep-grey.substantia-nigra.left",
+      "explanation": "The substantia nigra pars compacta supplies dopamine to the striatum; its degeneration causes Parkinson's disease.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }],
+      "structureIds": ["deep-grey.substantia-nigra.left"]
+    },
+    {
+      "id": "motor.find.2",
+      "kind": "find",
+      "systemId": "motor",
+      "stem": "Find the primary motor cortex, the origin of the corticospinal tract.",
+      "candidateIds": ["cortex.precentral-gyrus.left", "cortex.postcentral-gyrus.left", "cortex.superior-frontal-gyrus.left", "cortex.middle-temporal-gyrus.left"],
+      "answerId": "cortex.precentral-gyrus.left",
+      "explanation": "The precentral gyrus (BA 4) is the primary motor cortex, home of Betz cells and the motor homunculus.",
+      "citations": [{ "source": "Penfield & Rasmussen (1950)" }],
+      "structureIds": ["cortex.precentral-gyrus.left"]
+    },
+    {
+      "id": "motor.case.1",
+      "kind": "case",
+      "systemId": "motor",
+      "vignette": "A 62-year-old man presents with a 6-month history of a resting tremor in his right hand, cogwheel rigidity in the right arm, and bradykinesia. His gait is shuffling with reduced arm swing. Strength is full and reflexes are normal. His symptoms improve markedly with levodopa.",
+      "stem": "Which neuropathological finding best explains this patient's presentation?",
+      "options": ["Loss of dopaminergic neurons in the substantia nigra pars compacta", "Degeneration of Betz cells in the primary motor cortex", "Loss of Purkinje cells in the cerebellar cortex", "Demyelination of the corticospinal tract"],
+      "answerIndex": 0,
+      "explanation": "Resting tremor, rigidity, bradykinesia, and a levodopa response are the hallmarks of Parkinson's disease, caused by degeneration of dopamine neurons in the substantia nigra pars compacta.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 42" }],
+      "structureIds": ["deep-grey.substantia-nigra.left"]
+    }
+  ]
+}

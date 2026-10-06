@@ -1,0 +1,144 @@
+{
+  "systemId": "csf",
+  "overview": "Cerebrospinal fluid (CSF) is produced mainly by the choroid plexuses of the lateral, third, and fourth ventricles, circulates through the ventricular system (lateral → interventricular foramina → third ventricle → cerebral aqueduct → fourth ventricle), exits into the subarachnoid space via the median and lateral apertures, and is reabsorbed into the dural venous sinuses through arachnoid granulations. The system provides mechanical buoyancy, maintains ionic homeostasis, and is the conduit for the recently recognized glymphatic clearance of metabolic waste.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 3 (App. D)" },
+    { "source": "Brodal, The Central Nervous System, 5th ed. (2016), Ch. 5" }
+  ],
+  "structures": [
+    {
+      "structureId": "ventricles.choroid-plexus.left",
+      "function": [
+        "Specialized secretory epithelium (modified ependyma over a vascular stroma) that produces the majority of cerebrospinal fluid (~500 mL/day; total CSF volume ~150 mL).",
+        "Actively secretes CSF via ion transport (Na+/K+-ATPase, carbonic anhydrase) and forms the blood–CSF barrier."
+      ],
+      "connectivity": {
+        "afferent": ["Fenestrated choroidal capillaries"],
+        "efferent": ["Ventricular CSF space"]
+      },
+      "clinical": [
+        { "condition": "Choroid plexus papilloma", "note": "Can overproduce CSF, causing communicating hydrocephalus." },
+        { "condition": "CSF production target", "note": "Acetazolamide (carbonic anhydrase inhibition) reduces CSF production in idiopathic intracranial hypertension." }
+      ],
+      "methods": ["CSF production-rate measurement (mass-flow)", "Choroid plexus MRI volumetry"],
+      "citations": [
+        { "source": "Kandel 6th ed., App. D" },
+        { "source": "Damkier et al. (2013)" }
+      ]
+    },
+    {
+      "structureId": "ventricles.lateral-ventricle.left",
+      "function": [
+        "The paired largest ventricles (frontal horn, body, atrium, temporal & occipital horns), lined with choroid plexus in the body and inferior horn.",
+        "Serve as the principal CSF reservoir from which fluid flows into the third ventricle."
+      ],
+      "connectivity": {
+        "afferent": ["Choroid plexus (production)"],
+        "efferent": ["Third ventricle via the interventricular foramina of Monro"]
+      },
+      "clinical": [
+        { "condition": "Hydrocephalus", "note": "Obstruction (e.g., colloid cyst at the foramen of Monro) causes lateral-ventricle enlargement; the Evans index quantifies ventriculomegaly." }
+      ],
+      "methods": ["Ventriculostomy ICP monitoring", "CT/MRI ventricular volumetry"],
+      "citations": [{ "source": "Brodal 5th ed., Ch. 5" }]
+    },
+    {
+      "structureId": "ventricles.third-ventricle.median",
+      "function": [
+        "Narrow midline ventricle of the diencephalon receiving CSF from both lateral ventricles.",
+        "Its walls contain circumventricular organs (e.g., subfornical organ) and hypothalamic nuclei that sample CSF signals."
+      ],
+      "connectivity": {
+        "afferent": ["Lateral ventricles (foramina of Monro)"],
+        "efferent": ["Fourth ventricle via the cerebral aqueduct (of Sylvius)"]
+      },
+      "clinical": [
+        { "condition": "Colloid cyst", "note": "At the foramen of Monro can cause intermittent obstructive hydrocephalus and sudden death." }
+      ],
+      "methods": ["Endoscopic third ventriculostomy", "MRI cine flow studies"],
+      "citations": [{ "source": "Brodal 5th ed., Ch. 5" }]
+    },
+    {
+      "structureId": "ventricles.fourth-ventricle.median",
+      "function": [
+        "Diamond-shaped ventricle over the pons and medulla receiving CSF from the cerebral aqueduct.",
+        "CSF exits to the subarachnoid space through the median aperture (foramen of Magendie) and lateral apertures (foramina of Luschka)."
+      ],
+      "connectivity": {
+        "afferent": ["Cerebral aqueduct (from third ventricle)"],
+        "efferent": ["Subarachnoid space (median & lateral apertures)", "Central canal of the spinal cord"]
+      },
+      "clinical": [
+        { "condition": "Dandy–Walker malformation", "note": "Fourth-ventricle cystic enlargement with outflow obstruction causes hydrocephalus." }
+      ],
+      "methods": ["Fourth-ventricle outflow imaging", "Aqueductal CSF-flow MRI"],
+      "citations": [{ "source": "Brodal 5th ed., Ch. 5" }]
+    },
+    {
+      "structureId": "veins-sinuses.superior-sagittal-sinus.median",
+      "function": [
+        "The principal dural venous sinus into which CSF is returned to the blood via arachnoid granulations (Pacchionian bodies).",
+        "Site of the bulk of CSF reabsorption, completing the circulation from choroid plexus back to the venous system."
+      ],
+      "connectivity": {
+        "afferent": ["Arachnoid granulations draining subarachnoid CSF", "Cerebral veins"],
+        "efferent": ["Confluence of sinuses → transverse/sigmoid sinuses → internal jugular vein"]
+      },
+      "clinical": [
+        { "condition": "Idiopathic intracranial hypertension", "note": "Impaired CSF absorption at the arachnoid granulations raises intracranial pressure, causing papilledema and headache." },
+        { "condition": "Cerebral venous sinus thrombosis", "note": "Sagittal-sinus thrombosis elevates venous pressure, impairing CSF drainage and causing raised ICP." }
+      ],
+      "methods": ["ICP monitoring", "MR venography"],
+      "citations": [
+        { "source": "Brodal 5th ed., Ch. 5" },
+        { "source": "Mollanji et al. (2001)" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "csf.mc.1",
+      "kind": "mc",
+      "systemId": "csf",
+      "stem": "Where is the majority of cerebrospinal fluid produced?",
+      "options": ["Arachnoid granulations", "Choroid plexus", "Ependymal lining of the aqueduct", "Pia mater"],
+      "answerIndex": 1,
+      "explanation": "The choroid plexuses of the lateral, third, and fourth ventricles secrete ~500 mL of CSF per day via active ion transport.",
+      "citations": [{ "source": "Kandel 6th ed., App. D" }],
+      "structureIds": ["ventricles.choroid-plexus.left"]
+    },
+    {
+      "id": "csf.mc.2",
+      "kind": "mc",
+      "systemId": "csf",
+      "stem": "CSF exits the fourth ventricle into the subarachnoid space primarily through:",
+      "options": ["Foramina of Monro", "Cerebral aqueduct", "Median and lateral apertures (Magendie & Luschka)", "Arachnoid granulations"],
+      "answerIndex": 2,
+      "explanation": "CSF leaves the fourth ventricle through the median aperture (foramen of Magendie) and the two lateral apertures (foramina of Luschka).",
+      "citations": [{ "source": "Brodal 5th ed., Ch. 5" }],
+      "structureIds": ["ventricles.fourth-ventricle.median"]
+    },
+    {
+      "id": "csf.mc.3",
+      "kind": "mc",
+      "systemId": "csf",
+      "stem": "CSF is reabsorbed into the bloodstream mainly at the:",
+      "options": ["Choroid plexus", "Arachnoid granulations of the superior sagittal sinus", "Ependyma of the lateral ventricles", "Central canal"],
+      "answerIndex": 1,
+      "explanation": "Arachnoid granulations project into the superior sagittal sinus and return CSF to the venous circulation.",
+      "citations": [{ "source": "Brodal 5th ed., Ch. 5" }],
+      "structureIds": ["veins-sinuses.superior-sagittal-sinus.median"]
+    },
+    {
+      "id": "csf.find.1",
+      "kind": "find",
+      "systemId": "csf",
+      "stem": "Find the paired structures that are the principal site of CSF production.",
+      "candidateIds": ["ventricles.choroid-plexus.left", "ventricles.lateral-ventricle.left", "ventricles.third-ventricle.median", "veins-sinuses.superior-sagittal-sinus.median"],
+      "answerId": "ventricles.choroid-plexus.left",
+      "explanation": "The choroid plexuses secrete the bulk of cerebrospinal fluid.",
+      "citations": [{ "source": "Kandel 6th ed., App. D" }],
+      "structureIds": ["ventricles.choroid-plexus.left"]
+    }
+  ]
+}

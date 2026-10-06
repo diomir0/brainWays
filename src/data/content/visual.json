@@ -1,0 +1,167 @@
+{
+  "systemId": "visual",
+  "overview": "Vision is organized as a largely hierarchical, retinotopic pathway from retina through the lateral geniculate nucleus to primary visual cortex, then diverges into two cortical streams: a dorsal 'where/how' stream (MT/V5 → posterior parietal) for spatial vision and visually guided action, and a ventral 'what' stream (V4 → inferior temporal) for object, face, and scene recognition. A parallel retinotectal route through the superior colliculus supports reflexive orienting and residual vision in blindsight.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 25–28" },
+    { "source": "Purves et al., Principles of Cognitive Neuroscience, 2nd ed. (2013), Ch. 8" },
+    { "source": "Ungerleider & Mishkin (1982)" },
+    { "source": "Goodale & Milner (1992)" }
+  ],
+  "structures": [
+    {
+      "structureId": "diencephalon.lateral-geniculate-body.left",
+      "function": [
+        "Thalamic relay of the retina to primary visual cortex; laminar organization segregates magnocellular, parvocellular, and koniocellular channels.",
+        "Receives strong corticofugal feedback and reticular modulation, gating visual throughput during arousal."
+      ],
+      "connectivity": {
+        "afferent": ["Retinal ganglion cells (optic tract)"],
+        "efferent": ["Primary visual cortex via the optic radiation"]
+      },
+      "clinical": [
+        { "condition": "Visual field defects", "note": "LGN or optic-radiation damage produces quadrantanopia or hemianopia respecting the vertical meridian." }
+      ],
+      "methods": ["Single-unit physiology (Hubel & Wiesel)", "fMRI retinotopy"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 25" },
+        { "source": "Hubel & Wiesel (1962)" }
+      ]
+    },
+    {
+      "structureId": "cortex.calcarine-sulcus.left",
+      "function": [
+        "Primary visual cortex (V1, Brodmann area 17); the first cortical stage, with a precise retinotopic map and orientation-selective columns.",
+        "Reconstructs edges and motion signals that are redistributed to extrastriate areas."
+      ],
+      "connectivity": {
+        "afferent": ["Lateral geniculate nucleus"],
+        "efferent": ["V2, V3, MT/V5, V4"]
+      },
+      "clinical": [
+        { "condition": "Cortical blindness", "note": "Bilateral V1 lesions cause blindness with preserved pupillary reflexes; unilateral lesions cause contralateral hemianopia." }
+      ],
+      "methods": ["Retinotopic fMRI mapping", "Intrinsic-signal optical imaging"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 26" },
+        { "source": "Hubel & Wiesel (1962)" }
+      ]
+    },
+    {
+      "structureId": "cortex.middle-temporal-gyrus.left",
+      "function": [
+        "Region containing area MT/V5, specialized for visual motion and heading; integrates motion signals for smooth pursuit and optic flow.",
+        "A hub of the dorsal 'where/how' stream."
+      ],
+      "connectivity": {
+        "afferent": ["V1, V2, V3"],
+        "efferent": ["Posterior parietal cortex (MST, LIP)"]
+      },
+      "clinical": [
+        { "condition": "Akinetopsia", "note": "Bilateral MT+ lesions cause selective motion blindness (e.g., patient L.M.)." }
+      ],
+      "methods": ["Single-unit motion tuning", "fMRI motion localizer (hMT+)"],
+      "citations": [
+        { "source": "Zihl et al. (1983)" },
+        { "source": "Kandel 6th ed., Ch. 27" }
+      ]
+    },
+    {
+      "structureId": "cortex.inferior-temporal-gyrus.left",
+      "function": [
+        "High-level ventral-stream cortex for object, face, and visual-form recognition; cells show increasing invariance to position and scale.",
+        "Contains category-selective patches (faces, places, words)."
+      ],
+      "connectivity": {
+        "afferent": ["V4", "Middle temporal cortex"],
+        "efferent": ["Perirhinal & entorhinal cortex", "Prefrontal cortex"]
+      },
+      "clinical": [
+        { "condition": "Visual agnosia", "note": "Bilateral IT damage produces apperceptive/associative agnosia or prosopagnosia (face blindness)." }
+      ],
+      "methods": ["fMRI category localizers (FFA, PPA)", "Single-unit recordings in macaque IT"],
+      "citations": [
+        { "source": "Kanwisher et al. (1997)" },
+        { "source": "Kandel 6th ed., Ch. 28" }
+      ]
+    },
+    {
+      "structureId": "brainstem.superior-colliculus.left",
+      "function": [
+        "Midbrain retinotopic map mediating reflexive saccades and orienting; part of the retinotectal pathway.",
+        "Believed to support residual visual function in blindsight following V1 damage."
+      ],
+      "connectivity": {
+        "afferent": ["Retinal ganglion cells (retinotectal)", "Cortex & substantia nigra"],
+        "efferent": ["Brainstem gaze centers (PPRF, riMLF)"]
+      },
+      "clinical": [
+        { "condition": "Blindsight", "note": "Residual above-chance visual discrimination despite V1 lesions, attributed to the colliculo-pulvinar route." }
+      ],
+      "methods": ["Electrical microstimulation", "Lesion studies"],
+      "citations": [
+        { "source": "Weiskrantz (1986)" },
+        { "source": "Kandel 6th ed., Ch. 26" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "visual.mc.1",
+      "kind": "mc",
+      "systemId": "visual",
+      "stem": "Which two cortical streams were proposed by Ungerleider & Mishkin, and later reframed by Goodale & Milner?",
+      "options": ["Dorsal 'where/how' and ventral 'what'", "Anterior 'motion' and posterior 'form'", "Magnocellular 'color' and parvocellular 'motion'", "Left 'words' and right 'faces'"],
+      "answerIndex": 0,
+      "explanation": "Ungerleider & Mishkin (1982) proposed dorsal 'where' and ventral 'what' streams; Goodale & Milner (1992) reframed the dorsal stream as 'how' (visually guided action).",
+      "citations": [
+        { "source": "Ungerleider & Mishkin (1982)" },
+        { "source": "Goodale & Milner (1992)" }
+      ],
+      "structureIds": ["cortex.middle-temporal-gyrus.left"]
+    },
+    {
+      "id": "visual.mc.2",
+      "kind": "mc",
+      "systemId": "visual",
+      "stem": "Bilateral lesions of area MT/V5 classically produce which selective deficit?",
+      "options": ["Prosopagnosia", "Akinetopsia (motion blindness)", "Achromatopsia", "Simultanagnosia"],
+      "answerIndex": 1,
+      "explanation": "Patient L.M. (Zihl et al., 1983) could not perceive motion after bilateral MT+ damage, a syndrome termed akinetopsia.",
+      "citations": [{ "source": "Zihl et al. (1983)" }],
+      "structureIds": ["cortex.middle-temporal-gyrus.left"]
+    },
+    {
+      "id": "visual.mc.3",
+      "kind": "mc",
+      "systemId": "visual",
+      "stem": "The koniocellular, parvocellular, and magnocellular channels of the LGN differ primarily in their sensitivity to what?",
+      "options": ["Color and contrast vs. motion and luminance", "Odorants", "Sound frequency", "Tactile vibration"],
+      "answerIndex": 0,
+      "explanation": "Magnocellular neurons are fast, low-acuity, motion/luminance tuned; parvocellular neurons carry high-acuity color/opponent signals; koniocellular neurons contribute blue/yellow and other modulatory signals.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 25" }],
+      "structureIds": ["diencephalon.lateral-geniculate-body.left"]
+    },
+    {
+      "id": "visual.find.1",
+      "kind": "find",
+      "systemId": "visual",
+      "stem": "Find the primary visual cortex, located in and around the calcarine sulcus.",
+      "candidateIds": ["cortex.calcarine-sulcus.left", "cortex.cuneus.left", "cortex.lingual-gyrus.left", "cortex.angular-gyrus.left"],
+      "answerId": "cortex.calcarine-sulcus.left",
+      "explanation": "V1 (BA 17) lines the calcarine sulcus on the medial occipital surface; it receives the optic radiation from the LGN.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 26" }],
+      "structureIds": ["cortex.calcarine-sulcus.left"]
+    },
+    {
+      "id": "visual.find.2",
+      "kind": "find",
+      "systemId": "visual",
+      "stem": "Find the thalamic relay that carries retinal signals to visual cortex.",
+      "candidateIds": ["diencephalon.lateral-geniculate-body.left", "diencephalon.medial-geniculate-body.left", "diencephalon.pulvinar.left", "diencephalon.anterior-nuclei-of-thalamus.left"],
+      "answerId": "diencephalon.lateral-geniculate-body.left",
+      "explanation": "The lateral geniculate nucleus is the principal thalamic relay from retina to V1; the medial geniculate body instead serves the auditory system.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 25" }],
+      "structureIds": ["diencephalon.lateral-geniculate-body.left"]
+    }
+  ]
+}

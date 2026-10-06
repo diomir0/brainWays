@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+scripts/_mesh_names.json
+scripts/_bp_*.js
+.vscode/*
+!.vscode/extensions.json

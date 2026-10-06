@@ -1,0 +1,190 @@
+{
+  "systemId": "limbic",
+  "overview": "The limbic system integrates emotion and declarative memory. The hippocampus encodes new episodic memories and, via the fornix, drives the Papez circuit (hippocampus → fornix → mammillary bodies → anterior thalamus → cingulate cortex → back to hippocampus), long implicated in emotion and now understood as a memory-relevant loop. The amygdala appends emotional salience to experience through its basolateral (sensory input) and central (effector) nuclei, modulating the hippocampal memory system.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 65–66" },
+    { "source": "Purves et al., Neuroscience, 5th ed. (2012), Ch. 30–31" }
+  ],
+  "structures": [
+    {
+      "structureId": "cortex.hippocampus.left",
+      "function": [
+        "Core structure for the encoding and consolidation of declarative (episodic and semantic) memory and spatial cognition.",
+        "Its trisynaptic circuit (dentate gyrus → CA3 → CA1) performs pattern separation and completion; long-term potentiation here is the canonical cellular model of memory."
+      ],
+      "connectivity": {
+        "afferent": ["Entorhinal cortex (perforant path)", "Septal nuclei & brainstem modulators"],
+        "efferent": ["Fornix → mammillary bodies & anterior thalamus", "Entorhinal cortex (back to neocortex)"]
+      },
+      "clinical": [
+        { "condition": "Bilateral hippocampal lesion (patient H.M.)", "note": "Profound anterograde amnesia with spared procedural memory and remote memories." },
+        { "condition": "Alzheimer's disease", "note": "Early hippocampal/entorhinal atrophy underlies the initial episodic memory impairment." }
+      ],
+      "methods": ["LTP/LTD electrophysiology", "Place-cell recording", "Structural MRI volumetry"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 65" },
+        { "source": "Scoville & Milner (1957)" }
+      ]
+    },
+    {
+      "structureId": "white-matter.fornix.left",
+      "function": [
+        "The principal efferent white-matter tract of the hippocampus, carrying fibers to the mammillary bodies, anterior thalamus, and septal region.",
+        "The anatomical backbone of the Papez circuit, linking hippocampal output to diencephalic structures."
+      ],
+      "connectivity": {
+        "afferent": ["Hippocampal subiculum and CA fields"],
+        "efferent": ["Mammillary bodies", "Anterior nuclei of the thalamus", "Septal nuclei"]
+      },
+      "clinical": [
+        { "condition": "Fornix transection", "note": "Produces anterograde amnesia resembling hippocampal damage, underscoring the fornix as the critical memory output." }
+      ],
+      "methods": ["Diffusion MRI tractography", "Lesion studies"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 65" },
+        { "source": "Aggleton & Brown (1999)" }
+      ]
+    },
+    {
+      "structureId": "diencephalon.mamillary-body.left",
+      "function": [
+        "Diencephalic relay of the Papez circuit; receives the fornix and projects via the mammillothalamic tract to the anterior thalamus.",
+        "Lesions here (often from thiamine deficiency) disrupt memory, linking the circuit to episodic memory rather than emotion per se."
+      ],
+      "connectivity": {
+        "afferent": ["Fornix (from hippocampus)", "Tegmental nuclei"],
+        "efferent": ["Anterior nuclei of the thalamus (mammillothalamic tract)"]
+      },
+      "clinical": [
+        { "condition": "Wernicke–Korsakoff syndrome", "note": "Thiamine deficiency damages mammillary bodies and medial thalamus, producing confabulation and severe anterograde amnesia." }
+      ],
+      "methods": ["Post-mortem histology", "Mammillothalamic tractography"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 66" },
+        { "source": "Victor et al. (1971)" }
+      ]
+    },
+    {
+      "structureId": "diencephalon.anterior-nuclei-of-thalamus.left",
+      "function": [
+        "Thalamic node of the Papez circuit; relays mammillary-body input (mammillothalamic tract) to the cingulate cortex.",
+        "Implicated in episodic memory and spatial navigation; a target of deep-brain stimulation in refractory epilepsy."
+      ],
+      "connectivity": {
+        "afferent": ["Mammillary bodies (mammillothalamic tract)", "Hippocampus (via fornix)"],
+        "efferent": ["Cingulate cortex"]
+      },
+      "clinical": [
+        { "condition": "Korsakoff syndrome", "note": "Anterior thalamic involvement contributes to the memory deficit; anterior nucleus DBS is explored for memory and epilepsy." }
+      ],
+      "methods": ["Anterior thalamic DBS", "Head-direction cell recording"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 66" },
+        { "source": "Aggleton et al. (2010)" }
+      ]
+    },
+    {
+      "structureId": "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+      "function": [
+        "Cingulate cortex closes the Papez loop, projecting back to the entorhinal cortex and hippocampus; the anterior cingulate additionally mediates conflict monitoring and emotion regulation.",
+        "The middle/anterior cingulate links limbic drive to cognitive control and motivated behavior."
+      ],
+      "connectivity": {
+        "afferent": ["Anterior nuclei of the thalamus", "Amygdala"],
+        "efferent": ["Entorhinal cortex (to hippocampus)", "Prefrontal & motor regions"]
+      },
+      "clinical": [
+        { "condition": "Anterior cingulate lesion", "note": "Apathy, reduced initiative (akinetic mutism in bilateral cases), and impaired error monitoring." }
+      ],
+      "methods": ["Error-related negativity (ERN) EEG", "fMRI conflict tasks"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 65" },
+        { "source": "Bush et al. (2000)" }
+      ]
+    },
+    {
+      "structureId": "deep-grey.basolateral-complex.left",
+      "function": [
+        "The amygdala's sensory input zone (lateral + basal nuclei), receiving cortical and thalamic sensory information and assigning learned emotional significance.",
+        "Critical for fear conditioning — pairing neutral stimuli with aversive outcomes."
+      ],
+      "connectivity": {
+        "afferent": ["Sensory thalamus (auditory, visual)", "Sensory association cortex", "Hippocampus"],
+        "efferent": ["Central nucleus of the amygdala"]
+      },
+      "clinical": [
+        { "condition": "Post-traumatic stress disorder", "note": "Hyper-responsive basolateral amygdala underlies exaggerated fear acquisition and impaired extinction." }
+      ],
+      "methods": ["Fear-conditioning single-unit recording", "c-Fos mapping"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 65" },
+        { "source": "LeDoux (2000)" }
+      ]
+    },
+    {
+      "structureId": "deep-grey.central-nucleus.left",
+      "function": [
+        "The amygdala's primary output (effector) nucleus, orchestrating autonomic, endocrine, and behavioral fear responses.",
+        "Projects to the hypothalamus and brainstem to produce freezing, heart-rate changes, and stress-hormone release."
+      ],
+      "connectivity": {
+        "afferent": ["Basolateral complex"],
+        "efferent": ["Hypothalamus", "Brainstem (periaqueductal gray, locus coeruleus)"]
+      },
+      "clinical": [
+        { "condition": "Panic disorder", "note": "Central-nucleus output drives the autonomic surge characteristic of panic attacks." }
+      ],
+      "methods": ["Optogenetic output stimulation", "Autonomic telemetry"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 65" },
+        { "source": "Davis (1992)" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "limbic.mc.1",
+      "kind": "mc",
+      "systemId": "limbic",
+      "stem": "Which structure is the principal efferent pathway of the hippocampus in the Papez circuit?",
+      "options": ["Fornix", "Cingulum", "Mammillothalamic tract", "Perforant path"],
+      "answerIndex": 0,
+      "explanation": "The fornix carries hippocampal output to the mammillary bodies and anterior thalamus, forming the first leg of the Papez circuit.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 65" }],
+      "structureIds": ["white-matter.fornix.left"]
+    },
+    {
+      "id": "limbic.mc.2",
+      "kind": "mc",
+      "systemId": "limbic",
+      "stem": "Thiamine deficiency causing mammillary-body and medial-thalamic damage produces:",
+      "options": ["Parkinson's disease", "Wernicke–Korsakoff syndrome", "Multiple sclerosis", "Huntington's disease"],
+      "answerIndex": 1,
+      "explanation": "Wernicke–Korsakoff syndrome results from thiamine (vitamin B1) deficiency, damaging mammillary bodies and thalamus and causing confabulation with anterograde amnesia.",
+      "citations": [{ "source": "Victor et al. (1971)" }],
+      "structureIds": ["diencephalon.mamillary-body.left"]
+    },
+    {
+      "id": "limbic.mc.3",
+      "kind": "mc",
+      "systemId": "limbic",
+      "stem": "Which amygdala region is the primary output nucleus driving fear responses?",
+      "options": ["Lateral nucleus", "Basolateral complex", "Central nucleus", "Corticomedial group"],
+      "answerIndex": 2,
+      "explanation": "The central nucleus projects to the hypothalamus and brainstem to orchestrate autonomic, endocrine, and behavioral fear responses.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 65" }],
+      "structureIds": ["deep-grey.central-nucleus.left"]
+    },
+    {
+      "id": "limbic.find.1",
+      "kind": "find",
+      "systemId": "limbic",
+      "stem": "Find the structure whose bilateral lesion causes profound anterograde amnesia (as in patient H.M.).",
+      "candidateIds": ["cortex.hippocampus.left", "cortex.precentral-gyrus.left", "deep-grey.putamen.left", "diencephalon.medial-geniculate-body.left"],
+      "answerId": "cortex.hippocampus.left",
+      "explanation": "Bilateral hippocampal resection (patient H.M.) produced dense anterograde amnesia while sparing procedural memory.",
+      "citations": [{ "source": "Scoville & Milner (1957)" }],
+      "structureIds": ["cortex.hippocampus.left"]
+    }
+  ]
+}

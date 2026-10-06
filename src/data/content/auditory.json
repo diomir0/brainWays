@@ -1,0 +1,146 @@
+{
+  "systemId": "auditory",
+  "overview": "The ascending auditory pathway transduces sound in the cochlea, relays tonotopically through the cochlear nuclei, the superior olivary complex, and the inferior colliculus, then ascends to the medial geniculate body of the thalamus and terminates in the primary auditory cortex (Heschl's transverse temporal gyri, Brodmann areas 41/42). Binaural cues for sound localization are first computed in the superior olivary complex; the pathway is unusual in its heavy bilateral (crossed and uncrossed) ascent, so unilateral lesions above the cochlear nucleus cause only subtle hearing loss.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 30" },
+    { "source": "Purves et al., Neuroscience, 5th ed. (2012), Ch. 12" }
+  ],
+  "structures": [
+    {
+      "structureId": "brainstem.vestibular-nuclei.left",
+      "function": [
+        "In the auditory pathway, this brainstem region houses the cochlear nuclei (dorsal and ventral), the obligatory first central relay for all auditory nerve input.",
+        "The cochlear nuclei preserve and begin to sharpen the tonotopic map carried from the cochlea; their bushy and octopus cells extract onset and temporal cues used for sound localization.",
+        "Note: the vestibular nuclei proper subserve balance (vestibulo-ocular and vestibulospinal reflexes) and are co-localized in this atlas region."
+      ],
+      "connectivity": {
+        "afferent": ["Cochlear nerve (auditory division of CN VIII)", "Olivocochlear efferent feedback"],
+        "efferent": ["Superior olivary complex (trapezoid body)", "Contralateral cochlear nucleus via commissural fibers"]
+      },
+      "clinical": [
+        { "condition": "Acoustic neuroma (vestibular schwannoma)", "note": "Compression of CN VIII at the cerebellopontine angle causes asymmetric sensorineural hearing loss and tinnitus before facial (CN VII) involvement." }
+      ],
+      "methods": ["Brainstem auditory evoked potentials (BAEP)", "Single-unit phase-locking recordings"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 30" },
+        { "source": "Rose et al. (1959)" }
+      ]
+    },
+    {
+      "structureId": "brainstem.pons.left",
+      "function": [
+        "Hosts the superior olivary complex and nuclei of the trapezoid body, where interaural time and level differences are first compared to compute azimuthal sound localization.",
+        "Medial superior olive neurons encode interaural time differences; lateral superior olive neurons encode interaural intensity differences."
+      ],
+      "connectivity": {
+        "afferent": ["Cochlear nuclei (ipsilateral & contralateral)"],
+        "efferent": ["Inferior colliculus via the lateral lemniscus"]
+      },
+      "clinical": [
+        { "condition": "Pontine glioma or infarct", "note": "Bilateral involvement may spare hearing because of crossed and uncrossed olivary output but disrupts sound-localization accuracy." }
+      ],
+      "methods": ["Jeffress-model delay-line recording", "Glycinergic/gabaergic pharmacology"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 30" },
+        { "source": "Goldberg & Brown (1969)" }
+      ]
+    },
+    {
+      "structureId": "diencephalon.medial-geniculate-body.left",
+      "function": [
+        "The auditory relay nucleus of the thalamus; its ventral division projects with precise tonotopy to the primary auditory cortex.",
+        "The dorsal and medial divisions project to belt/parabelt auditory cortices and are part of a multimodal, modulatory route."
+      ],
+      "connectivity": {
+        "afferent": ["Inferior colliculus (brachium of the inferior colliculus)"],
+        "efferent": ["Primary auditory cortex (transverse temporal gyri)"]
+      },
+      "clinical": [
+        { "condition": "Thalamic lesion", "note": "Unilateral MGB damage rarely abolishes hearing (bilateral ascent) but can impair auditory attention and temporal discrimination." }
+      ],
+      "methods": ["Tonotopic microelectrode mapping", "Auditory-evoked fMRI"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 30" },
+        { "source": "Winer (1992)" }
+      ]
+    },
+    {
+      "structureId": "cortex.transverse-temporal-gyri.left",
+      "function": [
+        "Primary auditory cortex (A1; Heschl's gyrus, Brodmann areas 41/42), organized as a tonotopic map of sound frequency.",
+        "Encodes spectral and temporal features; adjacent belt and parabelt areas process complex sounds and project to the dorsal 'where' and ventral 'what' auditory streams."
+      ],
+      "connectivity": {
+        "afferent": ["Medial geniculate body (ventral division)"],
+        "efferent": ["Belt/parabelt auditory cortex", "Posterior superior temporal gyrus (Wernicke's area)"]
+      },
+      "clinical": [
+        { "condition": "Bilateral A1 lesion", "note": "Cortical deafness (rare) or auditory agnosia; unilateral damage impairs contralateral sound localization." },
+        { "condition": "Wernicke's aphasia", "note": "Damage extending into posterior superior temporal gyrus impairs speech comprehension." }
+      ],
+      "methods": ["fMRI tonotopy (mirror-symmetric maps)", "Electrocorticography during speech"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 30" },
+        { "source": "Formisano et al. (2003)" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "auditory.mc.1",
+      "kind": "mc",
+      "systemId": "auditory",
+      "stem": "Where are interaural time and level differences first computed for sound localization?",
+      "options": ["Cochlear nuclei", "Superior olivary complex", "Inferior colliculus", "Medial geniculate body"],
+      "answerIndex": 1,
+      "explanation": "The superior olivary complex (in the pons) is the first site of binaural convergence; the medial superior olive encodes interaural time differences and the lateral superior olive encodes intensity differences.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 30" }],
+      "structureIds": ["brainstem.pons.left"]
+    },
+    {
+      "id": "auditory.mc.2",
+      "kind": "mc",
+      "systemId": "auditory",
+      "stem": "Why does a unilateral lesion above the cochlear nucleus cause only subtle hearing loss?",
+      "options": ["The cochlea has bilateral output", "The ascending pathway is heavily crossed and uncrossed", "The thalamus compensates", "Hearing is processed subcortically"],
+      "answerIndex": 1,
+      "explanation": "Auditory input ascends both ipsilaterally and contralaterally beyond the cochlear nuclei, so one side still receives sound from both ears — a key contrast with the largely crossed somatosensory and motor pathways.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 30" }],
+      "structureIds": ["brainstem.vestibular-nuclei.left"]
+    },
+    {
+      "id": "auditory.mc.3",
+      "kind": "mc",
+      "systemId": "auditory",
+      "stem": "Which structure is the obligatory first central relay of the auditory nerve?",
+      "options": ["Superior olivary complex", "Inferior colliculus", "Cochlear nucleus", "Medial geniculate body"],
+      "answerIndex": 2,
+      "explanation": "Every auditory-nerve fiber synapses first in the cochlear nucleus before any further ascent.",
+      "citations": [{ "source": "Purves 5th ed., Ch. 12" }],
+      "structureIds": ["brainstem.vestibular-nuclei.left"]
+    },
+    {
+      "id": "auditory.find.1",
+      "kind": "find",
+      "systemId": "auditory",
+      "stem": "Find the primary auditory cortex (Heschl's gyrus).",
+      "candidateIds": ["cortex.transverse-temporal-gyri.left", "cortex.superior-temporal-gyrus-lateral-part.left", "cortex.postcentral-gyrus.left", "cortex.precentral-gyrus.left"],
+      "answerId": "cortex.transverse-temporal-gyri.left",
+      "explanation": "The transverse temporal gyri (Heschl's gyri, BA 41/42) constitute the primary auditory cortex, hidden within the lateral fissure.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 30" }],
+      "structureIds": ["cortex.transverse-temporal-gyri.left"]
+    },
+    {
+      "id": "auditory.case.1",
+      "kind": "case",
+      "systemId": "auditory",
+      "vignette": "A 50-year-old woman reports progressive hearing loss in her left ear over the past year, with intermittent tinnitus but no vertigo. Audiometry shows sensorineural hearing loss on the left. MRI reveals a mass at the left cerebellopontine angle.",
+      "stem": "The mass most likely compresses which cranial nerve?",
+      "options": ["CN VIII (vestibulocochlear)", "CN VII (facial)", "CN V (trigeminal)", "CN VI (abducens)"],
+      "answerIndex": 0,
+      "explanation": "A cerebellopontine-angle mass (most often a vestibular schwannoma) compresses CN VIII, producing progressive sensorineural hearing loss and tinnitus.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 30" }],
+      "structureIds": ["brainstem.vestibular-nuclei.left"]
+    }
+  ]
+}

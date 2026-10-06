@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "themes": [
+    {
+      "id": "transversal:memory",
+      "name": "Memory & the medial temporal lobe",
+      "kind": "transversal",
+      "summary": "The declarative-memory circuit (Papez circuit + hippocampal formation): hippocampus, parahippocampal cortex, mammillary body, anterior thalamus, and cingulate cortex. Spans the limbic system, diencephalon, and cortex.",
+      "structureIds": [
+        "cortex.hippocampus.left",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+        "diencephalon.mamillary-body.left",
+        "diencephalon.anterior-nuclei-of-thalamus.left",
+        "cortex.cingulate-gyrus-posteroventral-part.left"
+      ]
+    },
+    {
+      "id": "transversal:reward",
+      "name": "Dopamine & reward (mesostriatal)",
+      "kind": "transversal",
+      "summary": "The mesolimbic/mesostriatal dopamine system linking the ventral tegmental area's targets (nucleus accumbens, striatum) with the substantia nigra, habenula, and prefrontal cortex. Spans the motor (basal-ganglia) and limbic (reward) systems.",
+      "structureIds": [
+        "deep-grey.substantia-nigra.left",
+        "deep-grey.nucleus-accumbens.left",
+        "deep-grey.caudate-nucleus.left",
+        "deep-grey.putamen.left",
+        "deep-grey.septal-nuclei.median",
+        "diencephalon.habenula.median",
+        "cortex.superior-frontal-gyrus.left"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "systemId": "reward",
+  "overview": "Reward and motivation are mediated by midbrain dopamine neurons — principally in the ventral tegmental area (and substantia nigra pars compacta) — that project via the mesolimbic pathway to the nucleus accumbens and amygdala, and via the mesocortical pathway to the prefrontal cortex. Dopamine signals reward prediction error, driving learning and incentive salience; dysregulation of these pathways underlies addiction and several psychiatric disorders.",
+  "citations": [
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 49" },
+    { "source": "Purves et al., Neuroscience, 5th ed. (2012), Ch. 29" }
+  ],
+  "structures": [
+    {
+      "structureId": "deep-grey.substantia-nigra.left",
+      "function": [
+        "Midbrain dopaminergic cell groups (A9 substantia nigra pars compacta, alongside the A10 ventral tegmental area) that are the source of ascending dopamine.",
+        "Dopamine encodes reward-prediction error — firing phasically when outcomes exceed expectation — and reinforces actions that led to reward."
+      ],
+      "connectivity": {
+        "afferent": ["GABAergic inputs (striatum, rostromedial tegmental nucleus)", "Excitatory inputs (pedunculopontine nucleus)"],
+        "efferent": ["Nucleus accumbens (mesolimbic)", "Prefrontal cortex (mesocortical)", "Dorsal striatum (nigrostriatal)"]
+      },
+      "clinical": [
+        { "condition": "Addiction", "note": "Drugs of abuse converge on elevating dopamine in the nucleus accumbens, hijacking reward learning." },
+        { "condition": "Parkinson's disease", "note": "SNc degeneration depletes dorsal-striatal dopamine, causing motor signs (nigrostriatal pathway)." }
+      ],
+      "methods": ["Fast-scan cyclic voltammetry", "Dopamine-transporter PET", "Reward-prediction-error single-unit recording"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 49" },
+        { "source": "Schultz et al. (1997)" }
+      ]
+    },
+    {
+      "structureId": "deep-grey.nucleus-accumbens.left",
+      "function": [
+        "Ventral striatal hub of the mesolimbic pathway; integrates dopamine and glutamatergic (prefrontal, hippocampal, amygdala) inputs to drive motivation and reward-seeking.",
+        "Encodes incentive salience ('wanting'), value, and effort-based decision-making."
+      ],
+      "connectivity": {
+        "afferent": ["Ventral tegmental area (dopamine)", "Prefrontal cortex", "Amygdala & hippocampus"],
+        "efferent": ["Ventral pallidum", "Hypothalamus"]
+      },
+      "clinical": [
+        { "condition": "Addiction & depression", "note": "Blunted accumbens reward responses correlate with anhedonia; drug craving correlates with accumbens dopamine release." }
+      ],
+      "methods": ["Microdialysis of dopamine", "fMRI reward tasks (monetary incentive delay)"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 49" },
+        { "source": "Berridge & Robinson (1998)" }
+      ]
+    },
+    {
+      "structureId": "deep-grey.basolateral-complex.left",
+      "function": [
+        "Assigns emotional value to sensory stimuli and projects to the nucleus accumbens, gating reward-seeking by learned affective significance.",
+        "Links reward memory with the dopamine system during conditioned reinforcement."
+      ],
+      "connectivity": {
+        "afferent": ["Sensory cortex & thalamus", "Hippocampus"],
+        "efferent": ["Nucleus accumbens", "Central amygdala", "Prefrontal cortex"]
+      },
+      "clinical": [
+        { "condition": "Cue-induced craving", "note": "BLA→accumbens projections drive the motivational pull of drug-associated cues." }
+      ],
+      "methods": ["Conditioned-place preference", "Disconnection lesion studies"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 49" },
+        { "source": "Everitt & Robbins (2005)" }
+      ]
+    },
+    {
+      "structureId": "cortex.straight-gyrus-gyrus-rectus.left",
+      "function": [
+        "Ventromedial prefrontal / orbitofrontal territory implicated in reward value representation, reversal learning, and outcome-guided decision-making.",
+        "Part of the mesocortical target network that flexibly updates stimulus–reward associations."
+      ],
+      "connectivity": {
+        "afferent": ["Ventral tegmental area (dopamine)", "Amygdala"],
+        "efferent": ["Nucleus accumbens", "Dorsolateral prefrontal cortex"]
+      },
+      "clinical": [
+        { "condition": "Addiction & disinhibition", "note": "Orbitofrontal dysfunction impairs reversal learning and contributes to compulsive drug-seeking despite adverse consequences." }
+      ],
+      "methods": ["Reversal-learning fMRI", "Lesion studies (Phineas Gage)"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 49" },
+        { "source": "Rolls (2000)" }
+      ]
+    },
+    {
+      "structureId": "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+      "function": [
+        "Anterior/mid-cingulate target of the mesocortical dopamine pathway; encodes the effort and cost of actions and integrates reward value with cognitive control.",
+        "Tracks the 'work' required to obtain reward and signals prediction errors during learning."
+      ],
+      "connectivity": {
+        "afferent": ["Ventral tegmental area (dopamine)", "Prefrontal cortex"],
+        "efferent": ["Motor/premotor cortex", "Nucleus accumbens"]
+      },
+      "clinical": [
+        { "condition": "Apathy & anhedonia", "note": "Reduced mesocortical dopamine to the anterior cingulate correlates with motivational deficits in depression and schizophrenia." }
+      ],
+      "methods": ["Effort-based decision tasks", "PET of D1 receptors"],
+      "citations": [
+        { "source": "Kandel 6th ed., Ch. 49" },
+        { "source": "Salamone et al. (2007)" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "reward.mc.1",
+      "kind": "mc",
+      "systemId": "reward",
+      "stem": "What does the phasic firing of midbrain dopamine neurons encode?",
+      "options": ["Reward magnitude alone", "Reward prediction error", "Motor velocity", "Pain intensity"],
+      "answerIndex": 1,
+      "explanation": "Dopamine neurons fire phasically when reward exceeds prediction, is unchanged at fully predicted reward, and pause when reward is omitted — the reward-prediction-error signal.",
+      "citations": [{ "source": "Schultz et al. (1997)" }],
+      "structureIds": ["deep-grey.substantia-nigra.left"]
+    },
+    {
+      "id": "reward.mc.2",
+      "kind": "mc",
+      "systemId": "reward",
+      "stem": "Which structure is the ventral-striatal hub of the mesolimbic dopamine pathway?",
+      "options": ["Nucleus accumbens", "Putamen", "Globus pallidus", "Subthalamic nucleus"],
+      "answerIndex": 0,
+      "explanation": "The nucleus accumbens is the core of the ventral striatum and the primary mesolimbic target of VTA dopamine neurons.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 49" }],
+      "structureIds": ["deep-grey.nucleus-accumbens.left"]
+    },
+    {
+      "id": "reward.mc.3",
+      "kind": "mc",
+      "systemId": "reward",
+      "stem": "Which pathway projects dopamine from the VTA to the prefrontal cortex?",
+      "options": ["Nigrostriatal", "Mesolimbic", "Mesocortical", "Tuberoinfundibular"],
+      "answerIndex": 2,
+      "explanation": "The mesocortical pathway conveys VTA dopamine to the prefrontal cortex (including anterior cingulate and orbitofrontal regions), modulating cognition and motivation.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 49" }],
+      "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left"]
+    },
+    {
+      "id": "reward.find.1",
+      "kind": "find",
+      "systemId": "reward",
+      "stem": "Find the ventral-striatal hub of the mesolimbic reward pathway.",
+      "candidateIds": ["deep-grey.nucleus-accumbens.left", "deep-grey.caudate-nucleus.left", "deep-grey.globus-pallidus-internal.left", "deep-grey.subthalamic-nucleus.left"],
+      "answerId": "deep-grey.nucleus-accumbens.left",
+      "explanation": "The nucleus accumbens is the core of the ventral striatum and the main target of the mesolimbic dopamine pathway.",
+      "citations": [{ "source": "Kandel 6th ed., Ch. 49" }],
+      "structureIds": ["deep-grey.nucleus-accumbens.left"]
+    }
+  ]
+}
