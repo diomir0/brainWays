@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "license": "CC BY-SA 4.0",
+  "source": "Yeo et al. 2011 (resting-state intrinsic networks, 7-network parcellation), Thomas Yeo 17",
+  "networks": [
+    {
+      "id": "visual",
+      "name": "Visual network",
+      "taxonomy": "Yeo 7",
+      "color": "#781286",
+      "summary": "Primary and extrastriate visual cortex plus the lateral geniculate relay: calcarine/lingual/occipital gyri, cuneus, and the occipital pole.",
+      "structureIds": [
+        "cortex.cuneus.left",
+        "cortex.cuneus.right",
+        "cortex.lingual-gyrus.left",
+        "cortex.lingual-gyrus.right",
+        "cortex.lateral-occipital-gyrus-middle-occipital-gyrus.left",
+        "cortex.lateral-occipital-gyrus-middle-occipital-gyrus.right",
+        "cortex.superior-occipital-gyri.left",
+        "cortex.superior-occipital-gyri.right",
+        "cortex.occipital-pole.left",
+        "cortex.occipital-pole.right",
+        "cortex.calcarine-sulcus.left",
+        "cortex.calcarine-sulcus.right",
+        "cortex.inferior-occipital-gyrus-and-sulcus.left",
+        "cortex.inferior-occipital-gyrus-and-sulcus.right",
+        "diencephalon.lateral-geniculate-body.left",
+        "diencephalon.lateral-geniculate-body.right"
+      ],
+      "function": [
+        "Early (V1–V3) and extrastriate (hV4, lateral occipital complex) processing of retinotopic input.",
+        "Feeds the dorsal ('where'/action) and ventral ('what'/perception) visual streams."
+      ],
+      "states": [
+        "Active during passive and active visual perception, including low-level feature detection and visual imagery of scenes and objects."
+      ],
+      "paradigms": [
+        "Retinotopic mapping with flickering checkerboards and rotating wedges / expanding rings (Engel et al. 1994).",
+        "Passive movie viewing and object/scene recognition in task-based fMRI."
+      ],
+      "tracts": [
+        "Optic radiation (lateral geniculate nucleus → primary visual cortex)",
+        "Inferior longitudinal fasciculus (occipital → ventral temporal cortex)",
+        "Optic tract and optic nerve (retinal → LGN relay)"
+      ],
+      "disorders": [
+        { "condition": "Cortical blindness (Anton syndrome)", "note": "Bilateral V1 damage abolishes conscious vision; anosognosia for the deficit is characteristic." },
+        { "condition": "Visual agnosia", "note": "Ventral-stream lesions impair object recognition despite spared low-level vision." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Engel SA, Rumelhart DE, Wandell BA, et al. (1994) fMRI of human visual cortex. Nature 369:525." }
+      ]
+    },
+    {
+      "id": "somatomotor",
+      "name": "Somatomotor network",
+      "taxonomy": "Yeo 7",
+      "color": "#4682B4",
+      "summary": "Primary motor and somatosensory cortex with the supplementary motor area: precentral/postcentral and paracentral gyri.",
+      "structureIds": [
+        "cortex.precentral-gyrus.left",
+        "cortex.precentral-gyrus.right",
+        "cortex.postcentral-gyrus.left",
+        "cortex.postcentral-gyrus.right",
+        "cortex.paracentral-gyrus-and-sulcus.left",
+        "cortex.paracentral-gyrus-and-sulcus.right",
+        "cortex.central-sulcus.left",
+        "cortex.central-sulcus.right",
+        "cortex.precentral-sulcus-superior-part.left",
+        "cortex.precentral-sulcus-superior-part.right"
+      ],
+      "nodeNotes": {
+        "Precentral sulcus (Superior part)": "supplementary motor area (shared with the frontal eye fields of the dorsal attention network)"
+      },
+      "function": [
+        "Primary motor (M1) and primary somatosensory (S1) cortex, with the supplementary motor area (SMA), mediating voluntary movement execution and somatosensation."
+      ],
+      "states": [
+        "Active during overt and imagined movement; somatotopically organized as the motor and sensory homunculi."
+      ],
+      "paradigms": [
+        "Finger/hand movement tasks contrasted with rest; vibrotactile stimulation to map digit somatotopy (Penfield & Boldrey 1937)."
+      ],
+      "tracts": [
+        "Corticospinal tract (M1 → spinal cord)",
+        "Superior thalamic radiation (ventral posterolateral nucleus → S1)"
+      ],
+      "disorders": [
+        { "condition": "Upper motor neuron syndrome", "note": "M1/corticospinal lesions produce spasticity, hyperreflexia, and weakness." },
+        { "condition": "Cortical sensory loss / astereognosis", "note": "S1 damage impairs tactile discrimination and object recognition by touch." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Penfield W, Boldrey E (1937) Somatic motor and sensory representation in the cerebral cortex of man as studied by electrical stimulation. Brain 60:389–443." }
+      ]
+    },
+    {
+      "id": "dorsal-attention",
+      "name": "Dorsal attention network",
+      "taxonomy": "Yeo 7",
+      "color": "#00760E",
+      "summary": "Goal-directed (top-down) attention: intraparietal sulcus, superior parietal lobule, and the frontal eye fields.",
+      "structureIds": [
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.intraparietal-sulcus.left",
+        "cortex.intraparietal-sulcus.right",
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.precentral-sulcus-superior-part.left",
+        "cortex.precentral-sulcus-superior-part.right"
+      ],
+      "nodeNotes": {
+        "Superior parietal lobule": "caudal part",
+        "Middle frontal gyrus": "posterior part — frontal eye fields",
+        "Precentral sulcus (Superior part)": "frontal eye fields (shared with the supplementary motor area)"
+      },
+      "function": [
+        "Goal-directed (top-down) allocation of spatial attention and eye-movement planning; encodes attended spatial locations."
+      ],
+      "states": [
+        "Active during sustained spatial attention and saccade preparation/execution; deactivated during mind-wandering."
+      ],
+      "paradigms": [
+        "Posner spatial-cueing tasks, saccade and visual-search paradigms, and covert attention to peripheral targets (Corbetta & Shulman 2002)."
+      ],
+      "tracts": [
+        "Superior longitudinal fasciculus (frontoparietal attention circuit)",
+        "Frontal aslant tract (supplementary motor / frontal eye field region)"
+      ],
+      "disorders": [
+        { "condition": "Hemispatial neglect", "note": "Right-hemisphere DAN lesions (parietal or frontal eye fields) cause contralesional neglect." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Corbetta M, Shulman GL (2002) Control of goal-directed and stimulus-driven attention in the brain. Nat Rev Neurosci 3:201–215." }
+      ]
+    },
+    {
+      "id": "ventral-attention",
+      "name": "Ventral attention / salience network",
+      "taxonomy": "Yeo 7",
+      "color": "#C43AFA",
+      "summary": "Stimulus-driven reorienting and salience detection: temporoparietal junction, ventral frontal cortex, and anterior insula.",
+      "structureIds": [
+        "cortex.supramarginal-gyrus.left",
+        "cortex.supramarginal-gyrus.right",
+        "cortex.superior-temporal-gyrus-lateral-part.left",
+        "cortex.superior-temporal-gyrus-lateral-part.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.right",
+        "cortex.orbital-part-of-inferior-frontal-gyrus.left",
+        "cortex.orbital-part-of-inferior-frontal-gyrus.right"
+      ],
+      "nodeNotes": {
+        "Supramarginal gyrus": "posterior part — temporoparietal junction",
+        "Superior temporal gyrus (Lateral part)": "posterior superior temporal gyrus — temporoparietal junction",
+        "Angular gyrus": "ventral/anterior part at the temporoparietal junction",
+        "Insula (Subcentral gyrus and ant. and post. sulci)": "anterior insula"
+      },
+      "function": [
+        "Stimulus-driven reorienting of attention to salient or unexpected stimuli; detection of behaviorally relevant events.",
+        "Integrates interoceptive and limbic signals (the 'salience' component anchored in the anterior insula)."
+      ],
+      "states": [
+        "Transiently active at stimulus onset / oddball detection; tonically modulates switching between the default-mode and executive networks."
+      ],
+      "paradigms": [
+        "Auditory and visual oddball detection, stop-signal tasks, and salience/novelty paradigms (Seeley et al. 2007)."
+      ],
+      "tracts": [
+        "Fronto-insular white matter (anterior insula → inferior frontal cortex)",
+        "Superior longitudinal fasciculus (temporoparietal junction → frontal)",
+        "Uncinate fasciculus (limbic–frontal salience link)"
+      ],
+      "disorders": [
+        { "condition": "Schizophrenia (aberrant salience)", "note": "Dysregulated salience attribution is linked to delusions and hallucinations." },
+        { "condition": "Anxiety / interoceptive disorders", "note": "Anterior insula dysfunction associates with altered bodily-signal processing." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Seeley WW, Menon V, Schatzberg AF, et al. (2007) Dissociable intrinsic connectivity networks for salience processing and executive control. J Neurosci 27:2349–2356." },
+        { "source": "Corbetta M, Shulman GL (2002) Control of goal-directed and stimulus-driven attention in the brain. Nat Rev Neurosci 3:201–215." }
+      ]
+    },
+    {
+      "id": "limbic",
+      "name": "Limbic network",
+      "taxonomy": "Yeo 7",
+      "color": "#E6A020",
+      "summary": "Emotion and memory: temporal pole, orbitofrontal cortex, subgenual anterior cingulate, hippocampus/parahippocampus, and the amygdala.",
+      "structureIds": [
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right",
+        "cortex.orbital-gyri.left",
+        "cortex.orbital-gyri.right",
+        "cortex.orbital-gyri-frontomarginal-gyrus-and-sulcus.left",
+        "cortex.orbital-gyri-frontomarginal-gyrus-and-sulcus.right",
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "cortex.hippocampus.left",
+        "cortex.hippocampus.right",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.right",
+        "cortex.inferior-temporal-gyrus.left",
+        "cortex.inferior-temporal-gyrus.right",
+        "deep-grey.basolateral-complex.left",
+        "deep-grey.basolateral-complex.right",
+        "deep-grey.corticomedial-group.left",
+        "deep-grey.corticomedial-group.right",
+        "deep-grey.lateral-nucleus.left",
+        "deep-grey.lateral-nucleus.right",
+        "deep-grey.central-nucleus.left",
+        "deep-grey.central-nucleus.right"
+      ],
+      "nodeNotes": {
+        "Hippocampus": "anterior hippocampus (emotional memory; shared with the default mode network)",
+        "Medial occipitotemporal gyrus (Parahippocampal)": "anterior parahippocampal cortex",
+        "Cingulate gyrus and sulcus (Middle anterior part)": "subgenual/perigenual anterior cingulate",
+        "Straight gyrus (Gyrus rectus)": "medial orbitofrontal cortex",
+        "Temporal pole": "anterior temporal pole"
+      },
+      "function": [
+        "Emotion, motivation, and memory encoding, integrating olfactory, visceral, and mnemonic signals via the amygdala, hippocampus, and orbitofrontal cortex."
+      ],
+      "states": [
+        "Active during emotional experience and recall; tonically active at rest as part of the 'emotional' component of the default system."
+      ],
+      "paradigms": [
+        "Emotional face and picture viewing, autobiographical/emotional memory recall, and olfactory stimulation."
+      ],
+      "tracts": [
+        "Fornix (hippocampus → mammillary body)",
+        "Stria terminalis (amygdala → hypothalamus)",
+        "Uncinate fasciculus (temporal pole → orbitofrontal cortex)"
+      ],
+      "disorders": [
+        { "condition": "Anxiety and mood disorders", "note": "Amygdala–orbitofrontal dysregulation underlies pathological anxiety and depression." },
+        { "condition": "Temporal lobe epilepsy", "note": "Hippocampal/amygdala involvement can produce emotional and memory symptoms." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Catani M, Dell'Acqua F, Thiebaut de Schotten M (2013) A revised limbic system model for memory, emotion and behaviour. Neurosci Biobehav Rev 37:1724–1737." },
+        { "source": "Pessoa L (2017) A network model of the emotional brain. Trends Cogn Sci 21:357–371." }
+      ]
+    },
+    {
+      "id": "frontoparietal",
+      "name": "Frontoparietal control network",
+      "taxonomy": "Yeo 7",
+      "color": "#E85A3B",
+      "summary": "Flexible cognitive control: dorsolateral prefrontal cortex, anterior inferior parietal lobule, and lateral precuneus.",
+      "structureIds": [
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.supramarginal-gyrus.left",
+        "cortex.supramarginal-gyrus.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.right",
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.middle-temporal-gyrus.left",
+        "cortex.middle-temporal-gyrus.right"
+      ],
+      "nodeNotes": {
+        "Middle frontal gyrus": "middle portion — dorsolateral prefrontal cortex",
+        "Superior frontal gyrus": "posterior/lateral part — dorsolateral prefrontal cortex",
+        "Supramarginal gyrus": "anterior part — anterior inferior parietal lobule",
+        "Angular gyrus": "anterior angular gyrus",
+        "Precuneus": "lateral precuneus",
+        "Superior parietal lobule": "rostral part",
+        "Middle temporal gyrus": "middle temporal gyrus"
+      },
+      "function": [
+        "Flexible, goal-directed cognitive control: working memory, task switching, planning, and top-down regulation of other networks."
+      ],
+      "states": [
+        "Active during effortful cognitive tasks; flexibly couples with the default-mode (introspection) or dorsal-attention (external focus) network depending on task demands."
+      ],
+      "paradigms": [
+        "N-back working memory, task-switching, Stroop, and planning (Tower of London) tasks (Cole et al. 2013)."
+      ],
+      "tracts": [
+        "Superior longitudinal fasciculus II/III (frontoparietal control circuit)",
+        "Inferior fronto-occipital fasciculus",
+        "Frontal aslant tract"
+      ],
+      "disorders": [
+        { "condition": "Executive dysfunction", "note": "ADHD, traumatic brain injury, and schizophrenia associate with frontoparietal hypoconnectivity and impaired control." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Cole MW, Reynolds JR, Power JD, et al. (2013) Multi-task connectivity reveals flexible hubs for adaptive task control. Nat Neurosci 16:1348–1355." },
+        { "source": "Dosenbach NUF, Fair DA, Miezin FM, et al. (2007) Distinct brain networks for adaptive and stable task control in humans. Proc Natl Acad Sci USA 104:11073–11078." }
+      ]
+    },
+    {
+      "id": "default-mode",
+      "name": "Default mode network",
+      "taxonomy": "Yeo 7",
+      "color": "#D64550",
+      "summary": "Internally-directed cognition: posterior cingulate/precuneus, medial prefrontal cortex, angular gyrus, and medial temporal lobe.",
+      "structureIds": [
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.cingulate-gyrus-posteroventral-part.left",
+        "cortex.cingulate-gyrus-posteroventral-part.right",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-posterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-posterior-part.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.transverse-frontopolar-gyrus-and-sulcus.left",
+        "cortex.transverse-frontopolar-gyrus-and-sulcus.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "cortex.hippocampus.left",
+        "cortex.hippocampus.right",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.right",
+        "cortex.middle-temporal-gyrus.left",
+        "cortex.middle-temporal-gyrus.right",
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right",
+        "diencephalon.anterior-nuclei-of-thalamus.left",
+        "diencephalon.anterior-nuclei-of-thalamus.right",
+        "diencephalon.mediodorsal-nucleus.left",
+        "diencephalon.mediodorsal-nucleus.right"
+      ],
+      "nodeNotes": {
+        "Angular gyrus": "posterior angular gyrus",
+        "Precuneus": "medial precuneus",
+        "Superior frontal gyrus": "medial superior frontal gyrus (medial prefrontal cortex)",
+        "Cingulate gyrus (Posteroventral part)": "posterior cingulate cortex (ventral)",
+        "Cingulate gyrus and sulcus (Posterior dorsal part)": "posterior cingulate cortex (dorsal)",
+        "Cingulate gyrus and sulcus (Middle posterior part)": "posterior cingulate cortex",
+        "Hippocampus": "posterior hippocampus",
+        "Medial occipitotemporal gyrus (Parahippocampal)": "posterior parahippocampal cortex",
+        "Middle temporal gyrus": "posterior middle temporal gyrus",
+        "Temporal pole": "lateral temporal pole",
+        "Cingulate gyrus and sulcus (Middle anterior part)": "anterior cingulate cortex (shared with the limbic network)",
+        "Straight gyrus (Gyrus rectus)": "medial prefrontal cortex (shared with the limbic network)"
+      },
+      "function": [
+        "Internally-directed cognition: autobiographical memory, self-referential thought, future simulation, and social cognition."
+      ],
+      "states": [
+        "Most active at rest and deactivates during externally-focused tasks; supports mind-wandering and mental time travel."
+      ],
+      "paradigms": [
+        "Resting-state vs. task contrast, autobiographical memory recall, self-referential trait judgement, and future thinking (Buckner et al. 2008)."
+      ],
+      "tracts": [
+        "Cingulum bundle (posterior cingulate ↔ medial prefrontal; not discretely modeled in this atlas)",
+        "Fornix (hippocampus ↔ mammillary body/anterior thalamus)",
+        "Anterior thalamic radiation (anterior thalamus → cingulate)",
+        "Uncinate fasciculus (temporal ↔ frontal)"
+      ],
+      "disorders": [
+        { "condition": "Alzheimer's disease", "note": "Posterior cingulate/precuneus shows early hypometabolism and amyloid deposition." },
+        { "condition": "Major depressive disorder", "note": "Medial prefrontal–posterior cingulate hyperconnectivity is a robust finding." },
+        { "condition": "Autism spectrum disorder", "note": "Reduced DMN deactivation during externally-focused tasks." }
+      ],
+      "citations": [
+        { "source": "Yeo BTT, Krienen FM, Sepulcre J, et al. (2011) The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106:1125–1165." },
+        { "source": "Buckner RL, Andrews-Hanna JR, Schacter DL (2008) The brain's default network: anatomy, function, and relevance to disease. Ann N Y Acad Sci 1124:1–38." },
+        { "source": "Raichle ME, MacLeod AM, Snyder AZ, et al. (2001) A default mode of brain function. Proc Natl Acad Sci USA 98:676–682." }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 import type { SrsState } from '../../types/assessment';
 import { getAtlas } from '../atlas/loader';
 import { structureContentById } from '../content/loader';
+import { networksForStructure } from '../content/networks';
+import { cognitiveSystemsForStructure } from '../content/cognitiveSystems';
 import { themesForStructure } from '../content/themes';
 import { kvGet, kvKeys, kvSet } from '../storage/db';
 import { initialState } from './srs';
@@ -14,6 +16,8 @@ export interface ReviewCard {
   back: string[];
   category: string;
   themes: string[];
+  networks: string[];
+  cognitiveSystems: string[];
 }
 
 /** Cards derived from structures that carry a description or authored content. */
@@ -36,6 +40,8 @@ export function buildReviewCards(): ReviewCard[] {
       back,
       category: s.category,
       themes: themesForStructure(s.id),
+      networks: networksForStructure(s.id).map((n) => n.id),
+      cognitiveSystems: cognitiveSystemsForStructure(s.id).map((c) => c.id),
     });
   }
   return cards;

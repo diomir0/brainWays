@@ -1,12 +1,14 @@
 import { structureById, categoryLabel } from '../../core/atlas/loader';
 import { structureContentById } from '../../core/content/loader';
 import { pathwaysForStructure } from '../../core/content/themes';
+import { networksForStructure, nodeNote } from '../../core/content/networks';
 
 export function StructureCard({ structureId }: { structureId: string }) {
   const s = structureById(structureId);
   if (!s) return null;
   const content = structureContentById(structureId);
   const pathways = pathwaysForStructure(structureId);
+  const networks = networksForStructure(structureId);
 
   return (
     <div className="panel max-h-full overflow-y-auto p-4 text-sm">
@@ -38,6 +40,26 @@ export function StructureCard({ structureId }: { structureId: string }) {
                 </span>
               </li>
             ))}
+          </ul>
+        </div>
+      )}
+
+      {networks.length > 0 && (
+        <div className="mb-3">
+          <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-accent">
+            Brain networks
+          </h3>
+          <ul className="flex flex-wrap gap-1.5">
+            {networks.map((n) => {
+              const note = nodeNote(n.id, structureId);
+              return (
+                <li key={n.id} className="chip" style={{ borderColor: n.color }}>
+                  <span className="mr-1 inline-block h-2 w-2 rounded-full" style={{ background: n.color }} />
+                  {n.name}
+                  {note && <span className="ml-1 text-slate-400">({note})</span>}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

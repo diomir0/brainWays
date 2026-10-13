@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { buildReviewCards, getCardState, loadAllCardStates, saveCardState } from '../core/assessment/cards';
+import { getNetworks } from '../core/content/networks';
+import { getCognitiveSystems } from '../core/content/cognitiveSystems';
 import { getThemes } from '../core/content/themes';
 import { schedule } from '../core/assessment/srs';
 import type { SrsState } from '../types/assessment';
@@ -16,16 +18,28 @@ const GRADE_BUTTONS: { label: string; quality: number; cls: string }[] = [
 export function Review() {
   const allCards = useMemo(() => buildReviewCards(), []);
   const themes = useMemo(() => getThemes(), []);
+  const networks = useMemo(() => getNetworks(), []);
+  const cognitiveSystems = useMemo(() => getCognitiveSystems(), []);
 
-  const [themeId, setThemeId] = useState<string | null>(null);
+  const [deckFilter, setDeckFilter] = useState<{ kind: 'theme' | 'network' | 'cognitive'; id: string } | null>(null);
   const [queue, setQueue] = useState<string[]>([]);
   const [flipped, setFlipped] = useState(false);
   const [loading, setLoading] = useState(true);
   const [remaining, setRemaining] = useState(0);
 
   const deck = useMemo(
-    () => (themeId ? allCards.filter((c) => c.themes.includes(themeId)) : allCards),
-    [allCards, themeId],
+    () =>
+      deckFilter
+        ? allCards.filter((c) =>
+            (deckFilter.kind === 'theme'
+              ? c.themes
+              : deckFilter.kind === 'network'
+                ? c.networks
+                : c.cognitiveSystems
+            ).includes(deckFilter.id),
+          )
+        : allCards,
+    [allCards, deckFilter],
   );
   const current = queue.length ? allCards.find((c) => c.id === queue[0]) : undefined;
 
@@ -65,25 +79,49 @@ export function Review() {
 
   return (
     <div className="flex h-full flex-col">
-      {/* Theme selector */}
+      {/* Deck selector */}
       <div className="flex items-center gap-2 overflow-x-auto border-b border-edge px-4 py-2.5">
         <button
-          onClick={() => setThemeId(null)}
-          className={`chip shrink-0 ${themeId === null ? 'border-accent text-accent' : ''}`}
+          onClick={() => setDeckFilter(null)}
+          className={`chip shrink-0 ${deckFilter === null ? 'border-accent text-accent' : ''}`}
         >
-          All themes
+          All
         </button>
         {themes.map((t) => (
           <button
             key={t.id}
-            onClick={() => setThemeId(t.id)}
-            className={`chip shrink-0 ${themeId === t.id ? 'border-accent text-accent' : ''}`}
+            onClick={() => setDeckFilter({ kind: 'theme', id: t.id })}
+            className={`chip shrink-0 ${deckFilter?.kind === 'theme' && deckFilter.id === t.id ? 'border-accent text-accent' : ''}`}
             title={t.summary}
           >
             {t.name}
             {t.kind === 'transversal' && (
               <span className="ml-1 text-[10px] uppercase text-amber-400">×</span>
             )}
+          </button>
+        ))}
+        <div className="h-5 w-px bg-edge" />
+        {networks.map((n) => (
+          <button
+            key={n.id}
+            onClick={() => setDeckFilter({ kind: 'network', id: n.id })}
+            className={`chip shrink-0 ${deckFilter?.kind === 'network' && deckFilter.id === n.id ? 'border-accent text-accent' : ''}`}
+            title={n.summary}
+          >
+            <span className="mr-1 inline-block h-2 w-2 rounded-full" style={{ background: n.color }} />
+            {n.name}
+          </button>
+        ))}
+        <div className="h-5 w-px bg-edge" />
+        {cognitiveSystems.map((c) => (
+          <button
+            key={c.id}
+            onClick={() => setDeckFilter({ kind: 'cognitive', id: c.id })}
+            className={`chip shrink-0 ${deckFilter?.kind === 'cognitive' && deckFilter.id === c.id ? 'border-accent text-accent' : ''}`}
+            title={c.summary}
+          >
+            <span className="mr-1 inline-block h-2 w-2 rounded-full" style={{ background: c.color }} />
+            {c.name}
           </button>
         ))}
       </div>
@@ -95,13 +133,13 @@ export function Review() {
           <div className="panel max-w-md p-6 text-center">
             <h1 className="mb-2 font-serif text-2xl font-semibold">All caught up</h1>
             <p className="text-sm text-slate-400">
-              No cards are due in {themeId ? 'this theme' : 'any theme'} right now.
+              No cards are due in this deck right now.
             </p>
           </div>
         ) : (
           <>
             <p className="mb-3 text-xs text-slate-500">
-              {remaining} due · {deck.length} in {themeId ? 'theme' : 'deck'}
+              {remaining} due · {deck.length} in {deckFilter ? 'deck' : 'all'}
             </p>
 
             <div className="panel w-full max-w-md p-6">

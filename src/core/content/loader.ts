@@ -1,6 +1,7 @@
 import type { StructureContent, SystemContent } from '../../types/content';
 import type { Question } from '../../types/assessment';
 import { structureById } from '../atlas/loader';
+import { getCognitiveQuestions } from './cognitiveSystems';
 
 const modules = import.meta.glob('../../data/content/*.json', { eager: true });
 
@@ -18,7 +19,7 @@ for (const path in modules) {
     const s = structureById(c.structureId);
     if (s) contentByLabel.set(s.label, c);
   }
-  for (const q of sc.questions) allQuestions.push(q);
+  for (const q of sc.questions ?? []) allQuestions.push(q);
 }
 
 export function systemContent(systemId: string): SystemContent | undefined {
@@ -30,7 +31,8 @@ export function allSystemContent(): SystemContent[] {
 }
 
 export function getQuestions(systemId?: string): Question[] {
-  return systemId ? allQuestions.filter((q) => q.systemId === systemId) : allQuestions;
+  const all = [...allQuestions, ...getCognitiveQuestions()];
+  return systemId ? all.filter((q) => q.systemId === systemId) : all;
 }
 
 export function questionById(id: string): Question | undefined {

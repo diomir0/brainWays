@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { BrainViewer } from '../components/brain/BrainViewer';
 import { getSystems, structureById, structuresByLabel } from '../core/atlas/loader';
 import { getQuestions } from '../core/content/loader';
+import { getCognitiveSystems } from '../core/content/cognitiveSystems';
 import { drawQuestions, recordAnswer } from '../core/assessment/engine';
 import type { Question } from '../types/assessment';
 import { useApp, useBrain } from '../state/store';
@@ -10,6 +11,7 @@ type Phase = 'setup' | 'running' | 'done';
 
 export function Quiz() {
   const systems = getSystems().systems;
+  const cognitiveSystems = getCognitiveSystems();
   const quizSystemId = useApp((s) => s.quizSystemId);
   const setQuizSystemId = useApp((s) => s.setQuizSystemId);
 
@@ -115,11 +117,20 @@ export function Quiz() {
               className="mb-4 w-full rounded-lg border border-edge bg-panel px-3 py-2 text-sm text-slate-100 outline-none"
             >
               <option value="">All systems ({pool.length} questions)</option>
-              {systems.map((s) => (
-                <option key={s.id} value={s.id}>
-                  {s.name} ({getQuestions(s.id).length})
-                </option>
-              ))}
+              <optgroup label="Functional systems">
+                {systems.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.name} ({getQuestions(s.id).length})
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="Cognitive systems">
+                {cognitiveSystems.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name} ({getQuestions(c.id).length})
+                  </option>
+                ))}
+              </optgroup>
             </select>
             <button className="btn-primary w-full" onClick={start} disabled={pool.length === 0}>
               Start quiz

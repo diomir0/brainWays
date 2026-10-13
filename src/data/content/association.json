@@ -1,0 +1,188 @@
+{
+  "systemId": "association",
+  "overview": "Heteromodal and paralimbic association cortex — the dorsolateral and medial prefrontal cortex, insula, posterior cingulate/retrosplenial cortex, parahippocampal cortex, and temporal pole. These multimodal regions sit at the top of the cortical hierarchy, integrating inputs across sensory modalities and supporting higher-order cognition: working memory, cognitive control, attention, self-referential thought, and social cognition. They form the cortical hubs of the large-scale cognitive systems.",
+  "citations": [
+    { "source": "Mesulam M-M (2000) Principles of Behavioral and Cognitive Neurology, 2nd ed. (heteromodal & paralimbic association cortex)" },
+    { "source": "Kandel et al., Principles of Neural Science, 6th ed. (2021), Ch. 67" }
+  ],
+  "questions": [],
+  "structures": [
+    {
+      "structureId": "cortex.middle-frontal-gyrus.left",
+      "function": [
+        "The dorsolateral prefrontal cortex (DLPFC): a core node of the frontoparietal control network supporting working memory, cognitive control, and planning.",
+        "Its posterior part contains the frontal eye fields, which direct goal-driven saccades as part of the dorsal attention network."
+      ],
+      "connectivity": {
+        "afferent": ["Posterior parietal cortex", "Mediodorsal nucleus of the thalamus", "Dopaminergic midbrain (VTA)"],
+        "efferent": ["Caudate nucleus (corticostriatal)", "Premotor cortex", "Posterior parietal cortex"]
+      },
+      "clinical": [
+        { "condition": "Dysexecutive syndrome", "note": "Lateral prefrontal lesions impair planning, working memory, and cognitive flexibility." },
+        { "condition": "ADHD", "note": "Hypoactivation of the DLPFC during working-memory and inhibitory tasks." }
+      ],
+      "methods": ["N-back and delayed-response fMRI", "Lesion studies", "Transcranial magnetic stimulation"],
+      "citations": [
+        { "source": "Goldman-Rakic PS (1995) Cellular basis of working memory. Neuron 14:477–485." },
+        { "source": "Miller EK, Cohen JD (2001) An integrative theory of prefrontal cortex function. Annu Rev Neurosci 24:167–202." }
+      ]
+    },
+    {
+      "structureId": "cortex.superior-frontal-gyrus.left",
+      "function": [
+        "Lateral superior frontal gyrus forms the upper DLPFC, contributing to working memory and cognitive control.",
+        "Its medial surface is part of the medial prefrontal cortex (mPFC), a hub of the default-mode network for self-referential processing and mentalizing."
+      ],
+      "connectivity": {
+        "afferent": ["Mediodorsal nucleus of the thalamus", "Anterior cingulate cortex", "Posterior parietal cortex"],
+        "efferent": ["Caudate nucleus", "Premotor cortex", "Posterior cingulate cortex"]
+      },
+      "clinical": [
+        { "condition": "Apathy / abulia", "note": "Medial frontal lesions reduce initiative and spontaneous behavior." },
+        { "condition": "Major depressive disorder", "note": "Medial prefrontal over-engagement underlies excessive self-focus and rumination." }
+      ],
+      "methods": ["Resting-state fMRI (default-mode network)", "Self-referential trait judgement fMRI", "Lesion studies"],
+      "citations": [
+        { "source": "Northoff G et al. (2006) Self-referential processing in our brain — a meta-analysis. Neuroimage 31:440–457." },
+        { "source": "Miller EK, Cohen JD (2001) An integrative theory of prefrontal cortex function. Annu Rev Neurosci 24:167–202." }
+      ]
+    },
+    {
+      "structureId": "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+      "function": [
+        "The insular cortex, especially its anterior portion, mediates interoception — the conscious awareness of internal bodily states — and is the key hub of the salience network.",
+        "Integrates visceral, autonomic, and affective signals to tag stimuli as behaviorally salient and to switch between the default-mode and executive networks."
+      ],
+      "connectivity": {
+        "afferent": ["Ventromedial posterior nucleus of the thalamus (visceral)", "Amygdala", "Anterior cingulate cortex"],
+        "efferent": ["Anterior cingulate cortex", "Amygdala", "Prefrontal cortex"]
+      },
+      "clinical": [
+        { "condition": "Anxiety and interoceptive disorders", "note": "Altered insular interoceptive signaling underlies panic and somatic symptom disorders." },
+        { "condition": "Schizophrenia (aberrant salience)", "note": "Insular dysfunction links to the misattribution of salience in psychosis." }
+      ],
+      "methods": ["Interoceptive (heartbeat) awareness tasks", "Salience/oddball fMRI", "Resting-state connectivity"],
+      "citations": [
+        { "source": "Craig AD (2009) How do you feel — now? The anterior insula and human awareness. Nat Rev Neurosci 10:59–70." },
+        { "source": "Seeley WW et al. (2007) Dissociable intrinsic connectivity networks for salience processing and executive control. J Neurosci 27:2349–2356." }
+      ]
+    },
+    {
+      "structureId": "cortex.transverse-frontopolar-gyrus-and-sulcus.left",
+      "function": [
+        "The frontopolar cortex (Brodmann area 10): the most anterior prefrontal region, supporting relational reasoning, prospective memory, and cognitive branching (holding goals in mind while pursuing subgoals).",
+        "Contributes to the anterior component of the default-mode network during internally-directed thought."
+      ],
+      "connectivity": {
+        "afferent": ["Dorsolateral prefrontal cortex", "Anterior cingulate cortex", "Lateral parietal cortex"],
+        "efferent": ["Dorsolateral prefrontal cortex", "Anterior cingulate cortex"]
+      },
+      "clinical": [
+        { "condition": "Frontopolar lesion", "note": "Impaired multitasking and 'cognitive branching' with otherwise intact routine tasks." }
+      ],
+      "methods": ["Relational reasoning and multitasking paradigms", "Resting-state fMRI", "Lesion studies"],
+      "citations": [
+        { "source": "Koechlin E, Hyafil A (2007) Anterior prefrontal function and the limits of human decision-making. Science 318:594–598." },
+        { "source": "Burgess PW, Gilbert SJ, Dumontheil I (2007) Function and localization within rostral prefrontal cortex (area 10). Philos Trans R Soc Lond B 362:887–899." }
+      ]
+    },
+    {
+      "structureId": "cortex.cingulate-gyrus-posteroventral-part.left",
+      "function": [
+        "The ventral posterior cingulate cortex (PCC): a core hub of the default-mode network, active at rest and during self-referential thought and autobiographical memory.",
+        "Its activity tracks the balance between internally- and externally-directed attention, deactivating during demanding external tasks."
+      ],
+      "connectivity": {
+        "afferent": ["Anterior nuclei of the thalamus (Papez circuit)", "Hippocampus (via cingulum)", "Precuneus"],
+        "efferent": ["Medial prefrontal cortex (via cingulum)", "Precuneus", "Hippocampus"]
+      },
+      "clinical": [
+        { "condition": "Alzheimer's disease", "note": "Early PCC/precuneus hypometabolism and amyloid deposition." },
+        { "condition": "Major depressive disorder", "note": "PCC–medial prefrontal hyperconnectivity is a robust neuroimaging finding." }
+      ],
+      "methods": ["Resting-state fMRI (default-mode network)", "Task vs. rest deactivation contrasts", "FDG-PET"],
+      "citations": [
+        { "source": "Buckner RL, Andrews-Hanna JR, Schacter DL (2008) The brain's default network. Ann N Y Acad Sci 1124:1–38." },
+        { "source": "Raichle ME et al. (2001) A default mode of brain function. Proc Natl Acad Sci USA 98:676–682." }
+      ]
+    },
+    {
+      "structureId": "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left",
+      "function": [
+        "The dorsal posterior cingulate / retrosplenial cortex: supports spatial orientation, navigation, and the retrieval of episodic context.",
+        "Acts as an interface between hippocampal memory and the default-mode network's self-referential and spatial functions."
+      ],
+      "connectivity": {
+        "afferent": ["Anterior nuclei of the thalamus", "Hippocampus", "Precuneus"],
+        "efferent": ["Precuneus", "Medial prefrontal cortex", "Hippocampus"]
+      },
+      "clinical": [
+        { "condition": "Topographic disorientation", "note": "Retrosplenial damage impairs navigation and the use of spatial landmarks." },
+        { "condition": "Alzheimer's disease", "note": "Early posterior cingulate/retrosplenial involvement." }
+      ],
+      "methods": ["Virtual navigation tasks", "Resting-state fMRI", "Lesion studies"],
+      "citations": [
+        { "source": "Vann SD, Aggleton JP, Maguire EA (2009) What does the retrosplenial cortex do? Nat Rev Neurosci 10:792–802." },
+        { "source": "Buckner RL, Andrews-Hanna JR, Schacter DL (2008) The brain's default network. Ann N Y Acad Sci 1124:1–38." }
+      ]
+    },
+    {
+      "structureId": "cortex.cingulate-gyrus-and-sulcus-middle-posterior-part.left",
+      "function": [
+        "The middle-posterior cingulate cortex: part of the posterior default-mode core, integrating self-referential, mnemonic, and visuospatial signals.",
+        "Contributes to the continuity of the autobiographical self across time."
+      ],
+      "connectivity": {
+        "afferent": ["Precuneus", "Anterior nuclei of the thalamus", "Hippocampus"],
+        "efferent": ["Medial prefrontal cortex", "Precuneus", "Hippocampus"]
+      },
+      "clinical": [
+        { "condition": "Major depressive disorder", "note": "Posterior default-mode hyperconnectivity associates with rumination." }
+      ],
+      "methods": ["Resting-state fMRI", "Autobiographical memory recall", "FDG-PET"],
+      "citations": [
+        { "source": "Buckner RL, Andrews-Hanna JR, Schacter DL (2008) The brain's default network. Ann N Y Acad Sci 1124:1–38." }
+      ]
+    },
+    {
+      "structureId": "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+      "function": [
+        "The parahippocampal cortex (posterior portion contains the parahippocampal place area, PPA): represents spatial scenes and environmental context.",
+        "Its anterior portion feeds the entorhinal cortex, gating episodic encoding into the hippocampus."
+      ],
+      "connectivity": {
+        "afferent": ["Fusiform and lateral occipitotemporal cortex (visual 'what' stream)", "Perirhinal cortex"],
+        "efferent": ["Entorhinal cortex → hippocampus (perforant path)"]
+      },
+      "clinical": [
+        { "condition": "Scene agnosia", "note": "PPA damage impairs recognition of places and scenes." },
+        { "condition": "Alzheimer's disease", "note": "Entorhinal/parahippocampal involvement produces early topographical and memory deficits." }
+      ],
+      "methods": ["Scene vs. object fMRI (PPA localizer)", "Diffusion MRI tractography", "Structural MRI"],
+      "citations": [
+        { "source": "Epstein R, Kanwisher N (1998) A cortical representation of the local visual environment. Nature 392:598–601." },
+        { "source": "Aggleton JP, Brown MW (1999) Episodic memory, amnesia, and the hippocampal–anterior thalamic axis. Behav Brain Sci 22:425–489." }
+      ]
+    },
+    {
+      "structureId": "cortex.temporal-pole.left",
+      "function": [
+        "The temporal pole, the anterior tip of the temporal lobe: a paralimbic association region supporting semantic memory, social and emotional concepts, and face/name recognition.",
+        "Serves as an amodal 'hub' linking distributed modality-specific semantic representations."
+      ],
+      "connectivity": {
+        "afferent": ["Perirhinal cortex", "Amygdala", "Orbitofrontal cortex (via uncinate fasciculus)"],
+        "efferent": ["Orbitofrontal cortex (via uncinate fasciculus)", "Amygdala", "Anterior cingulate cortex"]
+      },
+      "clinical": [
+        { "condition": "Semantic dementia", "note": "Anterior temporal atrophy produces progressive loss of word and object meaning." },
+        { "condition": "Social cognition deficits", "note": "Temporal pole damage impairs naming and the recognition of familiar faces." }
+      ],
+      "methods": ["Semantic judgement tasks", "Diffusion MRI (uncinate fasciculus)", "Resting-state fMRI"],
+      "citations": [
+        { "source": "Patterson K, Nestor PJ, Rogers TT (2007) Where do you know what you know? The representation of semantic knowledge in the human brain. Nat Rev Neurosci 8:976–987." },
+        { "source": "Olson IR, Plotzker A, Ezzyat Y (2007) The enigmatic temporal pole: a review of findings on social and emotional processing. Brain 130:1718–1731." }
+      ]
+    }
+  ]
+}

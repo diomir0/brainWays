@@ -6,9 +6,10 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { getAtlas, categoryColor, structureById } from '../../core/atlas/loader';
 import { extractCenterline, resamplePolyline } from '../../core/atlas/tractPaths';
-import { useBrain } from '../../state/store';
+import { getNetworkAssignment } from '../../core/content/networks';
+import { useBrain, DEFAULT_HIGHLIGHT_COLOR } from '../../state/store';
 
-const HIGHLIGHT = new THREE.Color('#ffb020');
+const HIGHLIGHT = new THREE.Color(DEFAULT_HIGHLIGHT_COLOR);
 const HIGHLIGHT_GLOW = new THREE.Color('#ff9e00');
 const FLOW = new THREE.Color('#00e5ff');
 const FADE_OPACITY = 0.14;
@@ -265,7 +266,9 @@ function BrainScene() {
   // Visibility + highlight colour (no fade — fade is driven dynamically per frame).
   useEffect(() => {
     const apply = (s: ReturnType<typeof useBrain.getState>) => {
+      const hlColor = new THREE.Color(s.highlightColor || DEFAULT_HIGHLIGHT_COLOR);
       const highlighted = new Set([...s.highlightIds, s.selectedId ?? '']);
+      const assignment = s.showNetworkMap ? getNetworkAssignment() : null;
       for (const [id, meshes] of meshMap.current) {
         const cat = meshes[0].userData.category as string;
         const side = meshes[0].userData.side as string;
@@ -273,12 +276,17 @@ function BrainScene() {
           s.hiddenCategories.includes(cat) ||
           (s.hemisphere !== 'both' && side !== 'median' && side !== s.hemisphere);
         const isHighlighted = highlighted.has(id);
+        const assigned = assignment ? assignment.get(id) : undefined;
         for (const mesh of meshes) {
           mesh.visible = !hidden;
           const mat = mesh.material as THREE.MeshStandardMaterial;
-          if (isHighlighted) {
-            mat.color.copy(HIGHLIGHT);
-            mat.emissive.copy(HIGHLIGHT_GLOW);
+          if (assigned) {
+            mat.color.set(assigned.color);
+            mat.emissive.set('#000000');
+            mat.emissiveIntensity = 0;
+          } else if (isHighlighted) {
+            mat.color.copy(hlColor);
+            mat.emissive.copy(hlColor);
             mat.emissiveIntensity = HIGHLIGHT_EMISSIVE_INTENSITY;
           } else {
             mat.color.copy(mesh.userData.baseColor as THREE.Color);
@@ -448,6 +456,9 @@ function BrainScene() {
         effectiveDeepest = Math.max(effectiveDeepest, depthOf(id));
       }
       sameDepthKeep = new Set(flowIds);
+    } else if (state.showNetworkMap || state.highlightColor !== DEFAULT_HIGHLIGHT_COLOR) {
+      // Network-isolation mode: color handled by apply(); skip depth fade because a
+      // network spans multiple peel depths (fading would hide its cortical nodes).
     } else {
       for (const id of [...state.highlightIds, state.selectedId ?? '']) {
         effectiveDeepest = Math.max(effectiveDeepest, depthOf(id));

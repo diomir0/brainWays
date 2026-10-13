@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useApp, useBrain } from './state/store';
+import { useApp, useBrain, DEFAULT_HIGHLIGHT_COLOR } from './state/store';
 import { NavBar } from './components/ui/NavBar';
 import { Explore } from './views/Explore';
 import { Study } from './views/Study';
@@ -18,6 +18,8 @@ export default function App() {
     useBrain.getState().setFlow([]);
     useBrain.getState().setFlowActive([]);
     useBrain.getState().requestFocus([]);
+    useBrain.getState().setShowNetworkMap(false);
+    useBrain.getState().setHighlightColor(DEFAULT_HIGHLIGHT_COLOR);
   }, [view]);
 
   return (

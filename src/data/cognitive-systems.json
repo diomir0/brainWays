@@ -1,0 +1,1136 @@
+{
+  "schemaVersion": 1,
+  "license": "CC BY-SA 4.0",
+  "source": "Curated graduate-level cognitive systems; 'networks' cross-references networks.json (Yeo et al. 2011 7-network parcellation)",
+  "systems": [
+    {
+      "id": "working-memory",
+      "stages": [
+        { "title": "The workspace of the mind", "body": "Working memory holds a limited amount of information in an active state so it can be manipulated in the service of current goals. Baddeley's model distinguishes modality-specific buffers — a phonological loop and a visuospatial sketchpad — coordinated by a central executive and linked to long-term memory via an episodic buffer. Its neural substrate is the frontoparietal system.", "structureIds": [] },
+        { "title": "Prefrontal maintenance", "body": "The dorsolateral prefrontal cortex (DLPFC) sustains goal-relevant activity across a delay — the neural signature of holding information 'in mind'. Single-unit recordings show persistent firing that outlasts the stimulus, a cellular correlate of working memory.", "structureIds": ["cortex.middle-frontal-gyrus.left", "cortex.middle-frontal-gyrus.right", "cortex.superior-frontal-gyrus.left", "cortex.superior-frontal-gyrus.right"] },
+        { "title": "Parietal buffers", "body": "Posterior parietal cortex holds modality-specific contents: the superior parietal lobule and intraparietal sulcus maintain spatial and visuospatial information, and with the supramarginal gyrus and precuneus support the visuospatial sketchpad. Capacity is limited to roughly four chunks.", "structureIds": ["cortex.superior-parietal-lobule.left", "cortex.superior-parietal-lobule.right", "cortex.intraparietal-sulcus.left", "cortex.intraparietal-sulcus.right", "cortex.supramarginal-gyrus.left", "cortex.supramarginal-gyrus.right", "cortex.precuneus.left", "cortex.precuneus.right"] },
+        { "title": "Subcortical gating & salience", "body": "The basal ganglia and thalamus gate access to working memory: the caudate nucleus and mediodorsal thalamus form a prefrontal–striatal–thalamic loop, while the anterior insula tags behaviorally relevant contents for entry into the workspace.", "structureIds": ["deep-grey.caudate-nucleus.left", "deep-grey.caudate-nucleus.right", "diencephalon.mediodorsal-nucleus.left", "diencephalon.mediodorsal-nucleus.right", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right"] }
+      ],
+      "name": "Working memory",
+      "color": "#2E86C1",
+      "summary": "The online maintenance and manipulation of information over seconds, bridging perception, long-term memory, and action.",
+      "networks": ["frontoparietal", "dorsal-attention", "ventral-attention"],
+      "structureIds": [
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.intraparietal-sulcus.left",
+        "cortex.intraparietal-sulcus.right",
+        "cortex.supramarginal-gyrus.left",
+        "cortex.supramarginal-gyrus.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+        "deep-grey.caudate-nucleus.left",
+        "deep-grey.caudate-nucleus.right",
+        "diencephalon.mediodorsal-nucleus.left",
+        "diencephalon.mediodorsal-nucleus.right"
+      ],
+      "function": [
+        "Maintains a limited amount of information in an active state and manipulates it in the service of ongoing goals.",
+        "Coordinates modality-specific buffers (phonological loop, visuospatial sketchpad) through a central executive, with an episodic buffer linking to long-term memory (Baddeley's model)."
+      ],
+      "states": [
+        "Load-dependently active during delay periods; capacity is limited to roughly 4 chunks (Cowan's estimate)."
+      ],
+      "paradigms": [
+        "N-back, delayed match-to-sample, Sternberg item-recognition, and Corsi block span (visuospatial)."
+      ],
+      "disorders": [
+        { "condition": "Schizophrenia", "note": "Impaired working memory correlates with prefrontal dysfunction (Goldman-Rakic)." },
+        { "condition": "ADHD", "note": "Working-memory deficits associate with frontoparietal underactivation." }
+      ],
+      "citations": [
+        { "source": "Baddeley AD, Hitch G (1974) Working memory. In: The Psychology of Learning and Motivation, 8:47–89." },
+        { "source": "Goldman-Rakic PS (1995) Cellular basis of working memory. Neuron 14:477–485." },
+        { "source": "Curtis CE, D'Esposito M (2003) Persistent activity in the prefrontal cortex during working memory. Trends Cogn Sci 7:415–423." },
+        { "source": "Cowan N (2001) The magical number 4 in short-term memory: a reconsideration of mental storage capacity. Behav Brain Sci 24:87–114." }
+      ],
+      "questions": [
+        {
+          "id": "working-memory.mc.1",
+          "kind": "mc",
+          "systemId": "working-memory",
+          "stem": "Baddeley's model coordinates modality-specific buffers — a phonological loop and a visuospatial sketchpad — through which component?",
+          "options": ["Central executive", "Episodic buffer", "Semantic hub", "Attentional controller"],
+          "answerIndex": 0,
+          "explanation": "The central executive coordinates the phonological loop and visuospatial sketchpad, with the episodic buffer linking them to long-term memory.",
+          "citations": [{ "source": "Baddeley AD, Hitch G (1974) Working memory." }],
+          "structureIds": ["cortex.middle-frontal-gyrus.left"]
+        },
+        {
+          "id": "working-memory.mc.2",
+          "kind": "mc",
+          "systemId": "working-memory",
+          "stem": "The neural signature of holding information 'in mind' across a delay is persistent firing in which region?",
+          "options": ["Dorsolateral prefrontal cortex", "Primary visual cortex", "Cerebellar cortex", "Medial geniculate body"],
+          "answerIndex": 0,
+          "explanation": "Single-unit recordings show persistent, delay-period firing in dorsolateral prefrontal cortex — a cellular correlate of working memory.",
+          "citations": [{ "source": "Goldman-Rakic PS (1995) Cellular basis of working memory. Neuron 14:477–485." }],
+          "structureIds": ["cortex.middle-frontal-gyrus.left"]
+        },
+        {
+          "id": "working-memory.mc.3",
+          "kind": "mc",
+          "systemId": "working-memory",
+          "stem": "Working-memory capacity is limited to roughly how many chunks of information?",
+          "options": ["Two", "Four", "Seven plus or minus two", "Unlimited"],
+          "answerIndex": 1,
+          "explanation": "Cowan's estimate places working-memory capacity at roughly four chunks, not the classic seven-plus-or-minus-two.",
+          "citations": [{ "source": "Cowan N (2001) Behav Brain Sci 24:87–114." }],
+          "structureIds": ["cortex.superior-parietal-lobule.left"]
+        }
+      ]
+    },
+    {
+      "id": "attention",
+      "stages": [
+        { "title": "Selecting what matters", "body": "Attention prioritizes behaviorally relevant information while suppressing distractors. Posner's framework distinguishes three functions with separable substrates: selective (top-down) attention, orienting (bottom-up) attention, and sustained attention (vigilance).", "structureIds": [] },
+        { "title": "Selective (top-down) attention", "body": "Goal-directed attention is controlled by the dorsal attention network: the intraparietal sulcus and superior parietal lobule encode attended locations, while the frontal eye fields direct goal-driven saccades.", "structureIds": ["cortex.superior-parietal-lobule.left", "cortex.superior-parietal-lobule.right", "cortex.intraparietal-sulcus.left", "cortex.intraparietal-sulcus.right", "cortex.middle-frontal-gyrus.left", "cortex.middle-frontal-gyrus.right"] },
+        { "title": "Orienting (bottom-up) attention", "body": "Unexpected or salient stimuli trigger the ventral attention network: the temporoparietal junction (supramarginal gyrus and posterior superior temporal gyrus) and the anterior insula reorient attention independent of current goals.", "structureIds": ["cortex.supramarginal-gyrus.left", "cortex.supramarginal-gyrus.right", "cortex.superior-temporal-gyrus-lateral-part.left", "cortex.superior-temporal-gyrus-lateral-part.right", "cortex.angular-gyrus.left", "cortex.angular-gyrus.right", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right", "cortex.opercular-part-of-inferior-frontal-gyrus.left", "cortex.opercular-part-of-inferior-frontal-gyrus.right", "cortex.triangular-part-of-inferior-frontal-gyrus.left", "cortex.triangular-part-of-inferior-frontal-gyrus.right"] },
+        { "title": "Sustained attention & vigilance", "body": "Maintaining a vigilant state over time is right-lateralized and depends on the frontoparietal system together with the anterior cingulate and the mediodorsal and pulvinar thalamus, coupled to ascending arousal systems.", "structureIds": ["cortex.middle-frontal-gyrus.left", "cortex.middle-frontal-gyrus.right", "cortex.superior-parietal-lobule.left", "cortex.superior-parietal-lobule.right", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right", "diencephalon.mediodorsal-nucleus.left", "diencephalon.mediodorsal-nucleus.right", "diencephalon.pulvinar.left", "diencephalon.pulvinar.right"] }
+      ],
+      "name": "Attention",
+      "color": "#E67E22",
+      "summary": "The selection and prioritization of sensory, motor, and internal representations, realized by partially dissociable top-down, bottom-up, and sustained sub-systems.",
+      "networks": ["dorsal-attention", "ventral-attention", "frontoparietal"],
+      "structureIds": [
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.intraparietal-sulcus.left",
+        "cortex.intraparietal-sulcus.right",
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.supramarginal-gyrus.left",
+        "cortex.supramarginal-gyrus.right",
+        "cortex.superior-temporal-gyrus-lateral-part.left",
+        "cortex.superior-temporal-gyrus-lateral-part.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "diencephalon.mediodorsal-nucleus.left",
+        "diencephalon.mediodorsal-nucleus.right",
+        "diencephalon.pulvinar.left",
+        "diencephalon.pulvinar.right"
+      ],
+      "components": [
+        {
+          "name": "Selective (top-down) attention",
+          "summary": "Voluntary allocation of attention to task-relevant locations and features, driven by current goals.",
+          "networks": ["dorsal-attention"],
+          "structureIds": [
+            "cortex.superior-parietal-lobule.left",
+            "cortex.superior-parietal-lobule.right",
+            "cortex.intraparietal-sulcus.left",
+            "cortex.intraparietal-sulcus.right",
+            "cortex.middle-frontal-gyrus.left",
+            "cortex.middle-frontal-gyrus.right"
+          ]
+        },
+        {
+          "name": "Orienting (bottom-up) attention",
+          "summary": "Automatic reorienting to salient or unexpected stimuli, independent of current goals.",
+          "networks": ["ventral-attention"],
+          "structureIds": [
+            "cortex.supramarginal-gyrus.left",
+            "cortex.supramarginal-gyrus.right",
+            "cortex.superior-temporal-gyrus-lateral-part.left",
+            "cortex.superior-temporal-gyrus-lateral-part.right",
+            "cortex.angular-gyrus.left",
+            "cortex.angular-gyrus.right",
+            "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+            "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+            "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+            "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+            "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+            "cortex.triangular-part-of-inferior-frontal-gyrus.right"
+          ]
+        },
+        {
+          "name": "Sustained attention / vigilance",
+          "summary": "Maintaining a vigilant, alert state over time, right-lateralized and coupled to ascending arousal systems.",
+          "networks": ["frontoparietal", "dorsal-attention"],
+          "structureIds": [
+            "cortex.middle-frontal-gyrus.left",
+            "cortex.middle-frontal-gyrus.right",
+            "cortex.superior-parietal-lobule.left",
+            "cortex.superior-parietal-lobule.right",
+            "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+            "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+            "diencephalon.mediodorsal-nucleus.left",
+            "diencephalon.mediodorsal-nucleus.right",
+            "diencephalon.pulvinar.left",
+            "diencephalon.pulvinar.right"
+          ]
+        }
+      ],
+      "function": [
+        "Prioritizes behaviorally relevant information while suppressing distractors.",
+        "Dissociates into goal-directed (dorsal), stimulus-driven (ventral), and sustained (vigilance) components with distinct neural substrates."
+      ],
+      "states": [
+        "Tonic during vigilance; transient at target onset; flexibly reorients on salient events."
+      ],
+      "paradigms": [
+        "Posner spatial-cueing (orienting), visual search and saccade tasks (selective), oddball and continuous-performance tasks (sustained)."
+      ],
+      "disorders": [
+        { "condition": "Hemispatial neglect", "note": "Right-hemisphere damage to attention systems causes contralesional neglect." },
+        { "condition": "ADHD", "note": "Deficits in sustained and selective attention with impaired top-down control." }
+      ],
+      "citations": [
+        { "source": "Posner MI, Petersen SE (1990) The attention system of the human brain. Annu Rev Neurosci 13:25–42." },
+        { "source": "Corbetta M, Shulman GL (2002) Control of goal-directed and stimulus-driven attention in the brain. Nat Rev Neurosci 3:201–215." },
+        { "source": "Sarter M, Givens B, Bruno JP (2001) The cognitive neuroscience of sustained attention: where top-down meets bottom-up. Brain Res Rev 35:146–160." }
+      ],
+      "questions": [
+        {
+          "id": "attention.mc.1",
+          "kind": "mc",
+          "systemId": "attention",
+          "stem": "Posner's framework divides attention into which three functions?",
+          "options": ["Selective, orienting, and sustained", "Encoding, storage, and retrieval", "Perception, action, and memory", "Alerting, orienting, and executive"],
+          "answerIndex": 0,
+          "explanation": "Posner distinguishes selective (top-down) attention, orienting (bottom-up) attention, and sustained attention (vigilance).",
+          "citations": [{ "source": "Posner MI, Petersen SE (1990) Annu Rev Neurosci 13:25–42." }],
+          "structureIds": ["cortex.intraparietal-sulcus.left"]
+        },
+        {
+          "id": "attention.mc.2",
+          "kind": "mc",
+          "systemId": "attention",
+          "stem": "Which network reorients attention to salient or unexpected stimuli, independent of current goals?",
+          "options": ["Dorsal attention network", "Ventral attention network", "Frontoparietal network", "Default-mode network"],
+          "answerIndex": 1,
+          "explanation": "The ventral attention network — temporoparietal junction and anterior insula — reorients attention to bottom-up salient events.",
+          "citations": [{ "source": "Corbetta M, Shulman GL (2002) Nat Rev Neurosci 3:201–215." }],
+          "structureIds": ["cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left"]
+        },
+        {
+          "id": "attention.mc.3",
+          "kind": "mc",
+          "systemId": "attention",
+          "stem": "Damage to the right-hemisphere attention system most characteristically produces:",
+          "options": ["Hemispatial neglect", "Broca's aphasia", "Anterograde amnesia", "Prosopagnosia"],
+          "answerIndex": 0,
+          "explanation": "Right-hemisphere damage to attention networks causes contralesional (usually left-sided) hemispatial neglect.",
+          "citations": [{ "source": "Corbetta M, Shulman GL (2002) Nat Rev Neurosci 3:201–215." }],
+          "structureIds": ["cortex.supramarginal-gyrus.left"]
+        }
+      ]
+    },
+    {
+      "id": "cognitive-control",
+      "stages": [
+        { "title": "Control of goal-directed behavior", "body": "Cognitive control flexibly coordinates behavior toward goals. Miyake's three-factor model distinguishes inhibition, task switching, and working-memory updating, all supported by the frontoparietal control network.", "structureIds": [] },
+        { "title": "Inhibition", "body": "Suppressing prepotent responses engages the right inferior frontal gyrus (opercular and triangular parts) and the anterior insula, which exert top-down inhibition over motor and limbic regions.", "structureIds": ["cortex.opercular-part-of-inferior-frontal-gyrus.left", "cortex.opercular-part-of-inferior-frontal-gyrus.right", "cortex.triangular-part-of-inferior-frontal-gyrus.left", "cortex.triangular-part-of-inferior-frontal-gyrus.right", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right"] },
+        { "title": "Switching & updating", "body": "Shifting between task sets and updating working-memory contents rely on the dorsolateral prefrontal cortex and posterior parietal cortex, which reconfigure processing across networks.", "structureIds": ["cortex.middle-frontal-gyrus.left", "cortex.middle-frontal-gyrus.right", "cortex.superior-frontal-gyrus.left", "cortex.superior-frontal-gyrus.right", "cortex.superior-parietal-lobule.left", "cortex.superior-parietal-lobule.right", "cortex.supramarginal-gyrus.left", "cortex.supramarginal-gyrus.right", "cortex.angular-gyrus.left", "cortex.angular-gyrus.right", "cortex.precuneus.left", "cortex.precuneus.right"] },
+        { "title": "Conflict monitoring", "body": "The anterior cingulate cortex detects response conflict and signals the need for increased control, recruiting prefrontal regions; the anterior insula co-activates during effortful processing.", "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right"] }
+      ],
+      "name": "Cognitive control",
+      "color": "#C0392B",
+      "summary": "The flexible coordination of behavior toward goals: inhibition, task switching, and updating of working-memory contents.",
+      "networks": ["frontoparietal"],
+      "structureIds": [
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.right",
+        "cortex.supramarginal-gyrus.left",
+        "cortex.supramarginal-gyrus.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right"
+      ],
+      "function": [
+        "Inhibits prepotent responses, switches between task sets, and updates working memory (Miyake's three-factor model).",
+        "Biases processing in posterior and subcortical regions toward task-relevant representations."
+      ],
+      "states": [
+        "Active during conflict, effortful control, and task-set maintenance; flexibly couples with the default-mode or dorsal-attention networks depending on task."
+      ],
+      "paradigms": [
+        "Stroop, flanker, task-switching, stop-signal, and Wisconsin Card Sorting tasks."
+      ],
+      "disorders": [
+        { "condition": "Executive dysfunction", "note": "ADHD, traumatic brain injury, and schizophrenia associate with frontoparietal hypoconnectivity and impaired control." }
+      ],
+      "citations": [
+        { "source": "Miyake A, Friedman NP, Emerson MJ, et al. (2000) The unity and diversity of executive functions and their contributions to complex 'frontal lobe' tasks. Cogn Psychol 41:49–100." },
+        { "source": "Miller EK, Cohen JD (2001) An integrative theory of prefrontal cortex function. Annu Rev Neurosci 24:167–202." },
+        { "source": "Cole MW, Reynolds JR, Power JD, et al. (2013) Multi-task connectivity reveals flexible hubs for adaptive task control. Nat Neurosci 16:1348–1355." }
+      ],
+      "questions": [
+        {
+          "id": "cognitive-control.mc.1",
+          "kind": "mc",
+          "systemId": "cognitive-control",
+          "stem": "Miyake's three-factor model of executive functions comprises inhibition, task switching, and:",
+          "options": ["Working-memory updating", "Sustained attention", "Episodic encoding", "Response selection"],
+          "answerIndex": 0,
+          "explanation": "Miyake's latent-variable analysis identifies inhibition, task switching, and working-memory updating as separable executive functions.",
+          "citations": [{ "source": "Miyake A, et al. (2000) Cogn Psychol 41:49–100." }],
+          "structureIds": ["cortex.middle-frontal-gyrus.left"]
+        },
+        {
+          "id": "cognitive-control.mc.2",
+          "kind": "mc",
+          "systemId": "cognitive-control",
+          "stem": "Which region detects response conflict and signals the need for increased cognitive control?",
+          "options": ["Anterior cingulate cortex", "Primary motor cortex", "Angular gyrus", "Hippocampus"],
+          "answerIndex": 0,
+          "explanation": "The anterior cingulate cortex monitors response conflict and signals the need to recruit prefrontal control regions.",
+          "citations": [{ "source": "Miller EK, Cohen JD (2001) Annu Rev Neurosci 24:167–202." }],
+          "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left"]
+        },
+        {
+          "id": "cognitive-control.mc.3",
+          "kind": "mc",
+          "systemId": "cognitive-control",
+          "stem": "Suppressing a prepotent response — the core demand of the Stroop and stop-signal tasks — is termed:",
+          "options": ["Inhibition", "Task switching", "Updating", "Orienting"],
+          "answerIndex": 0,
+          "explanation": "Inhibition is the suppression of prepotent responses, engaged by the right inferior frontal gyrus and anterior insula.",
+          "citations": [{ "source": "Miyake A, et al. (2000) Cogn Psychol 41:49–100." }],
+          "structureIds": ["cortex.opercular-part-of-inferior-frontal-gyrus.left"]
+        }
+      ]
+    },
+    {
+      "id": "self-referential",
+      "stages": [
+        { "title": "The self in the brain", "body": "Self-referential processing — thinking about the self — engages a core set of default-mode regions: the medial prefrontal cortex, the posterior cingulate/precuneus, and the medial temporal lobe, most active at rest and during internally-directed thought.", "structureIds": [] },
+        { "title": "Self-referential evaluation", "body": "Judging traits and stimuli relative to the self activates the medial prefrontal cortex and the posterior cingulate/precuneus — the cortical midline core of the default-mode network.", "structureIds": ["cortex.superior-frontal-gyrus.left", "cortex.superior-frontal-gyrus.right", "cortex.straight-gyrus-gyrus-rectus.left", "cortex.straight-gyrus-gyrus-rectus.right", "cortex.transverse-frontopolar-gyrus-and-sulcus.left", "cortex.transverse-frontopolar-gyrus-and-sulcus.right", "cortex.cingulate-gyrus-posteroventral-part.left", "cortex.cingulate-gyrus-posteroventral-part.right", "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left", "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right", "cortex.precuneus.left", "cortex.precuneus.right"] },
+        { "title": "Autobiographical memory", "body": "Recollecting personally experienced events recruits the medial temporal lobe — hippocampus and parahippocampal cortex — together with the angular gyrus, precuneus, and temporal pole, reconstructing the narrative continuity of the self.", "structureIds": ["cortex.hippocampus.left", "cortex.hippocampus.right", "cortex.medial-occipitotemporal-gyrus-parahippocampal.left", "cortex.medial-occipitotemporal-gyrus-parahippocampal.right", "cortex.angular-gyrus.left", "cortex.angular-gyrus.right", "cortex.temporal-pole.left", "cortex.temporal-pole.right", "cortex.middle-temporal-gyrus.left", "cortex.middle-temporal-gyrus.right", "cortex.precuneus.left", "cortex.precuneus.right"] }
+      ],
+      "name": "Self-referential processing",
+      "color": "#8E44AD",
+      "summary": "Cognition that refers to the self: self-reflection, self-awareness, and the autobiographical self.",
+      "networks": ["default-mode"],
+      "structureIds": [
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.transverse-frontopolar-gyrus-and-sulcus.left",
+        "cortex.transverse-frontopolar-gyrus-and-sulcus.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.cingulate-gyrus-posteroventral-part.left",
+        "cortex.cingulate-gyrus-posteroventral-part.right",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-posterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-posterior-part.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.hippocampus.left",
+        "cortex.hippocampus.right",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.right",
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right",
+        "cortex.middle-temporal-gyrus.left",
+        "cortex.middle-temporal-gyrus.right"
+      ],
+      "components": [
+        {
+          "name": "Self-referential evaluation",
+          "summary": "Judging stimuli, traits, and events relative to the self.",
+          "networks": ["default-mode"],
+          "structureIds": [
+            "cortex.superior-frontal-gyrus.left",
+            "cortex.superior-frontal-gyrus.right",
+            "cortex.straight-gyrus-gyrus-rectus.left",
+            "cortex.straight-gyrus-gyrus-rectus.right",
+            "cortex.transverse-frontopolar-gyrus-and-sulcus.left",
+            "cortex.transverse-frontopolar-gyrus-and-sulcus.right",
+            "cortex.precuneus.left",
+            "cortex.precuneus.right",
+            "cortex.cingulate-gyrus-posteroventral-part.left",
+            "cortex.cingulate-gyrus-posteroventral-part.right",
+            "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left",
+            "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right"
+          ]
+        },
+        {
+          "name": "Autobiographical memory",
+          "summary": "Recollection of personally experienced events, drawing on medial temporal and posterior default-mode regions.",
+          "networks": ["default-mode"],
+          "structureIds": [
+            "cortex.precuneus.left",
+            "cortex.precuneus.right",
+            "cortex.angular-gyrus.left",
+            "cortex.angular-gyrus.right",
+            "cortex.hippocampus.left",
+            "cortex.hippocampus.right",
+            "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+            "cortex.medial-occipitotemporal-gyrus-parahippocampal.right",
+            "cortex.temporal-pole.left",
+            "cortex.temporal-pole.right",
+            "cortex.middle-temporal-gyrus.left",
+            "cortex.middle-temporal-gyrus.right"
+          ]
+        }
+      ],
+      "function": [
+        "Supports self-reflection, self-awareness, and the evaluation of information in relation to the self.",
+        "Underlies autobiographical memory and the construction of a continuous sense of self across time."
+      ],
+      "states": [
+        "Most active at rest and during internally-directed thought; deactivates during externally-focused tasks."
+      ],
+      "paradigms": [
+        "Self-referential trait judgement, autobiographical memory recall, and 'rest vs. task' contrasts (Kelley et al. 2002)."
+      ],
+      "disorders": [
+        { "condition": "Major depressive disorder", "note": "Excessive self-referential rumination with medial prefrontal over-engagement." },
+        { "condition": "Alzheimer's disease", "note": "Posterior default-mode regions show early hypometabolism, degrading the autobiographical self." }
+      ],
+      "citations": [
+        { "source": "Northoff G, Heinzel A, de Greck M, et al. (2006) Self-referential processing in our brain — a meta-analysis of imaging studies on the self. Neuroimage 31:440–457." },
+        { "source": "Kelley WM, Macrae CN, Wyland CL, et al. (2002) Finding the self? An event-related fMRI study. J Cogn Neurosci 14:785–794." },
+        { "source": "Buckner RL, Andrews-Hanna JR, Schacter DL (2008) The brain's default network: anatomy, function, and relevance to disease. Ann N Y Acad Sci 1124:1–38." }
+      ],
+      "questions": [
+        {
+          "id": "self-referential.mc.1",
+          "kind": "mc",
+          "systemId": "self-referential",
+          "stem": "Self-referential processing is anchored in which cortical midline network?",
+          "options": ["Default-mode network", "Dorsal attention network", "Ventral attention network", "Somatomotor network"],
+          "answerIndex": 0,
+          "explanation": "Self-referential thought engages the default-mode network's cortical midline structures, most active at rest.",
+          "citations": [{ "source": "Buckner RL, et al. (2008) Ann N Y Acad Sci 1124:1–38." }],
+          "structureIds": ["cortex.precuneus.left"]
+        },
+        {
+          "id": "self-referential.mc.2",
+          "kind": "mc",
+          "systemId": "self-referential",
+          "stem": "Which two regions form the cortical-midline core activated when judging stimuli relative to the self?",
+          "options": ["Medial prefrontal cortex and posterior cingulate/precuneus", "Hippocampus and amygdala", "Inferior frontal gyrus and superior temporal gyrus", "Caudate and putamen"],
+          "answerIndex": 0,
+          "explanation": "The medial prefrontal cortex and posterior cingulate/precuneus form the cortical-midline core of self-referential evaluation.",
+          "citations": [{ "source": "Northoff G, et al. (2006) Neuroimage 31:440–457." }],
+          "structureIds": ["cortex.superior-frontal-gyrus.left"]
+        },
+        {
+          "id": "self-referential.mc.3",
+          "kind": "mc",
+          "systemId": "self-referential",
+          "stem": "Excessive self-referential rumination with medial prefrontal over-engagement is a hallmark of:",
+          "options": ["Major depressive disorder", "Parkinson's disease", "Multiple sclerosis", "Guillain–Barré syndrome"],
+          "answerIndex": 0,
+          "explanation": "Major depressive disorder is characterized by excessive self-referential rumination and medial prefrontal over-engagement.",
+          "citations": [{ "source": "Northoff G, et al. (2006) Neuroimage 31:440–457." }],
+          "structureIds": ["cortex.superior-frontal-gyrus.left"]
+        }
+      ]
+    },
+    {
+      "id": "theory-of-mind",
+      "stages": [
+        { "title": "Reading other minds", "body": "Theory of mind — mentalizing — is the capacity to attribute beliefs, intentions, and emotions to others. It engages a medial and temporoparietal system overlapping the default-mode network.", "structureIds": [] },
+        { "title": "The medial prefrontal hub", "body": "The medial prefrontal cortex represents others' mental states and distinguishes one's own perspective from another's, a core region for belief reasoning.", "structureIds": ["cortex.superior-frontal-gyrus.left", "cortex.superior-frontal-gyrus.right", "cortex.straight-gyrus-gyrus-rectus.left", "cortex.straight-gyrus-gyrus-rectus.right"] },
+        { "title": "The temporoparietal junction", "body": "The temporoparietal junction — angular gyrus and posterior superior temporal gyrus — supports reasoning about others' beliefs and perspectives, together with the precuneus and middle temporal gyrus.", "structureIds": ["cortex.angular-gyrus.left", "cortex.angular-gyrus.right", "cortex.superior-temporal-gyrus-lateral-part.left", "cortex.superior-temporal-gyrus-lateral-part.right", "cortex.middle-temporal-gyrus.left", "cortex.middle-temporal-gyrus.right", "cortex.precuneus.left", "cortex.precuneus.right"] },
+        { "title": "The temporal pole & the social brain", "body": "The temporal pole links social and emotional semantic knowledge to mentalizing, and with the posterior cingulate supports the integration of social context. Dysfunction of this network underlies the social deficits of autism.", "structureIds": ["cortex.temporal-pole.left", "cortex.temporal-pole.right", "cortex.cingulate-gyrus-posteroventral-part.left", "cortex.cingulate-gyrus-posteroventral-part.right"] }
+      ],
+      "name": "Theory of mind",
+      "color": "#16A085",
+      "summary": "Attributing mental states — beliefs, intentions, and emotions — to oneself and others (mentalizing).",
+      "networks": ["default-mode"],
+      "structureIds": [
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.cingulate-gyrus-posteroventral-part.left",
+        "cortex.cingulate-gyrus-posteroventral-part.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.superior-temporal-gyrus-lateral-part.left",
+        "cortex.superior-temporal-gyrus-lateral-part.right",
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right",
+        "cortex.middle-temporal-gyrus.left",
+        "cortex.middle-temporal-gyrus.right"
+      ],
+      "function": [
+        "Represents the beliefs and intentions of others, enabling prediction and explanation of behavior.",
+        "Distinguishes cognitive (belief reasoning) and affective (emotion reasoning) mentalizing, both anchored in medial and temporoparietal cortex."
+      ],
+      "states": [
+        "Engaged during social interaction, story comprehension, and explicit reasoning about others' perspectives."
+      ],
+      "paradigms": [
+        "False-belief tasks, the Reading the Mind in the Eyes Test, and social vignette/animation paradigms."
+      ],
+      "disorders": [
+        { "condition": "Autism spectrum disorder", "note": "Reduced mentalizing-network engagement on false-belief and social tasks." }
+      ],
+      "citations": [
+        { "source": "Frith U, Frith CD (2003) Development and neurophysiology of mentalizing. Philos Trans R Soc Lond B 358:459–473." },
+        { "source": "Saxe R, Kanwisher N (2003) People thinking about thinking people: the role of the temporo-parietal junction in 'theory of mind'. Neuroimage 19:1835–1842." }
+      ],
+      "questions": [
+        {
+          "id": "theory-of-mind.mc.1",
+          "kind": "mc",
+          "systemId": "theory-of-mind",
+          "stem": "Mentalizing (theory of mind) most consistently engages which two regions?",
+          "options": ["Medial prefrontal cortex and temporoparietal junction", "Primary motor cortex and cerebellum", "Hippocampus and parahippocampal cortex", "Visual cortex and pulvinar"],
+          "answerIndex": 0,
+          "explanation": "Mentalizing engages the medial prefrontal cortex and temporoparietal junction, overlapping the default-mode network.",
+          "citations": [{ "source": "Frith U, Frith CD (2003) Philos Trans R Soc Lond B 358:459–473." }],
+          "structureIds": ["cortex.superior-frontal-gyrus.left"]
+        },
+        {
+          "id": "theory-of-mind.mc.2",
+          "kind": "mc",
+          "systemId": "theory-of-mind",
+          "stem": "Which region is selectively engaged when reasoning about others' beliefs, as in false-belief tasks?",
+          "options": ["Temporoparietal junction", "Central nucleus of the amygdala", "Substantia nigra", "Mammillary bodies"],
+          "answerIndex": 0,
+          "explanation": "The temporoparietal junction is selectively recruited when reasoning about others' beliefs and perspectives.",
+          "citations": [{ "source": "Saxe R, Kanwisher N (2003) Neuroimage 19:1835–1842." }],
+          "structureIds": ["cortex.angular-gyrus.left"]
+        },
+        {
+          "id": "theory-of-mind.mc.3",
+          "kind": "mc",
+          "systemId": "theory-of-mind",
+          "stem": "Reduced mentalizing-network engagement on false-belief and social tasks is a core feature of:",
+          "options": ["Autism spectrum disorder", "Huntington's disease", "Amyotrophic lateral sclerosis", "Myasthenia gravis"],
+          "answerIndex": 0,
+          "explanation": "Autism is associated with reduced mentalizing-network engagement on false-belief and social tasks.",
+          "citations": [{ "source": "Frith U, Frith CD (2003) Philos Trans R Soc Lond B 358:459–473." }],
+          "structureIds": ["cortex.precuneus.left"]
+        }
+      ]
+    },
+    {
+      "id": "episodic-memory",
+      "name": "Episodic memory",
+      "color": "#2980B9",
+      "summary": "The encoding, consolidation, and retrieval of personally experienced events bound to their spatial and temporal context.",
+      "networks": ["default-mode"],
+      "structureIds": [
+        "cortex.hippocampus.left",
+        "cortex.hippocampus.right",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.right",
+        "diencephalon.mamillary-body.left",
+        "diencephalon.mamillary-body.right",
+        "diencephalon.anterior-nuclei-of-thalamus.left",
+        "diencephalon.anterior-nuclei-of-thalamus.right",
+        "white-matter.fornix.left",
+        "white-matter.fornix.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.cingulate-gyrus-posteroventral-part.left",
+        "cortex.cingulate-gyrus-posteroventral-part.right",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right",
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right"
+      ],
+      "stages": [
+        { "title": "Remembering the past", "body": "Episodic memory records personally experienced events with their where and when. Encoding occurs in the hippocampal formation, and the hippocampal–anterior thalamic axis (the Papez circuit) supports consolidation and retrieval, with the posterior default-mode cortex representing the retrieved content.", "structureIds": [] },
+        { "title": "The hippocampal core", "body": "The hippocampus and parahippocampal cortex bind event components into a coherent trace. The parahippocampal cortex represents spatial context and feeds the entorhinal cortex, which relays into the hippocampus for encoding.", "structureIds": ["cortex.hippocampus.left", "cortex.hippocampus.right", "cortex.medial-occipitotemporal-gyrus-parahippocampal.left", "cortex.medial-occipitotemporal-gyrus-parahippocampal.right"] },
+        { "title": "The Papez circuit", "body": "The fornix carries hippocampal output to the mammillary bodies, which project to the anterior thalamus and onward to the posterior cingulate. Lesions anywhere along this loop — fornix, mammillary bodies, or anterior thalamus — disrupt episodic memory.", "structureIds": ["white-matter.fornix.left", "white-matter.fornix.right", "diencephalon.mamillary-body.left", "diencephalon.mamillary-body.right", "diencephalon.anterior-nuclei-of-thalamus.left", "diencephalon.anterior-nuclei-of-thalamus.right", "cortex.cingulate-gyrus-posteroventral-part.left", "cortex.cingulate-gyrus-posteroventral-part.right", "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left", "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right"] },
+        { "title": "Neocortical storage", "body": "Over time, episodic traces are consolidated into distributed neocortical representations, so retrieval of remote memories depends less on the hippocampus and more on the angular gyrus, precuneus, and temporal pole.", "structureIds": ["cortex.angular-gyrus.left", "cortex.angular-gyrus.right", "cortex.precuneus.left", "cortex.precuneus.right", "cortex.temporal-pole.left", "cortex.temporal-pole.right"] }
+      ],
+      "function": [
+        "Encodes and retrieves events bound to their spatial and temporal context, relying on the hippocampal–entorhinal system.",
+        "Consolidates labile hippocampal traces into distributed neocortical representations over time (systems consolidation)."
+      ],
+      "states": [
+        "Engaged during encoding and vivid recollection; recollection is accompanied by reactivation of the default-mode network."
+      ],
+      "paradigms": [
+        "Encoding and retrieval of word–image pairs, autobiographical recall, and Remember/Know judgements."
+      ],
+      "disorders": [
+        { "condition": "Alzheimer's disease", "note": "Early hippocampal/entorhinal atrophy produces the initial anterograde amnesia." },
+        { "condition": "Bilateral hippocampal lesion (H.M.)", "note": "Profound anterograde amnesia with spared procedural and remote memory." }
+      ],
+      "citations": [
+        { "source": "Scoville WB, Milner B (1957) Loss of recent memory after bilateral hippocampal lesions. J Neurol Neurosurg Psychiatry 20:11–21." },
+        { "source": "Tulving E (2002) Episodic memory: from mind to brain. Annu Rev Psychol 53:1–25." },
+        { "source": "Squire LR, Zola-Morgan S (1991) The medial temporal lobe memory system. Science 253:1380–1386." }
+      ],
+      "questions": [
+        {
+          "id": "episodic-memory.mc.1",
+          "kind": "mc",
+          "systemId": "episodic-memory",
+          "stem": "Bilateral hippocampal resection in patient H.M. produced which pattern of memory impairment?",
+          "options": ["Profound anterograde amnesia with spared procedural memory", "Retrograde amnesia only", "Impaired procedural memory with intact episodic memory", "No memory impairment"],
+          "answerIndex": 0,
+          "explanation": "H.M.'s bilateral hippocampal lesion caused dense anterograde amnesia while sparing procedural and remote memory.",
+          "citations": [{ "source": "Scoville WB, Milner B (1957) J Neurol Neurosurg Psychiatry 20:11–21." }],
+          "structureIds": ["cortex.hippocampus.left"]
+        },
+        {
+          "id": "episodic-memory.mc.2",
+          "kind": "mc",
+          "systemId": "episodic-memory",
+          "stem": "Which white-matter tract carries hippocampal output to the mammillary bodies in the Papez circuit?",
+          "options": ["Fornix", "Cingulum", "Corpus callosum", "Internal capsule"],
+          "answerIndex": 0,
+          "explanation": "The fornix is the principal hippocampal efferent, carrying output to the mammillary bodies and anterior thalamus.",
+          "citations": [{ "source": "Squire LR, Zola-Morgan S (1991) Science 253:1380–1386." }],
+          "structureIds": ["white-matter.fornix.left"]
+        },
+        {
+          "id": "episodic-memory.mc.3",
+          "kind": "mc",
+          "systemId": "episodic-memory",
+          "stem": "The gradual transfer of episodic traces from hippocampal to distributed neocortical storage is termed:",
+          "options": ["Systems consolidation", "Pattern separation", "Long-term potentiation", "Reconsolidation"],
+          "answerIndex": 0,
+          "explanation": "Systems consolidation is the time-dependent transfer of memory traces from hippocampus to neocortex.",
+          "citations": [{ "source": "Squire LR, Zola-Morgan S (1991) Science 253:1380–1386." }],
+          "structureIds": ["cortex.angular-gyrus.left"]
+        }
+      ]
+    },
+    {
+      "id": "semantic-memory",
+      "name": "Semantic memory",
+      "color": "#27AE60",
+      "summary": "General conceptual knowledge about the world, independent of the specific episode in which it was learned.",
+      "networks": ["default-mode"],
+      "structureIds": [
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right",
+        "cortex.angular-gyrus.left",
+        "cortex.angular-gyrus.right",
+        "cortex.middle-temporal-gyrus.left",
+        "cortex.middle-temporal-gyrus.right",
+        "cortex.inferior-temporal-gyrus.left",
+        "cortex.inferior-temporal-gyrus.right",
+        "cortex.superior-temporal-gyrus-lateral-part.left",
+        "cortex.superior-temporal-gyrus-lateral-part.right",
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.left",
+        "cortex.opercular-part-of-inferior-frontal-gyrus.right",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.left",
+        "cortex.triangular-part-of-inferior-frontal-gyrus.right"
+      ],
+      "stages": [
+        { "title": "Knowledge without episodes", "body": "Semantic memory stores general conceptual knowledge shared across experiences. In the hub-and-spoke model, the anterior temporal lobe acts as an amodal hub linking distributed modality-specific representations across cortex.", "structureIds": [] },
+        { "title": "The anterior temporal hub", "body": "The temporal pole and ventral temporal cortex converge modality-specific features into amodal concepts, so damage here produces semantic deficits regardless of input modality.", "structureIds": ["cortex.temporal-pole.left", "cortex.temporal-pole.right", "cortex.inferior-temporal-gyrus.left", "cortex.inferior-temporal-gyrus.right", "cortex.middle-temporal-gyrus.left", "cortex.middle-temporal-gyrus.right", "cortex.superior-temporal-gyrus-lateral-part.left", "cortex.superior-temporal-gyrus-lateral-part.right"] },
+        { "title": "The angular gyrus", "body": "The angular gyrus integrates semantic information across modalities and supports conceptual combination and retrieval, a key node of the posterior default-mode network.", "structureIds": ["cortex.angular-gyrus.left", "cortex.angular-gyrus.right"] },
+        { "title": "Controlled retrieval", "body": "The ventrolateral prefrontal cortex — opercular and triangular parts of the inferior frontal gyrus and the middle frontal gyrus — supports the controlled retrieval and selection of semantic information under effort.", "structureIds": ["cortex.middle-frontal-gyrus.left", "cortex.middle-frontal-gyrus.right", "cortex.opercular-part-of-inferior-frontal-gyrus.left", "cortex.opercular-part-of-inferior-frontal-gyrus.right", "cortex.triangular-part-of-inferior-frontal-gyrus.left", "cortex.triangular-part-of-inferior-frontal-gyrus.right"] }
+      ],
+      "function": [
+        "Stores amodal conceptual knowledge, with the anterior temporal lobe as a hub linking distributed modality-specific representations.",
+        "Ventrolateral prefrontal cortex supports the controlled retrieval and selection of semantic information."
+      ],
+      "states": [
+        "Engaged during object naming, categorization, and semantic judgements, regardless of input modality."
+      ],
+      "paradigms": [
+        "Picture naming, semantic judgement (e.g., 'is a robin a bird?'), and property verification."
+      ],
+      "disorders": [
+        { "condition": "Semantic dementia", "note": "Anterior temporal atrophy produces a progressive loss of word and object meaning." },
+        { "condition": "Anomia in stroke aphasia", "note": "Temporal and inferior parietal lesions impair word retrieval." }
+      ],
+      "citations": [
+        { "source": "Patterson K, Nestor PJ, Rogers TT (2007) Where do you know what you know? The representation of semantic knowledge in the human brain. Nat Rev Neurosci 8:976–987." },
+        { "source": "Lambon Ralph MA, Jefferies E, Patterson K, Rogers TT (2017) The neural and computational bases of semantic cognition. Nat Rev Neurosci 18:42–55." }
+      ],
+      "questions": [
+        {
+          "id": "semantic-memory.mc.1",
+          "kind": "mc",
+          "systemId": "semantic-memory",
+          "stem": "In the hub-and-spoke model of semantic memory, which region acts as the amodal hub linking distributed modality-specific representations?",
+          "options": ["Anterior temporal lobe", "Posterior parietal cortex", "Cerebellum", "Brainstem reticular formation"],
+          "answerIndex": 0,
+          "explanation": "The anterior temporal lobe acts as the amodal hub, linking distributed modality-specific spokes across cortex.",
+          "citations": [{ "source": "Patterson K, et al. (2007) Nat Rev Neurosci 8:976–987." }],
+          "structureIds": ["cortex.temporal-pole.left"]
+        },
+        {
+          "id": "semantic-memory.mc.2",
+          "kind": "mc",
+          "systemId": "semantic-memory",
+          "stem": "Progressive loss of word and object meaning from anterior temporal lobe atrophy characterizes:",
+          "options": ["Semantic dementia", "Wernicke's aphasia", "Conduction aphasia", "Pure alexia"],
+          "answerIndex": 0,
+          "explanation": "Semantic dementia, from anterior temporal atrophy, produces progressive loss of word and object meaning.",
+          "citations": [{ "source": "Lambon Ralph MA, et al. (2017) Nat Rev Neurosci 18:42–55." }],
+          "structureIds": ["cortex.temporal-pole.left"]
+        },
+        {
+          "id": "semantic-memory.mc.3",
+          "kind": "mc",
+          "systemId": "semantic-memory",
+          "stem": "Which region supports the controlled retrieval and selection of semantic information under effort?",
+          "options": ["Ventrolateral prefrontal cortex (inferior frontal gyrus)", "Primary auditory cortex", "Lateral geniculate nucleus", "Spinal trigeminal nucleus"],
+          "answerIndex": 0,
+          "explanation": "The ventrolateral prefrontal cortex supports controlled semantic retrieval and selection.",
+          "citations": [{ "source": "Lambon Ralph MA, et al. (2017) Nat Rev Neurosci 18:42–55." }],
+          "structureIds": ["cortex.triangular-part-of-inferior-frontal-gyrus.left"]
+        }
+      ]
+    },
+    {
+      "id": "emotion",
+      "name": "Emotion",
+      "color": "#E74C3C",
+      "summary": "The perception, experience, and regulation of affect, integrating appraisal, bodily, and mnemonic signals.",
+      "networks": ["limbic", "ventral-attention"],
+      "structureIds": [
+        "deep-grey.basolateral-complex.left",
+        "deep-grey.basolateral-complex.right",
+        "deep-grey.central-nucleus.left",
+        "deep-grey.central-nucleus.right",
+        "deep-grey.corticomedial-group.left",
+        "deep-grey.corticomedial-group.right",
+        "deep-grey.lateral-nucleus.left",
+        "deep-grey.lateral-nucleus.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+        "cortex.orbital-gyri.left",
+        "cortex.orbital-gyri.right",
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "cortex.temporal-pole.left",
+        "cortex.temporal-pole.right",
+        "cortex.hippocampus.left",
+        "cortex.hippocampus.right",
+        "diencephalon.anterior-hypothalamus.left",
+        "diencephalon.anterior-hypothalamus.right",
+        "diencephalon.lateral-hypothalamus.left",
+        "diencephalon.lateral-hypothalamus.right"
+      ],
+      "stages": [
+        { "title": "Appraisal & arousal", "body": "The amygdala appraises emotionally salient stimuli: its basolateral complex receives sensory input and drives the central nucleus, which triggers autonomic and behavioral responses via the hypothalamus and brainstem.", "structureIds": ["deep-grey.basolateral-complex.left", "deep-grey.basolateral-complex.right", "deep-grey.central-nucleus.left", "deep-grey.central-nucleus.right", "deep-grey.corticomedial-group.left", "deep-grey.corticomedial-group.right", "deep-grey.lateral-nucleus.left", "deep-grey.lateral-nucleus.right", "diencephalon.anterior-hypothalamus.left", "diencephalon.anterior-hypothalamus.right", "diencephalon.lateral-hypothalamus.left", "diencephalon.lateral-hypothalamus.right"] },
+        { "title": "Feeling the body", "body": "The anterior insula and anterior cingulate represent the bodily and subjective aspects of emotion — interoceptive awareness and the conscious feeling state.", "structureIds": ["cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right"] },
+        { "title": "Regulating emotion", "body": "The orbitofrontal and ventromedial prefrontal cortex regulate emotion by modulating the amygdala, while the anterior cingulate monitors conflict between emotional and goal-directed responses.", "structureIds": ["cortex.orbital-gyri.left", "cortex.orbital-gyri.right", "cortex.straight-gyrus-gyrus-rectus.left", "cortex.straight-gyrus-gyrus-rectus.right", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right"] },
+        { "title": "Emotional memory", "body": "The hippocampus and temporal pole bind emotional events into memory and link emotion to social and semantic context, strengthening the storage of salient experiences.", "structureIds": ["cortex.hippocampus.left", "cortex.hippocampus.right", "cortex.temporal-pole.left", "cortex.temporal-pole.right"] }
+      ],
+      "function": [
+        "Appraises emotionally salient stimuli via the amygdala, generating autonomic and behavioral responses.",
+        "Regulates emotion through prefrontal–amygdala coupling, particularly the orbitofrontal and ventromedial cortex."
+      ],
+      "states": [
+        "Transient emotional states arise from coordinated appraisal and bodily feedback; regulation modulates their intensity and duration."
+      ],
+      "paradigms": [
+        "Emotional face and picture (IAPS) viewing, fear conditioning, and cognitive reappraisal tasks."
+      ],
+      "disorders": [
+        { "condition": "Anxiety and mood disorders", "note": "Amygdala hyperreactivity and impaired prefrontal regulation." },
+        { "condition": "Post-traumatic stress disorder", "note": "Heightened amygdala response with reduced prefrontal control." }
+      ],
+      "citations": [
+        { "source": "LeDoux JE (2000) Emotion circuits in the brain. Annu Rev Neurosci 23:155–184." },
+        { "source": "Pessoa L (2017) A network model of the emotional brain. Trends Cogn Sci 21:357–371." },
+        { "source": "Ochsner KN, Gross JJ (2005) The cognitive control of emotion. Trends Cogn Sci 9:242–249." }
+      ],
+      "questions": [
+        {
+          "id": "emotion.mc.1",
+          "kind": "mc",
+          "systemId": "emotion",
+          "stem": "Which amygdala division receives cortical and thalamic sensory input and assigns learned emotional significance?",
+          "options": ["Basolateral complex", "Central nucleus", "Corticomedial group", "Subiculum"],
+          "answerIndex": 0,
+          "explanation": "The basolateral complex is the amygdala's sensory input zone, critical for fear conditioning.",
+          "citations": [{ "source": "LeDoux JE (2000) Annu Rev Neurosci 23:155–184." }],
+          "structureIds": ["deep-grey.basolateral-complex.left"]
+        },
+        {
+          "id": "emotion.mc.2",
+          "kind": "mc",
+          "systemId": "emotion",
+          "stem": "Which amygdala division drives autonomic, endocrine, and behavioral fear responses via the hypothalamus and brainstem?",
+          "options": ["Central nucleus", "Lateral nucleus", "Basal nucleus", "Dentate gyrus"],
+          "answerIndex": 0,
+          "explanation": "The central nucleus is the amygdala's effector, projecting to hypothalamus and brainstem to orchestrate fear responses.",
+          "citations": [{ "source": "LeDoux JE (2000) Annu Rev Neurosci 23:155–184." }],
+          "structureIds": ["deep-grey.central-nucleus.left"]
+        },
+        {
+          "id": "emotion.mc.3",
+          "kind": "mc",
+          "systemId": "emotion",
+          "stem": "Cognitive reappraisal regulates emotion through prefrontal modulation of which structure?",
+          "options": ["Amygdala", "Red nucleus", "Olivary nucleus", "Mammillary body"],
+          "answerIndex": 0,
+          "explanation": "Reappraisal involves prefrontal regions modulating the amygdala to change emotional responding.",
+          "citations": [{ "source": "Ochsner KN, Gross JJ (2005) Trends Cogn Sci 9:242–249." }],
+          "structureIds": ["cortex.orbital-gyri.left"]
+        }
+      ]
+    },
+    {
+      "id": "value-based-decision-making",
+      "name": "Value-based decision-making",
+      "color": "#D4AC0D",
+      "summary": "Assigning value to options and choosing among them, integrating reward, cost, and risk.",
+      "networks": ["frontoparietal", "limbic"],
+      "structureIds": [
+        "cortex.straight-gyrus-gyrus-rectus.left",
+        "cortex.straight-gyrus-gyrus-rectus.right",
+        "cortex.orbital-gyri.left",
+        "cortex.orbital-gyri.right",
+        "deep-grey.nucleus-accumbens.left",
+        "deep-grey.nucleus-accumbens.right",
+        "deep-grey.caudate-nucleus.left",
+        "deep-grey.caudate-nucleus.right",
+        "deep-grey.putamen.left",
+        "deep-grey.putamen.right",
+        "deep-grey.substantia-nigra.left",
+        "deep-grey.substantia-nigra.right",
+        "diencephalon.habenula.median",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right"
+      ],
+      "stages": [
+        { "title": "Computing value", "body": "The ventromedial prefrontal cortex and orbitofrontal cortex represent integrated subjective value, comparing options on a common scale to guide choice.", "structureIds": ["cortex.straight-gyrus-gyrus-rectus.left", "cortex.straight-gyrus-gyrus-rectus.right", "cortex.orbital-gyri.left", "cortex.orbital-gyri.right"] },
+        { "title": "Reward & prediction error", "body": "The striatum — nucleus accumbens, caudate, and putamen — receives dopamine from the substantia nigra, signaling reward prediction error to drive learning and action selection.", "structureIds": ["deep-grey.nucleus-accumbens.left", "deep-grey.nucleus-accumbens.right", "deep-grey.caudate-nucleus.left", "deep-grey.caudate-nucleus.right", "deep-grey.putamen.left", "deep-grey.putamen.right", "deep-grey.substantia-nigra.left", "deep-grey.substantia-nigra.right"] },
+        { "title": "Cost, risk & monitoring", "body": "The anterior cingulate and insula encode effort, risk, and conflict, while the habenula signals negative prediction error — the omission of expected reward — to suppress maladaptive choices.", "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right", "diencephalon.habenula.median"] }
+      ],
+      "function": [
+        "Computes and compares subjective values, with the ventromedial prefrontal/orbitofrontal cortex representing integrated value signals.",
+        "The striatum and dopamine system signal reward prediction error, guiding learning and choice."
+      ],
+      "states": [
+        "Choices reflect the comparison of expected values; value representations shift with context and delay (temporal discounting)."
+      ],
+      "paradigms": [
+        "Temporal discounting, the Iowa Gambling Task, and probabilistic reward-choice tasks."
+      ],
+      "disorders": [
+        { "condition": "Addiction", "note": "Striatal and dopaminergic dysfunction produces compulsive, devalued choice." },
+        { "condition": "Impulsivity after vmPFC damage", "note": "Poor integration of long-term consequences in risky decisions." }
+      ],
+      "citations": [
+        { "source": "Rangel A, Camerer C, Montague PR (2008) A framework for studying the neurobiology of value-based decision making. Nat Rev Neurosci 9:545–556." },
+        { "source": "Bechara A, Damasio AR, Damasio H, Anderson SW (1994) Insensitivity to future consequences following damage to human prefrontal cortex. Cognition 50:7–15." }
+      ],
+      "questions": [
+        {
+          "id": "value-based-decision-making.mc.1",
+          "kind": "mc",
+          "systemId": "value-based-decision-making",
+          "stem": "Which region represents integrated subjective value, comparing options on a common scale?",
+          "options": ["Ventromedial prefrontal / orbitofrontal cortex", "Primary somatosensory cortex", "Inferior colliculus", "Dorsal cochlear nucleus"],
+          "answerIndex": 0,
+          "explanation": "The ventromedial prefrontal and orbitofrontal cortex represent integrated subjective value on a common scale.",
+          "citations": [{ "source": "Rangel A, et al. (2008) Nat Rev Neurosci 9:545–556." }],
+          "structureIds": ["cortex.straight-gyrus-gyrus-rectus.left"]
+        },
+        {
+          "id": "value-based-decision-making.mc.2",
+          "kind": "mc",
+          "systemId": "value-based-decision-making",
+          "stem": "Reward prediction error is signaled to the striatum by dopamine released from which structure?",
+          "options": ["Substantia nigra / ventral tegmental area", "Locus coeruleus", "Raphe nuclei", "Nucleus basalis"],
+          "answerIndex": 0,
+          "explanation": "Midbrain dopamine neurons in the substantia nigra and ventral tegmental area signal reward prediction error to the striatum.",
+          "citations": [{ "source": "Rangel A, et al. (2008) Nat Rev Neurosci 9:545–556." }],
+          "structureIds": ["deep-grey.substantia-nigra.left"]
+        },
+        {
+          "id": "value-based-decision-making.mc.3",
+          "kind": "mc",
+          "systemId": "value-based-decision-making",
+          "stem": "Insensitivity to future consequences following ventromedial prefrontal damage is demonstrated by impaired performance on:",
+          "options": ["The Iowa Gambling Task", "The N-back task", "The Stroop task", "The Corsi block span"],
+          "answerIndex": 0,
+          "explanation": "The Iowa Gambling Task reveals insensitivity to future consequences after ventromedial prefrontal damage.",
+          "citations": [{ "source": "Bechara A, et al. (1994) Cognition 50:7–15." }],
+          "structureIds": ["cortex.straight-gyrus-gyrus-rectus.left"]
+        }
+      ]
+    },
+    {
+      "id": "interoception",
+      "name": "Interoception",
+      "color": "#5D6D7E",
+      "summary": "The sensing and representation of internal bodily states — cardiac, visceral, and autonomic signals — forming the basis of the bodily self.",
+      "networks": ["ventral-attention"],
+      "structureIds": [
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "diencephalon.anterior-hypothalamus.left",
+        "diencephalon.anterior-hypothalamus.right",
+        "diencephalon.lateral-hypothalamus.left",
+        "diencephalon.lateral-hypothalamus.right",
+        "diencephalon.posterior-hypothalamus.left",
+        "diencephalon.posterior-hypothalamus.right",
+        "diencephalon.tuberal-hypothalamus.left",
+        "diencephalon.tuberal-hypothalamus.right",
+        "cortex.orbital-gyri.left",
+        "cortex.orbital-gyri.right"
+      ],
+      "stages": [
+        { "title": "Sensing the body", "body": "The anterior insula integrates ascending visceral and autonomic signals into a moment-to-moment representation of bodily state — the neural basis of interoceptive awareness.", "structureIds": ["cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right"] },
+        { "title": "The visceral axis", "body": "The hypothalamus coordinates autonomic and endocrine responses, relaying visceral state upward and integrating homeostatic demands with interoceptive cortex.", "structureIds": ["diencephalon.anterior-hypothalamus.left", "diencephalon.anterior-hypothalamus.right", "diencephalon.lateral-hypothalamus.left", "diencephalon.lateral-hypothalamus.right", "diencephalon.posterior-hypothalamus.left", "diencephalon.posterior-hypothalamus.right", "diencephalon.tuberal-hypothalamus.left", "diencephalon.tuberal-hypothalamus.right"] },
+        { "title": "Feeling & acting", "body": "The anterior cingulate couples interoceptive signals to motivation and action selection, while the orbitofrontal cortex integrates bodily state with affective value.", "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right", "cortex.orbital-gyri.left", "cortex.orbital-gyri.right"] }
+      ],
+      "function": [
+        "The anterior insula integrates ascending visceral and autonomic signals into a moment-to-moment representation of bodily state.",
+        "The anterior cingulate couples interoceptive signals to motivation and action."
+      ],
+      "states": [
+        "Interoceptive accuracy (e.g., heartbeat detection) varies across individuals and tracks emotional and bodily awareness."
+      ],
+      "paradigms": [
+        "Heartbeat-detection and heartbeat-evoked-potential tasks, gastric distension, and interoceptive attention."
+      ],
+      "disorders": [
+        { "condition": "Panic and somatic symptom disorders", "note": "Heightened and catastrophic interoceptive processing." },
+        { "condition": "Alexithymia", "note": "Reduced interoceptive awareness and difficulty labeling emotion." }
+      ],
+      "citations": [
+        { "source": "Craig AD (2009) How do you feel — now? The anterior insula and human awareness. Nat Rev Neurosci 10:59–70." },
+        { "source": "Critchley HD, Wiens S, Rotshtein P, Öhman A, Dolan RJ (2004) Neural systems supporting interoceptive awareness. Nat Neurosci 7:189–195." }
+      ],
+      "questions": [
+        {
+          "id": "interoception.mc.1",
+          "kind": "mc",
+          "systemId": "interoception",
+          "stem": "Which region integrates ascending visceral and autonomic signals into a moment-to-moment representation of bodily state?",
+          "options": ["Anterior insula", "Fusiform gyrus", "Primary visual cortex", "Vestibular nuclei"],
+          "answerIndex": 0,
+          "explanation": "The anterior insula integrates visceral and autonomic signals into a representation of bodily state — interoceptive awareness.",
+          "citations": [{ "source": "Craig AD (2009) Nat Rev Neurosci 10:59–70." }],
+          "structureIds": ["cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left"]
+        },
+        {
+          "id": "interoception.mc.2",
+          "kind": "mc",
+          "systemId": "interoception",
+          "stem": "Interoceptive accuracy is classically measured by which task?",
+          "options": ["Heartbeat detection", "Visual search", "Digit span", "Mental rotation"],
+          "answerIndex": 0,
+          "explanation": "Heartbeat-detection tasks index interoceptive accuracy, engaging the insula and anterior cingulate.",
+          "citations": [{ "source": "Critchley HD, et al. (2004) Nat Neurosci 7:189–195." }],
+          "structureIds": ["cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left"]
+        },
+        {
+          "id": "interoception.mc.3",
+          "kind": "mc",
+          "systemId": "interoception",
+          "stem": "Reduced interoceptive awareness with difficulty labeling emotion characterizes:",
+          "options": ["Alexithymia", "Synesthesia", "Prosopagnosia", "Achromatopsia"],
+          "answerIndex": 0,
+          "explanation": "Alexithymia involves reduced interoceptive awareness and difficulty labeling emotion.",
+          "citations": [{ "source": "Craig AD (2009) Nat Rev Neurosci 10:59–70." }],
+          "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left"]
+        }
+      ]
+    },
+    {
+      "id": "metacognition",
+      "name": "Metacognition",
+      "color": "#9B59B6",
+      "summary": "Monitoring and controlling one's own cognitive processes — confidence, error detection, and insight.",
+      "networks": ["frontoparietal", "default-mode"],
+      "structureIds": [
+        "cortex.transverse-frontopolar-gyrus-and-sulcus.left",
+        "cortex.transverse-frontopolar-gyrus-and-sulcus.right",
+        "cortex.middle-frontal-gyrus.left",
+        "cortex.middle-frontal-gyrus.right",
+        "cortex.superior-frontal-gyrus.left",
+        "cortex.superior-frontal-gyrus.right",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left",
+        "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right"
+      ],
+      "stages": [
+        { "title": "Thinking about thinking", "body": "Metacognition is the capacity to monitor and evaluate one's own cognitive processes — forming confidence judgements and detecting errors — supported by rostrolateral prefrontal and cingulate cortex.", "structureIds": [] },
+        { "title": "Confidence & meta-representation", "body": "The frontopolar cortex (rostrolateral prefrontal) supports meta-representation and the confidence judgements that track the reliability of one's own decisions.", "structureIds": ["cortex.transverse-frontopolar-gyrus-and-sulcus.left", "cortex.transverse-frontopolar-gyrus-and-sulcus.right"] },
+        { "title": "Error detection & adjustment", "body": "The anterior cingulate cortex detects errors and response conflict, signaling the need for adjustment, while the insula and middle frontal gyrus support performance monitoring.", "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left", "cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.right", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.left", "cortex.insula-subcentral-gyrus-and-ant-and-post-sulci.right", "cortex.middle-frontal-gyrus.left", "cortex.middle-frontal-gyrus.right"] },
+        { "title": "Self-monitoring", "body": "The precuneus and medial superior frontal gyrus support self-monitoring and the evaluation of one's own knowledge and performance.", "structureIds": ["cortex.precuneus.left", "cortex.precuneus.right", "cortex.superior-frontal-gyrus.left", "cortex.superior-frontal-gyrus.right"] }
+      ],
+      "function": [
+        "The rostrolateral prefrontal cortex supports meta-representation and confidence judgements about one's own performance.",
+        "The anterior cingulate detects errors and signals the need for adjustment, while the precuneus supports self-monitoring."
+      ],
+      "states": [
+        "Confidence tracks objective accuracy only partially, revealing dissociable metacognitive sensitivity."
+      ],
+      "paradigms": [
+        "Perceptual and memory confidence judgements, error-awareness tasks, and post-decision wagering."
+      ],
+      "disorders": [
+        { "condition": "Schizophrenia (impaired insight)", "note": "Poor metacognition underlies reduced awareness of illness and deficits." },
+        { "condition": "Overconfidence after frontal lesions", "note": "Impaired self-monitoring of performance accuracy." }
+      ],
+      "citations": [
+        { "source": "Fleming SM, Dolan RJ (2012) The neural basis of metacognitive ability. Philos Trans R Soc Lond B 367:1338–1349." },
+        { "source": "Metcalfe J, Shimamura AP (1994) Metacognition: Knowing about Knowing. MIT Press." }
+      ],
+      "questions": [
+        {
+          "id": "metacognition.mc.1",
+          "kind": "mc",
+          "systemId": "metacognition",
+          "stem": "Which region supports meta-representation and the confidence judgements that track the reliability of one's own decisions?",
+          "options": ["Frontopolar / rostrolateral prefrontal cortex", "Lingual gyrus", "Superior colliculus", "Olivary complex"],
+          "answerIndex": 0,
+          "explanation": "The rostrolateral (frontopolar) prefrontal cortex supports meta-representation and confidence judgements.",
+          "citations": [{ "source": "Fleming SM, Dolan RJ (2012) Philos Trans R Soc Lond B 367:1338–1349." }],
+          "structureIds": ["cortex.transverse-frontopolar-gyrus-and-sulcus.left"]
+        },
+        {
+          "id": "metacognition.mc.2",
+          "kind": "mc",
+          "systemId": "metacognition",
+          "stem": "Detection of errors and signaling that adjustment is needed is mediated by:",
+          "options": ["Anterior cingulate cortex", "Cerebellar vermis", "Lateral geniculate nucleus", "Substantia gelatinosa"],
+          "answerIndex": 0,
+          "explanation": "The anterior cingulate cortex detects errors and response conflict, signaling the need for adjustment.",
+          "citations": [{ "source": "Fleming SM, Dolan RJ (2012) Philos Trans R Soc Lond B 367:1338–1349." }],
+          "structureIds": ["cortex.cingulate-gyrus-and-sulcus-middle-anterior-part.left"]
+        },
+        {
+          "id": "metacognition.mc.3",
+          "kind": "mc",
+          "systemId": "metacognition",
+          "stem": "Impaired insight — reduced awareness of illness and of one's own deficits — in schizophrenia reflects:",
+          "options": ["Poor metacognition", "Peripheral neuropathy", "Retinal degeneration", "Cochlear damage"],
+          "answerIndex": 0,
+          "explanation": "Poor metacognition underlies the reduced insight into illness and deficits seen in schizophrenia.",
+          "citations": [{ "source": "Fleming SM, Dolan RJ (2012) Philos Trans R Soc Lond B 367:1338–1349." }],
+          "structureIds": ["cortex.precuneus.left"]
+        }
+      ]
+    },
+    {
+      "id": "spatial-navigation",
+      "name": "Spatial cognition & navigation",
+      "color": "#148F77",
+      "summary": "Representing space and navigating within it, from allocentric cognitive maps to egocentric routes.",
+      "networks": ["default-mode"],
+      "structureIds": [
+        "cortex.hippocampus.left",
+        "cortex.hippocampus.right",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.left",
+        "cortex.medial-occipitotemporal-gyrus-parahippocampal.right",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left",
+        "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right",
+        "cortex.precuneus.left",
+        "cortex.precuneus.right",
+        "cortex.superior-parietal-lobule.left",
+        "cortex.superior-parietal-lobule.right",
+        "cortex.intraparietal-sulcus.left",
+        "cortex.intraparietal-sulcus.right",
+        "deep-grey.caudate-nucleus.left",
+        "deep-grey.caudate-nucleus.right"
+      ],
+      "stages": [
+        { "title": "Maps and routes", "body": "Navigation recruits two complementary strategies: an allocentric cognitive map based in the hippocampus, and egocentric route learning based in the striatum, flexibly weighted by task and environment.", "structureIds": [] },
+        { "title": "The cognitive map", "body": "The hippocampus contains place cells that encode location within an allocentric cognitive map, supporting flexible, map-based navigation and spatial memory.", "structureIds": ["cortex.hippocampus.left", "cortex.hippocampus.right"] },
+        { "title": "Scenes & landmarks", "body": "The parahippocampal cortex (place area) and precuneus represent scenes, landmarks, and the visual environment, anchoring the cognitive map to perceptual features.", "structureIds": ["cortex.medial-occipitotemporal-gyrus-parahippocampal.left", "cortex.medial-occipitotemporal-gyrus-parahippocampal.right", "cortex.precuneus.left", "cortex.precuneus.right"] },
+        { "title": "Frames of reference", "body": "The retrosplenial cortex (posterior cingulate) translates between allocentric and egocentric frames, while the superior parietal lobule and intraparietal sulcus support egocentric spatial attention, and the caudate supports habitual route learning.", "structureIds": ["cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.left", "cortex.cingulate-gyrus-and-sulcus-posterior-dorsal-part.right", "cortex.superior-parietal-lobule.left", "cortex.superior-parietal-lobule.right", "cortex.intraparietal-sulcus.left", "cortex.intraparietal-sulcus.right", "deep-grey.caudate-nucleus.left", "deep-grey.caudate-nucleus.right"] }
+      ],
+      "function": [
+        "The hippocampus forms allocentric cognitive maps, while the parahippocampal cortex represents scenes and landmarks.",
+        "The retrosplenial cortex translates between egocentric and allocentric frames; the caudate supports stimulus–response route learning."
+      ],
+      "states": [
+        "Navigation flexibly recruits hippocampal (map-based) or striatal (route-based) strategies depending on the environment."
+      ],
+      "paradigms": [
+        "Virtual-reality navigation, the Morris water maze (rodents), and landmark/scene recognition (PPA localizer)."
+      ],
+      "disorders": [
+        { "condition": "Topographic disorientation", "note": "Retrosplenial or parahippocampal lesions impair navigation and landmark use." },
+        { "condition": "Alzheimer's disease", "note": "Early hippocampal/retrosplenial involvement produces spatial disorientation." }
+      ],
+      "citations": [
+        { "source": "O'Keefe J, Nadel L (1978) The Hippocampus as a Cognitive Map. Oxford University Press." },
+        { "source": "Epstein R, Kanwisher N (1998) A cortical representation of the local visual environment. Nature 392:598–601." },
+        { "source": "Maguire EA, Gadian DG, Johnsrude IS, et al. (2000) Navigation-related structural change in the hippocampi of taxi drivers. Proc Natl Acad Sci USA 97:4398–4403." }
+      ],
+      "questions": [
+        {
+          "id": "spatial-navigation.mc.1",
+          "kind": "mc",
+          "systemId": "spatial-navigation",
+          "stem": "Place cells, encoding location within an allocentric cognitive map, are found in:",
+          "options": ["Hippocampus", "Primary motor cortex", "Inferior olive", "Spinal cord"],
+          "answerIndex": 0,
+          "explanation": "Hippocampal place cells encode location within an allocentric cognitive map supporting navigation.",
+          "citations": [{ "source": "O'Keefe J, Nadel L (1978) The Hippocampus as a Cognitive Map." }],
+          "structureIds": ["cortex.hippocampus.left"]
+        },
+        {
+          "id": "spatial-navigation.mc.2",
+          "kind": "mc",
+          "systemId": "spatial-navigation",
+          "stem": "The parahippocampal place area (PPA) responds selectively to:",
+          "options": ["Scenes and places", "Faces", "Written words", "Tool sounds"],
+          "answerIndex": 0,
+          "explanation": "The parahippocampal place area responds selectively to scenes and the local visual environment.",
+          "citations": [{ "source": "Epstein R, Kanwisher N (1998) Nature 392:598–601." }],
+          "structureIds": ["cortex.medial-occipitotemporal-gyrus-parahippocampal.left"]
+        },
+        {
+          "id": "spatial-navigation.mc.3",
+          "kind": "mc",
+          "systemId": "spatial-navigation",
+          "stem": "Enlarged posterior hippocampus in London taxi drivers is interpreted as evidence of:",
+          "options": ["Experience-dependent plasticity supporting spatial navigation", "A congenital anomaly", "Neurodegeneration", "Vascular pathology"],
+          "answerIndex": 0,
+          "explanation": "Taxi drivers' enlarged posterior hippocampus reflects experience-dependent plasticity for navigation.",
+          "citations": [{ "source": "Maguire EA, et al. (2000) Proc Natl Acad Sci USA 97:4398–4403." }],
+          "structureIds": ["cortex.hippocampus.left"]
+        }
+      ]
+    }
+  ]
+}

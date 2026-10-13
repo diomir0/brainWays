@@ -1,5 +1,12 @@
 import { create } from 'zustand';
 
+/**
+ * Default highlight color (amber). Used as the `highlightColor` default and as
+ * the sentinel that distinguishes plain highlight mode from network isolation
+ * (where a network's own color overrides it).
+ */
+export const DEFAULT_HIGHLIGHT_COLOR = '#ffb020';
+
 export type View = 'explore' | 'study' | 'quiz' | 'review' | 'progress';
 
 interface AppState {
@@ -27,6 +34,10 @@ interface BrainState {
   /** Hidden categories (layer peel). */
   hiddenCategories: string[];
   hemisphere: Hemisphere;
+  /** Highlight color override (used to tint an isolated network). Default amber. */
+  highlightColor: string;
+  /** Full-brain map: colour every structure by its primary resting-state network. */
+  showNetworkMap: boolean;
   /** Request to frame the camera on one or more structures (empty = reset). */
   focusIds: string[];
   /** Ordered structures to animate a "flow" pulse through (study mode). */
@@ -38,6 +49,8 @@ interface BrainState {
   toggleCategory: (cat: string) => void;
   setHiddenCategories: (cats: string[]) => void;
   setHemisphere: (h: Hemisphere) => void;
+  setHighlightColor: (color: string) => void;
+  setShowNetworkMap: (v: boolean) => void;
   requestFocus: (ids: string[]) => void;
   setFlow: (ids: string[]) => void;
   setFlowActive: (ids: string[]) => void;
@@ -48,6 +61,8 @@ export const useBrain = create<BrainState>((set) => ({
   highlightIds: [],
   hiddenCategories: [],
   hemisphere: 'both',
+  highlightColor: DEFAULT_HIGHLIGHT_COLOR,
+  showNetworkMap: false,
   focusIds: [],
   flowIds: [],
   flowActiveIds: [],
@@ -61,6 +76,8 @@ export const useBrain = create<BrainState>((set) => ({
     })),
   setHiddenCategories: (hiddenCategories) => set({ hiddenCategories }),
   setHemisphere: (hemisphere) => set({ hemisphere }),
+  setHighlightColor: (highlightColor) => set({ highlightColor }),
+  setShowNetworkMap: (showNetworkMap) => set({ showNetworkMap }),
   requestFocus: (focusIds) => set({ focusIds }),
   setFlow: (flowIds) => set({ flowIds }),
   setFlowActive: (flowActiveIds) => set({ flowActiveIds }),
