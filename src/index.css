@@ -54,3 +54,9 @@ body {
     @apply rounded-full border border-edge px-2.5 py-1 text-xs text-slate-300;
   }
 }
+
+/* Netlify injects its badge bottom-right, over the side panels; move it bottom-left. */
+#nl-badge-frame {
+  left: 0 !important;
+  right: auto !important;
+}
