@@ -162,7 +162,7 @@ function Lesson({ lesson, onBack }: { lesson: Lesson; onBack: () => void }) {
         </button>
       </div>
 
-      <div className="flex max-h-[50%] w-full flex-col border-t border-edge bg-panel/60 pb-14 sm:max-h-none sm:w-96 sm:border-l sm:border-t-0">
+      <div className="flex max-h-[50%] w-full flex-col border-t border-edge bg-panel/60 sm:max-h-none sm:w-96 sm:border-l sm:border-t-0">
         <div className="border-b border-edge px-4 py-3">
           <h2 className="font-serif text-lg font-semibold">{lesson.name}</h2>
           <p className="text-xs text-slate-500">
